@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Service Manual Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+<body>
+<!--Navigation bar-->
+<div id="nav-placeholder">
+  <script type="text/javascript">
+    $(function(){
+    $("#nav-placeholder").load("nav.html"); 
+    });
+      </script>
+</div>
+<!--end of Navigation bar-->
+
+    <div class="content">
+      <header> Docker </header>
+    </div>
+    <div class="paradock">
+      <header>What is Docker? </header>
+      <p>Docker is an open platform for developing, shipping, and running applications, it uses OS Level virtualisation to deliver software and packages that are known as containers.</p>
+      <header>How to get started with docker:</header>
+      <p>The docker docs website has a lot of documentation and allows you to get a very good understanding of the product and how it works. I would recommend <p><a href="https://docs.docker.com/docker-for-windows/">Getting started with docker</p></p></a>
+      <header>Where to find open source Docker Containers:</header>
+      <p>Docker hosts a 'hub' that allows you to download containers that other people have created and use them in your own envrionment <p><a href='https://hub.docker.com/'>Docker Hub</a></p></p>
+      <header>Video Resources:</header>
+      <p>If you are more of a visual learner there is a 2 hour video that will teach you the basics of docker <a href='https://www.youtube.com/watch?v=fqMOX6JJhGo'><p>here</p></a></p></a></p>
+
+    </div>
+    <script>
+      $('.icon').click(function(){
+        $('span').toggleClass("cancel");
+      });
+    </script>
+
+  </body>
+</html>
