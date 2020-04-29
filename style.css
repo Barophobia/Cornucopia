@@ -270,3 +270,39 @@ p{
   font-size: 30px;
   font-weight: 500;
 }
+
+.paraleftcol{
+  z-index: -1;
+  position: absolute;
+  text-align: left;
+  left: 3%;
+  top: 15%;
+}
+header{
+  font-size: 35px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+p{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.paraarticle{
+  z-index: -1;
+  position: absolute;
+  top: 17%;
+  left: 20%;
+  right:20%;
+  text-align: center;
+}
+header{
+  font-size: 35px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+p{
+  font-size: 30px;
+  font-weight: 500;
+}
+
