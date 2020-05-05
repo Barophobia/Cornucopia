@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Service Manual Library</title>
+    <title>Cronucopia - WDS</title>
     <link rel="icon" href="images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -22,7 +22,7 @@
 
 
 
-    <div class="Paradock">
+    <div class="paradock">
       <header>WDS </header>
       <p>Windows Deployment Services</p>
       <header>What is WDS? </header>
@@ -37,11 +37,5 @@
       now as long as you have DHCP setup correctly for clients you should be able to PXE boot to deploy your image.<br> if you havent setup DHCP then you should install the DHCP role to a server of your choice and open the DHCP app then look inside your IPv4 Scopes and add a new scope option the options you need is: <br> <b>Option 66:boot server host name (Value: WDS Server address)<br> Option 67: Bootfile name (Value: the bootfile name on your WDS server) </b><br> now right click the scope and choose 'activate' <br>now you should be able to boot through PXE and deploy your image.</p>
 
     </div>
-    <script>
-      $('.icon').click(function(){
-        $('span').toggleClass("cancel");
-      });
-    </script>
-    
   </body>
 </html>
