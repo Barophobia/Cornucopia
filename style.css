@@ -166,7 +166,7 @@ nav ul ul ul li{
 .content{
   z-index: -1;
   position: absolute;
-  top: 10%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
@@ -228,7 +228,7 @@ p{
 header{
   font-size: 35px;
   font-weight: 600;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 p{
   font-size: 30px;
