@@ -163,46 +163,11 @@ nav ul ul ul li{
     content: '\f00d';
   }
 }
-.content{
-  z-index: -1;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-}
-header{
-  font-size: 35px;
-  font-weight: 600;
-  padding: 0, 0;
-}
-p{
-  font-size: 30px;
-  font-weight: 500;
-}
-
-.para{
-  z-index: -1;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-}
-header{
-  font-size: 35px;
-  font-weight: 600;
-  padding: 10px 0;
-}
-p{
-  font-size: 30px;
-  font-weight: 500;
-}
 
 .paradock{
   z-index: -1;
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 20%;
   right:20%;
   text-align: center;
