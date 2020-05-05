@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Service Manual Library</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+<body>
+<!--Navigation bar-->
+<div id="nav-placeholder">
+  <script type="text/javascript">
+    $(function(){
+    $("#nav-placeholder").load("nav.html"); 
+    });
+      </script>
+</div>
+<!--end of Navigation bar-->
+
+
+
+    <div class="content">
+      <header>Windows ADK </header>
+    </div>
+    <div class="paradock">
+      <header>What is ADK? </header>
+      <p>Windows Assessment and Deployment Kit (Windows ADK), formerly Windows Automated Installation Kit (Windows AIK or WAIK), is a collection of tools and technologies produced by Microsoft designed to help deploy Microsoft Windows operating system images to target computers or to a virtual hard disk image in VHD format.</p>
+      <header></header>
+      <header>What tools are in the ADK? </header>
+      <p>The ADK is currently made up of 9 tools which break down into many more, they are as follows:<br>
+          <br><b>Application compatibility tools:</b> This toolset consists of Compatibility Administrator and Standard User Analyzer. 
+          <br><b>DISM (Deployment Image Service and Management Tool):</b> This is a tool introduced in Windows 7 and Windows Server 2008 R2 that can perform servicing tasks on a Windows, be the operating system running the system or an offline image within a folder or WIM file. Its features include mounting and unmounting images, querying installed device drivers in an offline image, and adding a device driver to an offline image.
+          <br><b>Imaging and configuration designer:</b> This allows you to create, edit and manage the image that you want to deploy as well as the software and settings inside the image (like WDS/MDT).
+          <br><b>WSIM (Windows System Image Manager):</b> This allows you to use a GUI to create the unattend.xml file to automate deployments.
+          <br><b>Windows assesment toolkit:</b> This allows you to assess computers to see if you are going to have issues with deployment.
+          <br><b>Windows performance toolkit:</b> This tool allows you to analyse performance on a device and manage aswell.
+          <br><b>USMT (User state migration tool):</b> This tool allows you to gather data and settings from a user and migrate them to a new deployment.
+          <br><b>VAMT (Volume Activation Management Tool):</b> This tool allows you to automate the activation of microsoft products for clients on the network.
+          <br><b>UEV (User Experience Virtualization):</b> This monitors the changes users make to application settings and allows them to follow the user on multiple devices.
+          <br><b>App-V (Application Virtualization):</b> This runs applications at a remote location and allow the user to use it locally.
+      </p>
+      <header></header>
+    </div>
+    <script>
+      $('.icon').click(function(){
+        $('span').toggleClass("cancel");
+      });
+    </script>
+    
+  </body>
+</html>

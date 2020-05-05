@@ -25,9 +25,22 @@
     </div>
     <div class="paradock">
       <header>What is Docker? </header>
-      <p>Docker is an open platform for developing, shipping, and running applications, it uses OS Level virtualisation to deliver software and packages that are known as containers.</p>
+      <p>Docker is an open platform for developing, shipping, and running applications, it uses OS Level virtualisation to deliver software and packages that are known as containers. Using docker allows you to have scalability instead of having to have multiple physical servers that could be in containers on one physical server.</p>
       <header>How to get started with docker:</header>
       <p>The docker docs website has a lot of documentation and allows you to get a very good understanding of the product and how it works. I would recommend <p><a href="https://docs.docker.com/docker-for-windows/">Getting started with docker</p></p></a>
+      <br><p>Docker has 2 requirements to stand a containers host, one is the containers feature in windows server on the container host as well as docker.</p>
+      <header></header>
+      <header>How to install Docker:</header>
+      <p>Begin with installing the containers feature on windows server (This can be skipped if you are installing docker through powershell with internet access)<br>
+      To install docker through Powershell you can type:<br>
+      Install-Module -Name DockerMsftProvider -Repository PSGallery -Force <br>
+      Install-Package -Name docker -ProviderName DockerMsftProvider -Verbose<br>
+      <br>
+      Verbose does not have to be on the end of the last command but it allows you to view what is happening whilst it is installing.
+      After installing docker or activating the containers feature you should restart your machine to enable containers correctly.<br>
+      Once docker is installed you can check that it is running in the services applet or by typing <br>Get-Service Docker <br>into powershell.</p>
+      <header>How to update docker:</header>
+      <p>You can update docker by typing into powershell <br>Install-Package -Name docker -ProviderName DockerMsftProvider -Update -Verbose </p>
       <header>Where to find open source Docker Containers:</header>
       <p>Docker hosts a 'hub' that allows you to download containers that other people have created and use them in your own envrionment <p><a href='https://hub.docker.com/'>Docker Hub</a></p></p>
       <header>Video Resources:</header>
