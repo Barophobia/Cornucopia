@@ -44,31 +44,32 @@
       <header>Video Resources:</header>
       <p>If you are more of a visual learner there is a 2 hour video that will teach you the basics of docker <a href='https://www.youtube.com/watch?v=fqMOX6JJhGo'><p>here</p></a></p></a></p>
       <header>Containers:</header> 
-      <p>The code and environment you use in the build file is what will make up the environment this does not make it a full virtual machine though using docker allows you to remove a lot of the overhead needed with virtual machines which means it will be much more efficient. 
+      <p>The code and environment you use in the build file is what will make up the environment this does not make it a full virtual machine though using docker allows you to remove a lot of the overhead needed with virtual machines which means it will be much more efficient. </p>
       <header>Dockerfile:</header> 
-      A dockerfile is a document of code written in steps for how you want the image the docker container uses and the process it needs to go through to be built in the specific way you want. Once this dockerfile is built it gives you the image which is then used to run the container.
+      <p>A dockerfile is a document of code written in steps for how you want the image the docker container uses and the process it needs to go through to be built in the specific way you want. Once this dockerfile is built it gives you the image which is then used to run the container.
       <br>An example of a basic docker file would be -<br> 
         
         FROM php:7.0-apache<br> 
         COPY X X2<br>
         EXPOSE 80 <br>
-        
+      </p>  
       <header>Explained:</header> 
-      First line - Using the FROM basically means you put in whatever image and tag you want to use the PHP is the image and 7.0-apache is the tag for the image I want to use because the official image has multiple different versions of PHP with apache<br>
+      <p>First line - Using the FROM basically means you put in whatever image and tag you want to use the PHP is the image and 7.0-apache is the tag for the image I want to use because the official image has multiple different versions of PHP with apache<br>
       Second line - COPY is used to move the files from your computer to the new image so for a PHP webserver you would most likely want to move your website from X (being the folder your website is in on your computer) to X2 (being the folder on the new webserver (this is most likely /var/www/html))<bR>
       Third line - The EXPOSE line just means that whatever port number you put after it will be exposed to the internet so port 80 is used here because a webserver is being made.<br>
       <br>
-      These dockerfiles can get a lot more advanced but this basic example works for a very basic webserver.
+      These dockerfiles can get a lot more advanced but this basic example works for a very basic webserver.</p>
       <header>Building using a Dockerfile:</header> 
-      To build your newly created Dockerfile into an image that you can use for a containter you will need to 'build' it. To do this go into a terminal and CD to the Dockerfile folder 
+      <p>To build your newly created Dockerfile into an image that you can use for a containter you will need to 'build' it. To do this go into a terminal and CD to the Dockerfile folder 
       <br>Inside the folder in the terminal type: docker build -t *Name you want for output image*
-      <br>This will build the image for your container using the exact parameters you set inside the dockerfile, once it is complete you will see the image inside the folder.
+      <br>This will build the image for your container using the exact parameters you set inside the dockerfile, once it is complete you will see the image inside the folder. </p>
       <header>Running your new container:</header> 
-      <br>Now that your image has been built you can run it using the 'docker run' command
+      <p><br>Now that your image has been built you can run it using the 'docker run' command
       <br>docker run *name of image*
       <br>If you are building a webserver you will need to forward the port from the host machine to this container this is done my including a flag in the command
       <br>docker run -p 80:80 *name of image*
       <br>This will then run the image in a container
+      </p>
       </p>
 
     </div>
