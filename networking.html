@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cornucopia - Networking</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+<body>
+<!--Navigation bar-->
+<div id="nav-placeholder">
+  <script type="text/javascript">
+    $(function(){
+    $("#nav-placeholder").load("nav.html"); 
+    });
+      </script>
+</div>
+<!--end of Navigation bar-->
+
+
+
+    <div class="paradock">
+      <header>Networking</header>
+      <header>What is networking?</header>
+      <p>Networking is the communication on a network between devices.</p>
+      <br>
+      <header>What is DHCP?</header>
+      <p>DHCP (Dynamic Host Configuration Protocol) is used to dynamically assign devices on the network IP addresses automatically, an easy way to understand this is if you imagine a router in a household 99% of homes most likely are just using the default configuration of the router and when you join the network you are automatically given an IP address, the router is giving you that IP address on a lease meaning that if the lease ends and has not been renewed automatically by your device then the IP address will be put back in the DHCP scope and handed to another device.</p>
+      <br>
+      <header>What is a static IP?</header>
+      <p>A static IP is an IP Address that does not change after being set for example on a /24 network you could set the IP address of a device to 192.168.0.2 where the router would be 192.168.0.1 and the device would hold that IP until you change it, if you are using static IP's on a network then you will need to take the static IP's out of the DHCP scope.</p>
+      <br>
+      <header>Setting a static IP address in CMD or PS:</header>
+      <p><b>PS:
+        1) Get-NetAdapter</b>
+        This will give you the ifindex number of the interfaces in your machine
+        <b>2) New-NetIPAddress -InterfaceIndex *ifindex number* -IPAddress *required static IP Address -PrefixLength *SubnetMask ex. 24* -DefaultGateway *DefaultGateway IP*</b>
+        This will set the static IP in powershell
+        <br>
+        <b>CMD:
+        1) Netsh interface ipv4 set address name="*Name of interface*" static *IP address* *subnet* *default gateway*
+        </b>This will set the static IP address using CMD.</p>
+        <br>
+        <header>Network Interface Info in different OS's</header>
+        <p>	1) Windows - ipconfig <br>
+        2) macOS/Linux - ifconfig<br>
+        3) Cisco - show ip interface brief / sh ip int bri</p>
+        
+    </div>    
+  </body>
+</html>
