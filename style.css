@@ -170,16 +170,18 @@ nav ul ul ul li{
   left: 10%;
   right:10%;
   text-align: center;
+  font-size: 30px;
 }
 header{
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 900;
   padding: 10px 0;
 }
-p{
-  font-size: 12px;
-  font-weight: 500;
+p{ 
+  font-size: 16px;
+  font-weight: 400;
 }
+
 
 .paraindex{
   z-index: -1;
@@ -189,15 +191,7 @@ p{
   transform: translate(-50%,-50%);
   text-align: center;
 }
-header{
-  font-size: 35px;
-  font-weight: 600;
-  padding: 10px 0;
-}
-p{
-  font-size: 30px;
-  font-weight: 500;
-}
+
 
 .paraleftcol{
   z-index: -1;
@@ -206,15 +200,7 @@ p{
   left: 3%;
   top: 15%;
 }
-header{
-  font-size: 35px;
-  font-weight: 600;
-  padding: 10px 0;
-}
-p{
-  font-size: 30px;
-  font-weight: 500;
-}
+
 
 .paraarticle{
   z-index: -1;
@@ -223,15 +209,6 @@ p{
   left: 20%;
   right:20%;
   text-align: center;
-}
-header{
-  font-size: 35px;
-  font-weight: 600;
-  padding: 10px 0;
-}
-p{
-  font-size: 30px;
-  font-weight: 500;
 }
 
 .spacer
