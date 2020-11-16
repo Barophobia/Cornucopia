@@ -22,13 +22,12 @@
 
     <div class="paradock">
       <header> Docker </header>
-      <header>What is Docker? </header>
+      <br><header>What is Docker? </header>
       <p>Docker is an open platform for developing, shipping, and running applications, it uses OS Level virtualisation to deliver software and packages that are known as containers. Using docker allows you to have scalability instead of having to have multiple physical servers that could be in containers on one physical server.</p>
-      <header>How to get started with docker:</header>
+      <br><header>How to get started with docker:</header>
       <p>The docker docs website has a lot of documentation and allows you to get a very good understanding of the product and how it works. I would recommend <p><a href="https://docs.docker.com/docker-for-windows/">Getting started with docker</p></p></a>
       <br><p>Docker has 2 requirements to stand a containers host, one is the containers feature in windows server on the container host as well as docker.</p>
-      <header></header>
-      <header>How to install Docker:</header>
+      <br><header>How to install Docker:</header>
       <p>Begin with installing the containers feature on windows server (This can be skipped if you are installing docker through powershell with internet access)<br>
       To install docker through Powershell you can type:<br>
       Install-Module -Name DockerMsftProvider -Repository PSGallery -Force <br>
@@ -37,15 +36,15 @@
       Verbose does not have to be on the end of the last command but it allows you to view what is happening whilst it is installing.
       After installing docker or activating the containers feature you should restart your machine to enable containers correctly.<br>
       Once docker is installed you can check that it is running in the services applet or by typing <br>Get-Service Docker <br>into powershell.</p>
-      <header>How to update docker:</header>
+      <br><header>How to update docker:</header>
       <p>You can update docker by typing into powershell <br>Install-Package -Name docker -ProviderName DockerMsftProvider -Update -Verbose </p>
-      <header>Where to find open source Docker Containers:</header>
+      <br><header>Where to find open source Docker Containers:</header>
       <p>Docker hosts a 'hub' that allows you to download containers that other people have created and use them in your own envrionment <p><a href='https://hub.docker.com/'>Docker Hub</a></p></p>
-      <header>Video Resources:</header>
+      <br><header>Video Resources:</header>
       <p>If you are more of a visual learner there is a 2 hour video that will teach you the basics of docker <a href='https://www.youtube.com/watch?v=fqMOX6JJhGo'><p>here</p></a></p></a></p>
-      <header>Containers:</header> 
+      <br><header>Containers:</header> 
       <p>The code and environment you use in the build file is what will make up the environment this does not make it a full virtual machine though using docker allows you to remove a lot of the overhead needed with virtual machines which means it will be much more efficient. </p>
-      <header>Dockerfile:</header> 
+      <br><header>Dockerfile:</header> 
       <p>A dockerfile is a document of code written in steps for how you want the image the docker container uses and the process it needs to go through to be built in the specific way you want. Once this dockerfile is built it gives you the image which is then used to run the container.
       <br>An example of a basic docker file would be -<br> 
         
