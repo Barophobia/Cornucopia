@@ -1,2 +1,2 @@
 # Cornucopia
- Just a website with Tech guides and resources and Hardware manuals.
+ Just a website with Techology, Software and Hardware Information.
