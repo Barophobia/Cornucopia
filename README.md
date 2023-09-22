@@ -1,3 +1,3 @@
-# techdocs
+# Cornucopia
 
-A website for technical writing
+A website for technical writing, guides and the like.
