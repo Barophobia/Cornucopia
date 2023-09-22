@@ -1,8 +1,5 @@
 +++
-title = "How to mount a network share"
-weight = 5
-chapter = true
-pre = "<b> - </b>"
+title = "Mounting a network share"
 +++
 
 # How to mount a network share

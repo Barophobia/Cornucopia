@@ -1,8 +1,5 @@
 +++
-title = "WIP How to install Arch Linux"
-weight = 5
-chapter = true
-pre = "<b> - </b>"
+title = "Installing Arch Linux"
 +++
 
 # How to install Arch Linux
@@ -33,5 +30,5 @@ The guided installer will perform the following steps:
 - set the root password;
 - install a boot loader (limited to systemd-boot for UEFI and GRUB for BIOS)
 
-Leaving the root password blank disabels the root account.
+Leaving the root password blank disables the root account.
 

@@ -1,8 +1,5 @@
 +++
-title = "Powershell"
-weight = 5
-chapter = true
-pre = "<b> - </b>"
+title = "Powershell Cheatsheet"
 +++
 
 # Powershell

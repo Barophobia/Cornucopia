@@ -1,8 +1,5 @@
 +++
 title = "Setup Headless Raspberry Pi"
-weight = 5
-chapter = true
-pre = "<b> -- </b>"
 +++
 
 # Setup a headless Raspberry Pi

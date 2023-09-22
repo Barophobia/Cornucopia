@@ -1,8 +1,5 @@
 +++
-title = "Docker"
-weight = 5
-chapter = true
-pre = "<b> - </b>"
+title = "Docker Cheatsheet"
 +++
 
 # Docker

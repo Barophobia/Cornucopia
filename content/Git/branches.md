@@ -1,8 +1,6 @@
 +++
 title = "Git Branches"
-weight = 5
 chapter = true
-pre = "<b> - </b>"
 +++
 
 # Git Branches

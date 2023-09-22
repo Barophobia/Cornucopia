@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Terraform"
+title: "Terraform Cheatsheet"
 date: 2023-09-06
 author: "Barophobia"
 tags: ["terraform", "introduction"]

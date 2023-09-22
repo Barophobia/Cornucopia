@@ -51,7 +51,7 @@
         title = "Cornucopia"
 
         # Subtitle for this site, used in homepage only
-        subtitle = ""
+        subtitle = "A place for technical writing, guides and things like that."
 
         # Config about your's site logo, remove this item to hide the logo
         [params.header.logo]
