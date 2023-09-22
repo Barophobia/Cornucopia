@@ -7,7 +7,7 @@ This document will detail how to change to custom certificate mode and then appl
 
 Before changing vCenter to custom certificate mode, the vCenter will try to apply its own certificates to the hosts it manages, changing to custom certificate mode stops this behaviour and allows the administrator to apply custom certificates to the host without them being overwritten when connected to a vCenter instance.
 
-## Changing vCenter's certificate mode: 
+## Changing vCenter's certificate mode 
 - Select your vCenter system in vSphere Client.
 - Click Configure and under Settings, click Advanced Settings.
 - Click Edit Settings.
