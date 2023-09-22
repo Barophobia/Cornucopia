@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NXLog on </title>
+    <link>https://barophobia.co.uk/nxlog/</link>
+    <description>Recent content in NXLog on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://barophobia.co.uk/nxlog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to configure NXLog</title>
+      <link>https://barophobia.co.uk/nxlog/howtoconfigurenxlog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/nxlog/howtoconfigurenxlog/</guid>
+      <description>How to configure NXLog Windows   Edit the nxlog.conf file inside C:\Program Files (x86)\nxlog\conf
+  At the bottom of the notepad will be some commented out lines that are similar to the lines below, remove the hashes so they arent commented out and make sure the output is correctly configured to the syslog server&amp;rsquo;s IP using the correct Module (TCP/UDP) and Port.
+  When you edit the nxlog.</description>
+    </item>
+    
+    <item>
+      <title>How to install NXLog</title>
+      <link>https://barophobia.co.uk/nxlog/howtoinstallnxlog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/nxlog/howtoinstallnxlog/</guid>
+      <description>How to install NXLog Windows Download NXLog from the website - NXLog Downloads
+Install using the .exe you just downloaded, if you choose a custom install path make sure you remember where it is.
+Once you have configured the nxlog.conf start the nxlog service in the services applet.
+If you have any issues there is a log file in the INSTALL_PATH\data\nxlog.txt this should give some information on what the issue is.</description>
+    </item>
+    
+  </channel>
+</rss>

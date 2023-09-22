@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on </title>
+    <link>https://barophobia.co.uk/</link>
+    <description>Recent content in Home on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Dec 2021 16:51:31 +0000</lastBuildDate>
+    
+	<atom:link href="https://barophobia.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creating a reverse proxy</title>
+      <link>https://barophobia.co.uk/webservers/nginx/reverseproxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/webservers/nginx/reverseproxy/</guid>
+      <description>Reverse proxy with nginx In this example I will be making a reverse proxy for a calibre server so anywhere it references that service is a variable of whatever service you are setting up.
+  Create a new file inside /etc/nginx/sites-available/calibre
+  Now edit the file and add the following
+  server { listen 80; client_max_body_size 64M; # To upload large books (Change where required) server_name calibre.example.com ; location / { proxy_pass http://127.</description>
+    </item>
+    
+    <item>
+      <title>Git Branches</title>
+      <link>https://barophobia.co.uk/git/branches/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/git/branches/</guid>
+      <description>Git Branches Creating new branches If you have multiple people who contribute to a project then it may be useful to create a new branch so that the master branch is always working and correct.
+To create a new branch you can use this command.
+git branch X X = name of the new branch
+now a new branch has been made but you are not on the branch yet, to switch to a new branch use:</description>
+    </item>
+    
+    <item>
+      <title>How to configure NXLog</title>
+      <link>https://barophobia.co.uk/nxlog/howtoconfigurenxlog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/nxlog/howtoconfigurenxlog/</guid>
+      <description>How to configure NXLog Windows   Edit the nxlog.conf file inside C:\Program Files (x86)\nxlog\conf
+  At the bottom of the notepad will be some commented out lines that are similar to the lines below, remove the hashes so they arent commented out and make sure the output is correctly configured to the syslog server&amp;rsquo;s IP using the correct Module (TCP/UDP) and Port.
+  When you edit the nxlog.</description>
+    </item>
+    
+    <item>
+      <title>How to install NXLog</title>
+      <link>https://barophobia.co.uk/nxlog/howtoinstallnxlog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/nxlog/howtoinstallnxlog/</guid>
+      <description>How to install NXLog Windows Download NXLog from the website - NXLog Downloads
+Install using the .exe you just downloaded, if you choose a custom install path make sure you remember where it is.
+Once you have configured the nxlog.conf start the nxlog service in the services applet.
+If you have any issues there is a log file in the INSTALL_PATH\data\nxlog.txt this should give some information on what the issue is.</description>
+    </item>
+    
+    <item>
+      <title>How to mount a network share</title>
+      <link>https://barophobia.co.uk/linux/mountnfs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/linux/mountnfs/</guid>
+      <description>How to mount a network share NFS Mounting an NFS share requires nfs-common. To install:
+apt install nfs-common To mount an NFS network share use the command below:
+mount -t nfs -o 192.168.0.100:/backups Replace the IP Address and share location to your required config.</description>
+    </item>
+    
+    <item>
+      <title>Important Directories and Files</title>
+      <link>https://barophobia.co.uk/webservers/nginx/dirandfiles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/webservers/nginx/dirandfiles/</guid>
+      <description>Important nginx Directories and files Content /var/www/html The actual web content, which by default only consists of the default Nginx page you saw earlier, is served out of the /var/www/html directory. This can be changed by altering Nginx configuration files.
+Server Configuration /etc/nginx The Nginx configuration directory. All of the Nginx configuration files reside here.
+/etc/nginx/nginx.conf The main Nginx configuration file. This can be modified to make changes to the Nginx global configuration.</description>
+    </item>
+    
+    <item>
+      <title>Maintaining a Linux Server</title>
+      <link>https://barophobia.co.uk/linux/maintainingaserver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/linux/maintainingaserver/</guid>
+      <description>Maintaining a Linux Server Keep packages up to date All Linux distributions use package managers to easily be able to install and update packages without having to manually download them.
+On debian the package manager is apt.
+apt update apt upgrade Keeping the server up to date should be minimum maintenance required for your server as not only do up to date packages often offer more features but they also fix security bugs and vulnerabilities.</description>
+    </item>
+    
+    <item>
+      <title>Setup Headless Raspberry Pi</title>
+      <link>https://barophobia.co.uk/linux/raspberrypi/preprpi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/linux/raspberrypi/preprpi/</guid>
+      <description>Setup a headless Raspberry Pi Requirements
+ Raspberry Pi with power supply SD Card  Imaging the SD Card: Download Raspbian lite (this has no DE, if you want a DE download the full iso image not lite) Raspbian Downloads
+Use an application like EthcherBalena to write to the SD Card.
+Steps to take once the image is written to the SD Card: Once the image is written to the SD Card open a terminal and browse to the the SD Card (Usually /Volumes/boot/).</description>
+    </item>
+    
+    <item>
+      <title>Uncomplicated Firewall (UFW)</title>
+      <link>https://barophobia.co.uk/linux/ufw/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/linux/ufw/</guid>
+      <description>UFW Installation: Debian:
+apt install ufw Check the status of UFW: You can check the status of ufw by running:
+ufw status Without any changes it will most likely report back &amp;lsquo;Status: Inactive&amp;rsquo;
+Set up UFW to allow SSH or port 22: Here we will set up UFW to allow port 22 (SSH) connections so that once the UFW is enabled you are still able to SSH into the machine.</description>
+    </item>
+    
+    <item>
+      <title>Updating Oracle Linux</title>
+      <link>https://barophobia.co.uk/linux/oracle-linux/updateoffline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/linux/oracle-linux/updateoffline/</guid>
+      <description>Updating Oracle Linux Check your current Oracle Linux Version: cat /etc/oracle-release The output of this command will be the version of your machine.
+With internet: With internet updating and upgrading oracle linux is as simple as using the following command
+sudo yum update -y &amp;amp;&amp;amp; sudo yum upgrade -y This will check you have the latest update information. The upgrade command will actually upgrade the software on your machine.
+Without internet: To complete an offline upgrade of an oracle linux system there is a requirement that you have the oracle ISO file that is a higher version.</description>
+    </item>
+    
+    <item>
+      <title>Using DNSMasq for DNS</title>
+      <link>https://barophobia.co.uk/linux/dnsmasq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/linux/dnsmasq/</guid>
+      <description>Install DNSMasq Install DNSMasq Debian:
+apt install dnsmasq </description>
+    </item>
+    
+    <item>
+      <title>WIP How to install Arch Linux</title>
+      <link>https://barophobia.co.uk/linux/installarch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/linux/installarch/</guid>
+      <description>How to install Arch Linux Arch linux is a sort of &amp;lsquo;build it yourself&amp;rsquo; OS allowing you to create the environment you desire, I use this to have a low resource requirement extending the life of &amp;lsquo;old&amp;rsquo; hardware but it can be used for more than that.
+Steps to install Arch Linux Download the Arch Linux ISO from the website. https://www.archlinux.org
+If you are building a virtual machine just mount the ISO to the machine and boot to it.</description>
+    </item>
+    
+  </channel>
+</rss>

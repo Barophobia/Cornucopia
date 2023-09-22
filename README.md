@@ -1,2 +1,3 @@
-# Cornucopia
- Just a website with Techology, Software and Hardware Information.
+# techdocs
+
+A website for technical writing

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oracle Linux on </title>
+    <link>https://barophobia.co.uk/linux/oracle-linux/</link>
+    <description>Recent content in Oracle Linux on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://barophobia.co.uk/linux/oracle-linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Updating Oracle Linux</title>
+      <link>https://barophobia.co.uk/linux/oracle-linux/updateoffline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/linux/oracle-linux/updateoffline/</guid>
+      <description>Updating Oracle Linux Check your current Oracle Linux Version: cat /etc/oracle-release The output of this command will be the version of your machine.
+With internet: With internet updating and upgrading oracle linux is as simple as using the following command
+sudo yum update -y &amp;amp;&amp;amp; sudo yum upgrade -y This will check you have the latest update information. The upgrade command will actually upgrade the software on your machine.
+Without internet: To complete an offline upgrade of an oracle linux system there is a requirement that you have the oracle ISO file that is a higher version.</description>
+    </item>
+    
+  </channel>
+</rss>

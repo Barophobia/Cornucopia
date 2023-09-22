@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on </title>
+    <link>https://barophobia.co.uk/linux/</link>
+    <description>Recent content in Linux on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Dec 2021 16:51:31 +0000</lastBuildDate>
+    
+	<atom:link href="https://barophobia.co.uk/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to mount a network share</title>
+      <link>https://barophobia.co.uk/linux/mountnfs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/linux/mountnfs/</guid>
+      <description>How to mount a network share NFS Mounting an NFS share requires nfs-common. To install:
+apt install nfs-common To mount an NFS network share use the command below:
+mount -t nfs -o 192.168.0.100:/backups Replace the IP Address and share location to your required config.</description>
+    </item>
+    
+    <item>
+      <title>Maintaining a Linux Server</title>
+      <link>https://barophobia.co.uk/linux/maintainingaserver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/linux/maintainingaserver/</guid>
+      <description>Maintaining a Linux Server Keep packages up to date All Linux distributions use package managers to easily be able to install and update packages without having to manually download them.
+On debian the package manager is apt.
+apt update apt upgrade Keeping the server up to date should be minimum maintenance required for your server as not only do up to date packages often offer more features but they also fix security bugs and vulnerabilities.</description>
+    </item>
+    
+    <item>
+      <title>Uncomplicated Firewall (UFW)</title>
+      <link>https://barophobia.co.uk/linux/ufw/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/linux/ufw/</guid>
+      <description>UFW Installation: Debian:
+apt install ufw Check the status of UFW: You can check the status of ufw by running:
+ufw status Without any changes it will most likely report back &amp;lsquo;Status: Inactive&amp;rsquo;
+Set up UFW to allow SSH or port 22: Here we will set up UFW to allow port 22 (SSH) connections so that once the UFW is enabled you are still able to SSH into the machine.</description>
+    </item>
+    
+    <item>
+      <title>Using DNSMasq for DNS</title>
+      <link>https://barophobia.co.uk/linux/dnsmasq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/linux/dnsmasq/</guid>
+      <description>Install DNSMasq Install DNSMasq Debian:
+apt install dnsmasq </description>
+    </item>
+    
+    <item>
+      <title>WIP How to install Arch Linux</title>
+      <link>https://barophobia.co.uk/linux/installarch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://barophobia.co.uk/linux/installarch/</guid>
+      <description>How to install Arch Linux Arch linux is a sort of &amp;lsquo;build it yourself&amp;rsquo; OS allowing you to create the environment you desire, I use this to have a low resource requirement extending the life of &amp;lsquo;old&amp;rsquo; hardware but it can be used for more than that.
+Steps to install Arch Linux Download the Arch Linux ISO from the website. https://www.archlinux.org
+If you are building a virtual machine just mount the ISO to the machine and boot to it.</description>
+    </item>
+    
+  </channel>
+</rss>
