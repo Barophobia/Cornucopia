@@ -66,4 +66,4 @@ openssl req -new -node -out rui.csr -key rui.key -config openssl.cnf
 
 - Now take the CSR and sign it.
 
-If you need to know how to import the signed certificate go here - [Applying to certificates to ESXi Hosts]({{< ref "applying-certificates" >}})
+If you need to know how to import the signed certificate go here - [Applying certificates to ESXi Hosts]({{< ref "applying-certificates" >}})
