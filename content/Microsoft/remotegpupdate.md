@@ -4,7 +4,6 @@ chapter = true
 +++
 
 ### Steps to force a remote group policy update 
-
 - Open GPMC
 - Right-Click the OU that you want to update
 - Click 'Group Policy Update'
