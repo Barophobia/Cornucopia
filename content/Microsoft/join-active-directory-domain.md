@@ -3,7 +3,7 @@ title = "Join AD Domain"
 chapter = true
 +++
 
-### Verify you can resolve the Active Directory Domain Controller FQDN (Optional)
+### Verify you can resolve the Active Directory Domain Controller FQDN - (Optional)
 
 Open a command prompt and ping your ADDC FQDN, replace DC.network.com in the command below.
 ```
