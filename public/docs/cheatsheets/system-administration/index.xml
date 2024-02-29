@@ -1,0 +1,40 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – System Administration</title>
+    <link>//localhost:1313/docs/cheatsheets/system-administration/</link>
+    <description>Recent content in System Administration on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/cheatsheets/system-administration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Powershell Cheatsheet</title>
+      <link>//localhost:1313/docs/cheatsheets/system-administration/powershell/powershell-cheatsheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/cheatsheets/system-administration/powershell/powershell-cheatsheet/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;powershell&#34;&gt;Powershell&lt;/h1&gt;
+&lt;p&gt;a lot of powershell commands have aliases that are similar to linux.&lt;/p&gt;
+&lt;p&gt;Basic&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ls              # Shows current directory
+cd &amp;lt;DIRECTORY&amp;gt;  # Change directory to specified directory
+mkdir &amp;lt;NEWDIRECTORYNAME&amp;gt; # Create a new folder
+copy &amp;lt;FILETOCOPY&amp;gt; &amp;lt;PATHTOCOPYTO&amp;gt;    # Copy a folder/file to a different place
+move &amp;lt;FILETOMOVE&amp;gt; &amp;lt;PATHTOCOPYTO&amp;gt;    # Move a folder/file to a different place
+rm &amp;lt;FILETOREMOVE&amp;gt;   # Remove a file 
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

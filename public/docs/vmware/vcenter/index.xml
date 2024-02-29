@@ -1,0 +1,103 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – vCenter</title>
+    <link>//localhost:1313/docs/vmware/vcenter/</link>
+    <description>Recent content in vCenter on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/vmware/vcenter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Full Custom Certification</title>
+      <link>//localhost:1313/docs/vmware/vcenter/custom-certificate-mode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/vmware/vcenter/custom-certificate-mode/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This document will detail how to change to custom certificate mode and then apply a custom certificate to vCenter and ESXi hosts. In some environments there may be the requirement to have all services certified by a trusted CA and not be able to have a subordinate CA (Hybrid Mode) this solution allows you to certify your hosts as required.&lt;/p&gt;
+&lt;p&gt;Before changing vCenter to custom certificate mode, the vCenter will try to apply its own certificates to the hosts it manages, changing to custom certificate mode stops this behaviour and allows the administrator to apply custom certificates to the host without them being overwritten when connected to a vCenter instance.&lt;/p&gt;
+&lt;h2 id=&#34;changing-vcenters-certificate-mode&#34;&gt;Changing vCenter&amp;rsquo;s certificate mode&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Select your vCenter system in vSphere Client.&lt;/li&gt;
+&lt;li&gt;Click Configure and under Settings, click Advanced Settings.&lt;/li&gt;
+&lt;li&gt;Click Edit Settings.&lt;/li&gt;
+&lt;li&gt;click the Filter icon in the name column and in the field enter:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vpxd.certmgmt
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Change the value of vpxd.certmgmt.mode to custom.&lt;/li&gt;
+&lt;li&gt;Restart the vCenter Server Service.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;applying-certificates-to-esxi-hosts&#34;&gt;Applying certificates to ESXi Hosts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Log in with root.&lt;/li&gt;
+&lt;li&gt;Go to Manage &amp;gt; Security &amp;amp; Users &amp;gt; Certificates.&lt;/li&gt;
+&lt;li&gt;Select Import new Certificate &amp;gt; Generate FQDN request.&lt;/li&gt;
+&lt;li&gt;Copy and paste FQDN request into a text file and rename it with the .csr extension.&lt;/li&gt;
+&lt;li&gt;Send file over to CA host so the CA can sign it.
+&lt;ul&gt;
+&lt;li&gt;Note: You can add the IP address of the ESXi host to the Subject Alternate Name to allow secure connections by specifying the FQDN (set to the CN) or the IP (set to the SAN).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Send back signed cert in .pem format (Base64 ASCII encoded).&lt;/li&gt;
+&lt;li&gt;Open the certificate file with a text editor.&lt;/li&gt;
+&lt;li&gt;Back in ESXi under root privilege, go to Manage &amp;gt; Security &amp;amp; Users &amp;gt; Certificates.&lt;/li&gt;
+&lt;li&gt;Select Import new Certificate.&lt;/li&gt;
+&lt;li&gt;Copy and paste the .pem content into an empty box and select Import.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Troubleshooting vCenter</title>
+      <link>//localhost:1313/docs/vmware/vcenter/vcenter_troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/vmware/vcenter/vcenter_troubleshooting/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;vcenter-booting-to-a-login-prompt&#34;&gt;vCenter booting to a login prompt&lt;/h2&gt;
+&lt;p&gt;If vCenter is booting to a login prompt these are the steps you can take to troubleshoot and fix the issue:&lt;/p&gt;
+&lt;h3 id=&#34;first-method&#34;&gt;First method&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;try to navigate to &amp;lt;IP_ADDRESS&amp;gt;:5480 in your web browser, from this page you should be able to remediate any issues, check health and running services.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;second-method&#34;&gt;Second method&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Log into the vCenter using root and the password set when creating the appliance (Reset the root password using the GRUB reset method if required)&lt;/li&gt;
+&lt;li&gt;type:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;service-control --start --all
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Once the services have started you should be able to get to the web address, if this doesn&amp;rsquo;t work go to the next method.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;third-method&#34;&gt;Third Method&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;In the vCenter shell enter:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl --list-unit-files | grep masked
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;If services are showing as masked then run this command to unmask them:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;find /etc/systemd/system/ -lname &amp;#39;/dev/null&amp;#39; -exec rm {} \\;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Now check all the services are unmasked and run:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;service-control --start --all
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

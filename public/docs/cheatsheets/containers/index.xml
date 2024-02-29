@@ -1,0 +1,52 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – Containers</title>
+    <link>//localhost:1313/docs/cheatsheets/containers/</link>
+    <description>Recent content in Containers on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/cheatsheets/containers/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Docker Cheatsheet</title>
+      <link>//localhost:1313/docs/cheatsheets/containers/docker/docker-cheatsheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/cheatsheets/containers/docker/docker-cheatsheet/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;docker&#34;&gt;Docker&lt;/h1&gt;
+&lt;h3 id=&#34;docker-basics&#34;&gt;Docker basics&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker start &amp;lt;CONTAINER&amp;gt; #start container
+docker restart &amp;lt;CONTAINER&amp;gt; #restart container
+docker stop &amp;lt;CONTAINER&amp;gt; #stop container
+docker rm &amp;lt;CONTAINER&amp;gt; #remove a container
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;listing-containers&#34;&gt;Listing containers&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker ps       #list running containers
+docker ps -a    #list all containers
+docker ps -s    #list running containers with system specs
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;image-management&#34;&gt;Image management&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker images       #list local stored images
+docker rmi &amp;lt;IMAGE&amp;gt;  #remove a local image
+docker save -o &amp;lt;TARBALL&amp;gt; &amp;lt;IMAGE&amp;gt; #Save a local image as a tarball so you can archive or inspect the image.
+docker history &amp;lt;IMAGE&amp;gt; #Shows image creation history
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;building-images&#34;&gt;Building Images&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker build .
+docker build --build-arg ARG=VALUE . # pass variables with build arg
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;networks&#34;&gt;Networks&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker network ls      # shows docker network info
+docker network rm &amp;lt;NETWORKID&amp;gt; #Remove a network using the ID
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

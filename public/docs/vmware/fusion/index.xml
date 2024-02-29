@@ -1,0 +1,43 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – Fusion</title>
+    <link>//localhost:1313/docs/vmware/fusion/</link>
+    <description>Recent content in Fusion on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/vmware/fusion/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Install Fusion</title>
+      <link>//localhost:1313/docs/vmware/fusion/install-fusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/vmware/fusion/install-fusion/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;fusion&#34;&gt;Fusion&lt;/h1&gt;
+&lt;h3 id=&#34;install-using-brew&#34;&gt;Install using brew:&lt;/h3&gt;
+&lt;p&gt;If you have brew on mac then just run this command to install vmware-fusion.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install --cask vmware-fusion
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;install-using-dmg-provided-by-vmware&#34;&gt;Install using DMG provided by VMWare&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Download the file from the link below:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.vmware.com/uk/products/fusion/fusion-evaluation.html&#34;&gt;https://www.vmware.com/uk/products/fusion/fusion-evaluation.html&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open the DMG file and double click install, the installer will ask for your password and automatically install.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

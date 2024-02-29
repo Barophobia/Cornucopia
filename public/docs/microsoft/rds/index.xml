@@ -1,0 +1,48 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – RDS</title>
+    <link>//localhost:1313/docs/microsoft/rds/</link>
+    <description>Recent content in RDS on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/microsoft/rds/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Reset a Domain Password in RDWeb</title>
+      <link>//localhost:1313/docs/microsoft/rds/resetpass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/rds/resetpass/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;resetting-a-domain-password-in-rdweb&#34;&gt;Resetting a domain password in RDWeb&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Open IIS on the Server with RDWeb service installed&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to [Server Name] –&amp;gt; Sites –&amp;gt; Default Web Site –&amp;gt; RDWeb –&amp;gt; Pages and open the section Application Settings.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;find &lt;em&gt;PasswordChangeEnabled&lt;/em&gt; and change the value to true&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Restart the IIS Service&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now you can navigate to the RDWeb page and change your password
+https://[SERVERNAME]/RDWeb/Pages/en-US/password.aspx&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

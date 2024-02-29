@@ -1,0 +1,111 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – Oracle Linux</title>
+    <link>//localhost:1313/docs/linux/oracle-linux/</link>
+    <description>Recent content in Oracle Linux on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/linux/oracle-linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Updating Oracle Linux</title>
+      <link>//localhost:1313/docs/linux/oracle-linux/updateoffline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/linux/oracle-linux/updateoffline/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;updating-oracle-linux&#34;&gt;Updating Oracle Linux&lt;/h1&gt;
+&lt;h2 id=&#34;check-your-current-oracle-linux-version&#34;&gt;Check your current Oracle Linux Version:&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat /etc/oracle-release
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output of this command will be the version of your machine.&lt;/p&gt;
+&lt;h2 id=&#34;with-internet&#34;&gt;With internet:&lt;/h2&gt;
+&lt;p&gt;With internet updating and upgrading oracle linux is as simple as using the following command&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum update -y &amp;amp;&amp;amp; sudo yum upgrade -y
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will check you have the latest update information.
+The upgrade command will actually upgrade the software on your machine.&lt;/p&gt;
+&lt;h2 id=&#34;without-internet&#34;&gt;Without internet:&lt;/h2&gt;
+&lt;p&gt;To complete an offline upgrade of an oracle linux system there is a requirement that you have the oracle ISO file that is a higher version.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mount the ISO to a mount point (I am using /mnt/iso)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir /mnt/iso
+mount -o ro ORACLE_ISO.iso /mnt/iso
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Disable the Online repository&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo vi /etc/yum.repos.d/public.repo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Inside this file there will be a list of repos, change the enable variable to 0 (enable=0)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a local repo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo vi local.repo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Inside the new file write this:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[localRepo]
+name=localRepo
+baseurl=file:///mnt/iso/
+gpgcheck=0
+enabled=1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now save and exit the file.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clean the yum package manager cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum clean all
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Check the local repo is enable and being used&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum repolist all
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In the output you should see the localRepo and it should be enabled.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Now update the system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum update -y --skip-broken
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Restart the system to ensure the updates are installed as expected.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;or&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;after-offline-update-clean-up&#34;&gt;After offline update clean up&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;unmount the ISO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;umount /mnt/iso
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;clean the yum cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;yum clean all
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Remove the ISO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;rm ORACLE_ISO
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After completing these steps you could go further and remove the local repo but I wouldn&amp;rsquo;t recommend it as you can use the same repo in the future to make upgrades a bit smoother as long as you mount in the same directory.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: About Oracle Linux</title>
+      <link>//localhost:1313/docs/linux/oracle-linux/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/linux/oracle-linux/about/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;about-oracle-linux&#34;&gt;About Oracle Linux&lt;/h1&gt;
+&lt;p&gt;Oracle linux or Oracle Enterprise Linux (OEL) is a linux distribution freely distributed by Oracle. It is compiled from Red Hat (RHEL) source code.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

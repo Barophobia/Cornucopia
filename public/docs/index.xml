@@ -1,0 +1,1168 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – Documentation</title>
+    <link>//localhost:1313/docs/</link>
+    <description>Recent content in Documentation on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Creating a reverse proxy</title>
+      <link>//localhost:1313/docs/webservers/nginx/reverseproxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/webservers/nginx/reverseproxy/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;reverse-proxy-with-nginx&#34;&gt;Reverse proxy with nginx&lt;/h1&gt;
+&lt;p&gt;In this example I will be making a reverse proxy for a calibre server so anywhere it references that service is a variable of whatever service you are setting up.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Create a new file inside /etc/nginx/sites-available/calibre&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now edit the file and add the following&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;server {
+    listen 80;
+    client_max_body_size 64M; # To upload large books (Change where required)
+    server_name calibre.example.com ;
+
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can now navigate to the server_name address you set and it will work as expected.&lt;/p&gt;
+&lt;p&gt;It is recommended to issue a cert and use HTTPS this can be done with certbot.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Encrypt/Decrypt Files</title>
+      <link>//localhost:1313/docs/gpg/encrypt_decrypt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/gpg/encrypt_decrypt/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;encrypt-a-file&#34;&gt;Encrypt a file:&lt;/h2&gt;
+&lt;p&gt;This will encrypt a file, the -r flag is the recipient of the file to use this locally you can provide your own username.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg -e -r &amp;#34;USER&amp;#34; example.txt 
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;decrypt-a-file&#34;&gt;Decrypt a file:&lt;/h2&gt;
+&lt;p&gt;This will decrypt the gpg file provided in the command once you have provided the passphrase.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg -d -o example.txt example.txt.gpg 
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Generate GPG Keys</title>
+      <link>//localhost:1313/docs/gpg/genkeys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/gpg/genkeys/</guid>
+      <description>
+        
+        
+        &lt;p&gt;To get start with GPG you will need to generate a secret and public key, this will require some security information.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --full-generate-key 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;OR&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --gen-key
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: How to configure NXLog</title>
+      <link>//localhost:1313/docs/nxlog/howtoconfigurenxlog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/nxlog/howtoconfigurenxlog/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;how-to-configure-nxlog&#34;&gt;How to configure NXLog&lt;/h1&gt;
+&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Edit the nxlog.conf file inside C:\Program Files (x86)\nxlog\conf&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At the bottom of the notepad will be some commented out lines that are similar to the lines below, remove the hashes so they arent commented out and make sure the output is correctly configured to the syslog server&amp;rsquo;s IP using the correct Module (TCP/UDP) and Port.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When you edit the nxlog.conf file make sure you restart the nxlog service.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Modules section
+&amp;lt;Input in&amp;gt;
+    Module  im_msvistalog
+&amp;lt;/Input&amp;gt;
+
+&amp;lt;Output out&amp;gt;
+    Module  om_udp
+    Host    IP_ADDRESS
+    Port    514
+    Exec    to_syslog_snare();
+&amp;lt;/Output&amp;gt;
+
+# Route section
+&amp;lt;Route 1&amp;gt;
+    Path    in =&amp;gt; out
+&amp;lt;/Route&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;sending-logs-as-json&#34;&gt;Sending Logs as JSON&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Edit nxlog.conf and change the Extension and Output to look like the lines below&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;Extension json&amp;gt;
+    Module    xm_json
+&amp;lt;/Extension&amp;gt;
+
+&amp;lt;Output out&amp;gt;
+    Module    om_tcp
+    Host      IP_ADDRESS
+    Port      514
+    Exec      to_json();
+&amp;lt;/Output&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: How to install NXLog</title>
+      <link>//localhost:1313/docs/nxlog/howtoinstallnxlog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/nxlog/howtoinstallnxlog/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;how-to-install-nxlog&#34;&gt;How to install NXLog&lt;/h1&gt;
+&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
+&lt;p&gt;Download NXLog from the website - &lt;a href=&#34;https://nxlog.co/products/nxlog-community-edition/download&#34;&gt;NXLog Downloads&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Install using the .exe you just downloaded, if you choose a custom install path make sure you remember where it is.&lt;/p&gt;
+&lt;p&gt;Once you have configured the nxlog.conf start the nxlog service in the services applet.&lt;/p&gt;
+&lt;p&gt;If you have any issues there is a log file in the INSTALL_PATH\data\nxlog.txt this should give some information on what the issue is.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Important Directories and Files</title>
+      <link>//localhost:1313/docs/webservers/nginx/dirandfiles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/webservers/nginx/dirandfiles/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;important-nginx-directories-and-files&#34;&gt;Important nginx Directories and files&lt;/h2&gt;
+&lt;h3 id=&#34;content&#34;&gt;Content&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/var/www/html
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The actual web content, which by default only consists of the default Nginx page you saw earlier, is served out of the /var/www/html directory. This can be changed by altering Nginx configuration files.&lt;/p&gt;
+&lt;h3 id=&#34;server-configuration&#34;&gt;Server Configuration&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The Nginx configuration directory. All of the Nginx configuration files reside here.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx/nginx.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The main Nginx configuration file. This can be modified to make changes to the Nginx global configuration.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx/sites-available/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The directory where per-site server blocks can be stored. Nginx will not use the configuration files found in this directory unless they are linked to the sites-enabled directory. Typically, all server block configuration is done in this directory, and then enabled by linking to the other directory.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx/sites-enabled/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The directory where enabled per-site server blocks are stored. Typically, these are created by linking to configuration files found in the sites-available directory.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx/snippets
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This directory contains configuration fragments that can be included elsewhere in the Nginx configuration. Potentially repeatable configuration segments are good candidates for refactoring into snippets.&lt;/p&gt;
+&lt;h3 id=&#34;server-logs&#34;&gt;Server Logs&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/var/log/nginx/access.log
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Every request to your web server is recorded in this log file unless Nginx is configured to do otherwise.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/var/log/nginx/error.log
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Any Nginx errors will be recorded in this log.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Install Fusion</title>
+      <link>//localhost:1313/docs/vmware/fusion/install-fusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/vmware/fusion/install-fusion/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;fusion&#34;&gt;Fusion&lt;/h1&gt;
+&lt;h3 id=&#34;install-using-brew&#34;&gt;Install using brew:&lt;/h3&gt;
+&lt;p&gt;If you have brew on mac then just run this command to install vmware-fusion.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install --cask vmware-fusion
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;install-using-dmg-provided-by-vmware&#34;&gt;Install using DMG provided by VMWare&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Download the file from the link below:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.vmware.com/uk/products/fusion/fusion-evaluation.html&#34;&gt;https://www.vmware.com/uk/products/fusion/fusion-evaluation.html&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open the DMG file and double click install, the installer will ask for your password and automatically install.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Installing Nginx</title>
+      <link>//localhost:1313/docs/webservers/nginx/install-nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/webservers/nginx/install-nginx/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;installing-nginx&#34;&gt;Installing Nginx&lt;/h1&gt;
+&lt;h2 id=&#34;installing-nginx-on-linux&#34;&gt;Installing nginx on Linux&lt;/h2&gt;
+&lt;p&gt;Ubuntu:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You may need to adjust UFW rules to allow access to the webserver.&lt;/p&gt;
+&lt;h2 id=&#34;checking-if-your-webserver-is-running&#34;&gt;Checking if your webserver is running&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl status nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;managing-the-nginx-process&#34;&gt;Managing the nginx process&lt;/h2&gt;
+&lt;p&gt;To stop nginx:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl stop nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To start nginx:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl start nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To restart nginx:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl restart nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you only make configuration changes you can reload without dropping connections:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl reload nginx
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: List stored Keys</title>
+      <link>//localhost:1313/docs/gpg/viewkeys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/gpg/viewkeys/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This will list the current keys in your trust database depending on the key you would like to see:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --list-secret-keys 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;OR&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --list-keys
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Maintaining a Linux Server</title>
+      <link>//localhost:1313/docs/linux/maintainingaserver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/linux/maintainingaserver/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;maintaining-a-linux-server&#34;&gt;Maintaining a Linux Server&lt;/h1&gt;
+&lt;h2 id=&#34;keep-packages-up-to-date&#34;&gt;Keep packages up to date&lt;/h2&gt;
+&lt;p&gt;All Linux distributions use package managers to easily be able to install and update packages without having to manually download them.&lt;/p&gt;
+&lt;p&gt;On debian the package manager is apt.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt update
+apt upgrade
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Keeping the server up to date should be minimum maintenance required for your server as not only do up to date packages often offer more features but they also fix security bugs and vulnerabilities.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Uncomplicated Firewall (UFW)</title>
+      <link>//localhost:1313/docs/linux/ufw/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/linux/ufw/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;ufw&#34;&gt;UFW&lt;/h1&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation:&lt;/h2&gt;
+&lt;p&gt;Debian:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install ufw
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;check-the-status-of-ufw&#34;&gt;Check the status of UFW:&lt;/h2&gt;
+&lt;p&gt;You can check the status of ufw by running:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw status
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Without any changes it will most likely report back &lt;strong&gt;&amp;lsquo;Status: Inactive&amp;rsquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;set-up-ufw-to-allow-ssh-or-port-22&#34;&gt;Set up UFW to allow SSH or port 22:&lt;/h2&gt;
+&lt;p&gt;Here we will set up UFW to allow port 22 (SSH) connections so that once the UFW is enabled you are still able to SSH into the machine.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First lets deny all incoming connections by default.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw default deny incoming
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Now lets allow ssh or port 22 - there are 2 ways of doing this.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw allow in ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;or&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw allow in 22
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Once this is set we can enable the UFW.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw enable
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;view-all-your-rules&#34;&gt;View all your rules:&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw status verbose
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;delete-a-rule&#34;&gt;Delete a rule:&lt;/h2&gt;
+&lt;p&gt;To delete a rule for example the SSH rule, run:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw delete allow in &amp;#39;SSH&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once the rule is deleted, reload UFW&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw reload
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;disable-ufw&#34;&gt;Disable UFW:&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw disable
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Updating Oracle Linux</title>
+      <link>//localhost:1313/docs/linux/oracle-linux/updateoffline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/linux/oracle-linux/updateoffline/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;updating-oracle-linux&#34;&gt;Updating Oracle Linux&lt;/h1&gt;
+&lt;h2 id=&#34;check-your-current-oracle-linux-version&#34;&gt;Check your current Oracle Linux Version:&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat /etc/oracle-release
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output of this command will be the version of your machine.&lt;/p&gt;
+&lt;h2 id=&#34;with-internet&#34;&gt;With internet:&lt;/h2&gt;
+&lt;p&gt;With internet updating and upgrading oracle linux is as simple as using the following command&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum update -y &amp;amp;&amp;amp; sudo yum upgrade -y
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will check you have the latest update information.
+The upgrade command will actually upgrade the software on your machine.&lt;/p&gt;
+&lt;h2 id=&#34;without-internet&#34;&gt;Without internet:&lt;/h2&gt;
+&lt;p&gt;To complete an offline upgrade of an oracle linux system there is a requirement that you have the oracle ISO file that is a higher version.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mount the ISO to a mount point (I am using /mnt/iso)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir /mnt/iso
+mount -o ro ORACLE_ISO.iso /mnt/iso
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Disable the Online repository&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo vi /etc/yum.repos.d/public.repo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Inside this file there will be a list of repos, change the enable variable to 0 (enable=0)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a local repo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo vi local.repo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Inside the new file write this:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[localRepo]
+name=localRepo
+baseurl=file:///mnt/iso/
+gpgcheck=0
+enabled=1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now save and exit the file.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clean the yum package manager cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum clean all
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Check the local repo is enable and being used&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum repolist all
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In the output you should see the localRepo and it should be enabled.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Now update the system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum update -y --skip-broken
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Restart the system to ensure the updates are installed as expected.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;or&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;after-offline-update-clean-up&#34;&gt;After offline update clean up&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;unmount the ISO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;umount /mnt/iso
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;clean the yum cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;yum clean all
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Remove the ISO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;rm ORACLE_ISO
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After completing these steps you could go further and remove the local repo but I wouldn&amp;rsquo;t recommend it as you can use the same repo in the future to make upgrades a bit smoother as long as you mount in the same directory.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Using DNSMasq for DNS</title>
+      <link>//localhost:1313/docs/linux/dnsmasq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/linux/dnsmasq/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;install-dnsmasq&#34;&gt;Install DNSMasq&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Install DNSMasq&lt;/strong&gt;
+Debian:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install dnsmasq
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Terraform Cheatsheet</title>
+      <link>//localhost:1313/docs/cheatsheets/automation/terraform/terra_syntax/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/cheatsheets/automation/terraform/terra_syntax/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;terraform&#34;&gt;Terraform&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;terraform plan          # dry run
+terraform apply         # apply configuration changes
+terraform refresh       # synchronise state with the resource
+terraform destroy       # destroy current configuration
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;state-management&#34;&gt;State management&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;terraform state list # this will show the resources in the state file
+terraform state rm &amp;lt;RESOURCE&amp;gt; # remove a resource from the state list
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;correcting-formatting&#34;&gt;Correcting formatting&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;terraform fmt #reformats .tf files for better readability
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;remote-exec&#34;&gt;Remote Exec&lt;/h3&gt;
+&lt;p&gt;This is used for remotely executing a command.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;provisioner &amp;#34;remote-exec&amp;#34; {
+    inline = [
+         &amp;#34;apt install neofetch&amp;#34;
+    ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Ansible Syntax</title>
+      <link>//localhost:1313/docs/cheatsheets/automation/ansible/syntax/</link>
+      <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/cheatsheets/automation/ansible/syntax/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;ansible&#34;&gt;Ansible&lt;/h1&gt;
+&lt;h3 id=&#34;playbooks&#34;&gt;Playbooks&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ansible-playbook &amp;lt;YAML&amp;gt; -i &amp;lt;HOSTSFILE&amp;gt;    # Run on all hosts from specified hosts file
+ansible-playbook &amp;lt;YAML&amp;gt; -C                # Test run
+ansible-playbook &amp;lt;YAML&amp;gt; -C -D             # Dry run
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;check-syntax&#34;&gt;Check Syntax&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ansible-playbook --syntax-check &amp;lt;YAML&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;execute-commands-on-hosts&#34;&gt;Execute commands on hosts&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ansible &amp;lt;HOSTGROUP&amp;gt; -a &amp;lt;COMMAND&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ansible all -a &amp;#34;neofetch&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Install KMS</title>
+      <link>//localhost:1313/docs/microsoft/kms/install/</link>
+      <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/kms/install/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;installing-kms&#34;&gt;Installing KMS&lt;/h3&gt;
+&lt;p&gt;These steps remain the same whether you are installing on Windows Server 2008 R2, 2012, 2012 R2, 2016, 2019 or 2022.&lt;/p&gt;
+&lt;h4 id=&#34;pre-requisites&#34;&gt;Pre-requisites&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Decide which server will host the KMS. It is recommended to utilise the latest server version you have access to, with the highest patch level.&lt;/li&gt;
+&lt;li&gt;Administrator access to CMD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;installation-process&#34;&gt;Installation process&lt;/h4&gt;
+&lt;p&gt;Logon to the server and open an elevated command prompt (without the elevation you will not be able to complete the process)&lt;/p&gt;
+&lt;p&gt;change directory to the system32 folder:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd C:\windows\system32
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Install your product key:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cscript slmgr.vbs /ipk *PRODUCT_KEY*
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cscript slmgr.vbs /ato
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The KMS should now function as expected.&lt;/p&gt;
+&lt;p&gt;To validate that clients are being activated use:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cscript slmgr.vbs /dlv
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: General Syntax</title>
+      <link>//localhost:1313/docs/microsoft/kms/general/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/kms/general/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Useful commands when using KMS&lt;/p&gt;
+&lt;h3 id=&#34;check-the-status-of-windows-activation&#34;&gt;Check the Status of Windows Activation&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;slmgr.vbs /dli
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: About Oracle Linux</title>
+      <link>//localhost:1313/docs/linux/oracle-linux/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/linux/oracle-linux/about/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;about-oracle-linux&#34;&gt;About Oracle Linux&lt;/h1&gt;
+&lt;p&gt;Oracle linux or Oracle Enterprise Linux (OEL) is a linux distribution freely distributed by Oracle. It is compiled from Red Hat (RHEL) source code.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Applying Certificates</title>
+      <link>//localhost:1313/docs/vmware/esxi/applying-certificates/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/vmware/esxi/applying-certificates/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;applying-certificates-to-esxi-hosts-through-the-web-ui&#34;&gt;Applying certificates to ESXi Hosts through the web UI&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Log in with root.&lt;/li&gt;
+&lt;li&gt;Go to Manage &amp;gt; Security &amp;amp; Users &amp;gt; Certificates.&lt;/li&gt;
+&lt;li&gt;Select Import new Certificate &amp;gt; Generate FQDN request.&lt;/li&gt;
+&lt;li&gt;Copy and paste FQDN request into a text file and rename it with the .csr extension.&lt;/li&gt;
+&lt;li&gt;Send file over to CA host so the CA can sign it.
+&lt;ul&gt;
+&lt;li&gt;Note: You can add the IP address of the ESXi host to the Subject Alternate Name to allow secure connections by specifying the FQDN (set to the CN) or the IP (set to the SAN).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Send back signed cert in .pem format (Base64 ASCII encoded).&lt;/li&gt;
+&lt;li&gt;Open the certificate file with a text editor.&lt;/li&gt;
+&lt;li&gt;Back in ESXi under root privilege, go to Manage &amp;gt; Security &amp;amp; Users &amp;gt; Certificates.&lt;/li&gt;
+&lt;li&gt;Select Import new Certificate.&lt;/li&gt;
+&lt;li&gt;Copy and paste the .pem content into an empty box and select Import.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;apply-certificates-to-esxi-hosts-through-the-cli&#34;&gt;Apply certificates to ESXi Hosts through the CLI&lt;/h3&gt;
+&lt;p&gt;This assumes you have already generated a CSR and signed it using a CA. If you haven&amp;rsquo;t use the guide here - &lt;a href=&#34;//localhost:1313/docs/vmware/esxi/gencsr/&#34;&gt;Generating a CSR for ESXi&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SSH to the host.&lt;/li&gt;
+&lt;li&gt;Change directory /etc/vmware/ssl
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd /etc/vmware/ssl
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;Open rui.key in vi and paste the key you used to create your CSR, then save and quit using :wq&lt;/li&gt;
+&lt;li&gt;Open rui.cer in vi and paste the signed certificate contents into the box. (Make sure the certificate is in Base64)&lt;/li&gt;
+&lt;li&gt;Once complete reboot the host and navigate to the webpage to see if the certificate was succesfully imported.&lt;/li&gt;
+&lt;li&gt;Delete the /csrstore, made if you used my guide to create the CSR.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Configure time zone</title>
+      <link>//localhost:1313/docs/linux/ubuntu/configure-time-zone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/linux/ubuntu/configure-time-zone/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;check-the-current-time-zone&#34;&gt;Check the current time zone&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;date
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;configuring-the-time-zone-used&#34;&gt;Configuring the time zone used&lt;/h3&gt;
+&lt;p&gt;To configure the timezone in ubuntu, timedatectl is used.&lt;/p&gt;
+&lt;p&gt;Find the time zone from the list using the command below&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;timedatectl list-timezones
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once you have the time zone name for the time zone required use the command below to set it, change America/Goose_Bay to your desired timezone.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo timedatectl set-timezone America/Goose_Bay
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now use the command listed in the first section again to check your new setting.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Disabling Cipher Suites</title>
+      <link>//localhost:1313/docs/microsoft/disabling-cipher-suites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/disabling-cipher-suites/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;check-active-cipher-suites-using-powershell&#34;&gt;Check active cipher suites using powershell&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Get-TlsCipherSuite | format-table Name
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will give you a list of active cipher suites on the device.&lt;/p&gt;
+&lt;h2 id=&#34;disabling-a-cipher-suite&#34;&gt;Disabling a cipher suite&lt;/h2&gt;
+&lt;p&gt;For this example I will disable the &amp;lsquo;TLS_RSA_WITH_3DES_EDE_CBC_SHA&amp;rsquo; cipher suite as this is classed as vulnerable to a SWEET32 attack.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Disable-TlsCipherSuite -Name &amp;#34;TLS_RSA_WITH_3DES_EDE_CBC_SHA&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The command will not give any terminal output but you can use the Get-TlsCipherSuite command to make sure it is deactivated.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Docker Cheatsheet</title>
+      <link>//localhost:1313/docs/cheatsheets/containers/docker/docker-cheatsheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/cheatsheets/containers/docker/docker-cheatsheet/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;docker&#34;&gt;Docker&lt;/h1&gt;
+&lt;h3 id=&#34;docker-basics&#34;&gt;Docker basics&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker start &amp;lt;CONTAINER&amp;gt; #start container
+docker restart &amp;lt;CONTAINER&amp;gt; #restart container
+docker stop &amp;lt;CONTAINER&amp;gt; #stop container
+docker rm &amp;lt;CONTAINER&amp;gt; #remove a container
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;listing-containers&#34;&gt;Listing containers&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker ps       #list running containers
+docker ps -a    #list all containers
+docker ps -s    #list running containers with system specs
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;image-management&#34;&gt;Image management&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker images       #list local stored images
+docker rmi &amp;lt;IMAGE&amp;gt;  #remove a local image
+docker save -o &amp;lt;TARBALL&amp;gt; &amp;lt;IMAGE&amp;gt; #Save a local image as a tarball so you can archive or inspect the image.
+docker history &amp;lt;IMAGE&amp;gt; #Shows image creation history
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;building-images&#34;&gt;Building Images&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker build .
+docker build --build-arg ARG=VALUE . # pass variables with build arg
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;networks&#34;&gt;Networks&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker network ls      # shows docker network info
+docker network rm &amp;lt;NETWORKID&amp;gt; #Remove a network using the ID
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Enable Remote Desktop</title>
+      <link>//localhost:1313/docs/microsoft/enable-rdp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/enable-rdp/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;Open Server Manager and click Local Server on the left hand menu panel&lt;/li&gt;
+&lt;li&gt;Click the Remote Desktop property in the Properties panel (Usually Disabled by default), the will open a System Properties window.&lt;/li&gt;
+&lt;li&gt;In the System Properties window, select Allow remote connections to this computer. A window will open telling you that firewall rule exceptions will be enabled for Remote Desktop, click OK.&lt;/li&gt;
+&lt;li&gt;On the System Properties window click Apply and then OK.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now test you can RDP to the server using another device.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Force a remote group policy update</title>
+      <link>//localhost:1313/docs/microsoft/remotegpupdate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/remotegpupdate/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;steps-to-force-a-remote-group-policy-update&#34;&gt;Steps to force a remote group policy update&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Open GPMC&lt;/li&gt;
+&lt;li&gt;Right-Click the OU that you want to update&lt;/li&gt;
+&lt;li&gt;Click &amp;lsquo;Group Policy Update&amp;rsquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The remote Group Policy refresh updates all Group Policy settings, including security settings that are set on a group of remote computers, by using the functionality that is added to the context menu for an OU in the Group Policy Management Console (GPMC). When you select an OU to remotely refresh the Group Policy settings on all the computers in that OU, the following operations happen:&lt;/p&gt;
+&lt;p&gt;An Active Directory query returns a list of all computers that belong to that OU.&lt;/p&gt;
+&lt;p&gt;For each computer that belongs to the selected OU, a WMI call retrieves the list of signed in users.&lt;/p&gt;
+&lt;p&gt;A remote scheduled task is created to run GPUpdate.exe /force for each signed in user and once for the computer Group Policy refresh. The task is scheduled to run with a random delay of up to 10 minutes to decrease the load on the network traffic.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Full Custom Certification</title>
+      <link>//localhost:1313/docs/vmware/vcenter/custom-certificate-mode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/vmware/vcenter/custom-certificate-mode/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This document will detail how to change to custom certificate mode and then apply a custom certificate to vCenter and ESXi hosts. In some environments there may be the requirement to have all services certified by a trusted CA and not be able to have a subordinate CA (Hybrid Mode) this solution allows you to certify your hosts as required.&lt;/p&gt;
+&lt;p&gt;Before changing vCenter to custom certificate mode, the vCenter will try to apply its own certificates to the hosts it manages, changing to custom certificate mode stops this behaviour and allows the administrator to apply custom certificates to the host without them being overwritten when connected to a vCenter instance.&lt;/p&gt;
+&lt;h2 id=&#34;changing-vcenters-certificate-mode&#34;&gt;Changing vCenter&amp;rsquo;s certificate mode&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Select your vCenter system in vSphere Client.&lt;/li&gt;
+&lt;li&gt;Click Configure and under Settings, click Advanced Settings.&lt;/li&gt;
+&lt;li&gt;Click Edit Settings.&lt;/li&gt;
+&lt;li&gt;click the Filter icon in the name column and in the field enter:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vpxd.certmgmt
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Change the value of vpxd.certmgmt.mode to custom.&lt;/li&gt;
+&lt;li&gt;Restart the vCenter Server Service.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;applying-certificates-to-esxi-hosts&#34;&gt;Applying certificates to ESXi Hosts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Log in with root.&lt;/li&gt;
+&lt;li&gt;Go to Manage &amp;gt; Security &amp;amp; Users &amp;gt; Certificates.&lt;/li&gt;
+&lt;li&gt;Select Import new Certificate &amp;gt; Generate FQDN request.&lt;/li&gt;
+&lt;li&gt;Copy and paste FQDN request into a text file and rename it with the .csr extension.&lt;/li&gt;
+&lt;li&gt;Send file over to CA host so the CA can sign it.
+&lt;ul&gt;
+&lt;li&gt;Note: You can add the IP address of the ESXi host to the Subject Alternate Name to allow secure connections by specifying the FQDN (set to the CN) or the IP (set to the SAN).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Send back signed cert in .pem format (Base64 ASCII encoded).&lt;/li&gt;
+&lt;li&gt;Open the certificate file with a text editor.&lt;/li&gt;
+&lt;li&gt;Back in ESXi under root privilege, go to Manage &amp;gt; Security &amp;amp; Users &amp;gt; Certificates.&lt;/li&gt;
+&lt;li&gt;Select Import new Certificate.&lt;/li&gt;
+&lt;li&gt;Copy and paste the .pem content into an empty box and select Import.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Generating a CSR using CLI</title>
+      <link>//localhost:1313/docs/vmware/esxi/gencsr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/vmware/esxi/gencsr/</guid>
+      <description>
+        
+        
+        &lt;p&gt;In this guide I will be using the openssl pre-installed on the ESXi host to generate the CSR, if you have openSSL elsewhere you can use that, just make sure you take the rui.key file with the configuration.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SSH to the ESXi host&lt;/li&gt;
+&lt;li&gt;Create a directory called that will be used to temporarily house the config and key. (the /etc/vmware/ssl folder can reset itself back to default so it isn&amp;rsquo;t recommended to store anything there). This directory can be removed once the certificate is imported.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir /csrstore
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Change directory to the new folder&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd /csrstore
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;create an openssl.cnf file and use the example below to fill it out. The fields that should be changed are -&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;                - subjectAltName
+                - CountryName
+                - stateOrProvinceName
+                - LocalityName
+                - 0.organizationName
+                - organizationalUnitName
+                - commonName
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create the openssl.cnf file and open it in the vi text editor&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vi openssl.cnf
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;SAMPLE OPENSSL CONFIG&lt;/em&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[ req ]
+default_bits = 2048
+default_keyfile = rui.key
+distinguished_name = req_distinguished_name
+encrypt_key = no
+prompt = no
+string_mask = nombstr
+req_extensions = v3_req
+
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = digitalSignature, keyEncipherment, dataEncipherment
+extendedKeyUsage = serverAuth, clientAuth
+subjectAltName = DNS:esxihost, IP:10.0.1.10, DNS:esxihost.vmware.com
+
+[ req_distinguished_name ]
+CountryName = US
+stateOrProvinceName = StreetCorner
+LocalityName = Alleyway
+0.organizationName = CompanyX
+organizationalUnitName = ITGuys
+commonName = esxihost.vmware.com
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Generate a new rui.key to be used with your new certifate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;openssl genrsa -out rui.key 2048
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Now generate the CSR based on your config and rui.key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;openssl req -new -node -out rui.csr -key rui.key -config openssl.cnf
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Now take the CSR and sign it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you need to know how to import the signed certificate go here - &lt;a href=&#34;//localhost:1313/docs/vmware/esxi/applying-certificates/&#34;&gt;Applying certificates to ESXi Hosts&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Git Branches</title>
+      <link>//localhost:1313/docs/git/branches/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/git/branches/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;git-branches&#34;&gt;Git Branches&lt;/h1&gt;
+&lt;h3 id=&#34;creating-new-branches&#34;&gt;Creating new branches&lt;/h3&gt;
+&lt;p&gt;If you have multiple people who contribute to a project then it may be useful to create a new branch so that the master branch is always working and correct.&lt;/p&gt;
+&lt;p&gt;To create a new branch you can use this command.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch X
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;X = name of the new branch&lt;/p&gt;
+&lt;p&gt;now a new branch has been made but you are not on the branch yet, to switch to a new branch use:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git switch X
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;X = name of the branch to switch to&lt;/p&gt;
+&lt;p&gt;You are now on the new branch.&lt;/p&gt;
+&lt;p&gt;you could also use:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git switch -c X
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;X = new branch name&lt;/p&gt;
+&lt;p&gt;this will create and switch you to the new branch that you have created.&lt;/p&gt;
+&lt;h3 id=&#34;listing-branches&#34;&gt;Listing branches&lt;/h3&gt;
+&lt;p&gt;To see local branches, run this command:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To see remote branches, run this command:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch -r
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To see all local and remote branches, run this
+command:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch -a
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The current branch will be marked with an asterix.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Hardening ESXi 7</title>
+      <link>//localhost:1313/docs/vmware/esxi/hardening/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/vmware/esxi/hardening/</guid>
+      <description>
+        
+        
+        &lt;p&gt;A link to my ESXi script is included in the github link section, if thats all you are looking for go there.&lt;/p&gt;
+&lt;p&gt;The script requires powerCLI this can be obtained from VMWare free of charge.&lt;/p&gt;
+&lt;h1 id=&#34;github-link&#34;&gt;Github Link&lt;/h1&gt;
+&lt;p&gt;I recommend reading the page before running the script blindly but that&amp;rsquo;s up to you.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Barophobia/esxi_7_hardening&#34;&gt;Barophobia ESXi 7 Hardening Script&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Installing and configuring OpenSSH</title>
+      <link>//localhost:1313/docs/microsoft/openssh/openssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/openssh/openssh/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;openssh-windows&#34;&gt;OpenSSH Windows&lt;/h1&gt;
+&lt;p&gt;With the addition of windows server 2019 you can now install the openssh component through the server manager features.&lt;/p&gt;
+&lt;p&gt;&amp;lsquo;Add Roles &amp;amp; Features&amp;rsquo; &amp;gt; &amp;lsquo;OpenSSH Server&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;This will install the OpenSSH Server component and will allow you to edit the config and listen on the relevant port&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Useful locations:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;sshd_config
+%programdata%\ssh&lt;/p&gt;
+&lt;p&gt;sshd executables
+C:\Windows\System32\OpenSSH&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Debugging sshd&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To start sshd in debug mode type &amp;lsquo;sshd -d&amp;rsquo; into powershell, this will give you mroe output in the console.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Turning on logs&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To turn on logs you will need to remove the # before the log config in the ssh_config file located inside %Programdata%\ssh the logs will then go into %programdata%\ssh\logs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No Service inside the services applet&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you cannot see the OpenSSH Server process inside the services applet you may need to create your own.&lt;/p&gt;
+&lt;p&gt;Using CMD:&lt;/p&gt;
+&lt;p&gt;sc.exe create &amp;ldquo;OpenSSH Server&amp;rdquo; C:\Windows\System32\OpenSSH\sshd.exe&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;sshd Service will not start&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If the sshd service won&amp;rsquo;t start it may be to do with the security permissions set on the %Programdata%/ssh folder.
+There should only be 2 users that have permissions to the SSH folder (SYSTEM &amp;amp; Administrators) outside of the listed 2 the service will not start so remove the permissions and try to start the service.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Installing Arch Linux</title>
+      <link>//localhost:1313/docs/linux/installarch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/linux/installarch/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;how-to-install-arch-linux&#34;&gt;How to install Arch Linux&lt;/h1&gt;
+&lt;p&gt;Arch linux is a sort of &amp;lsquo;build it yourself&amp;rsquo; OS allowing you to create the environment you desire, I use this to have a low resource requirement extending the life of &amp;lsquo;old&amp;rsquo; hardware but it can be used for more than that.&lt;/p&gt;
+&lt;h3 id=&#34;how-to-use-the-arch-automated-installer&#34;&gt;How to use the Arch automated installer&lt;/h3&gt;
+&lt;p&gt;Download the Arch Linux ISO from the website.
+&lt;a href=&#34;https://www.archlinux.org&#34;&gt;https://www.archlinux.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Boot to the ISO file&lt;/p&gt;
+&lt;p&gt;Once you have booted to the ISO you should be presented with the command line&lt;/p&gt;
+&lt;p&gt;To use the Arch automated installer type:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;archinstall
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The guided installer will perform the following steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;configure the locale;&lt;/li&gt;
+&lt;li&gt;select the mirrors;&lt;/li&gt;
+&lt;li&gt;partition the disks;&lt;/li&gt;
+&lt;li&gt;format the partitions;&lt;/li&gt;
+&lt;li&gt;enable disk encryption (optional);&lt;/li&gt;
+&lt;li&gt;set the hostname;&lt;/li&gt;
+&lt;li&gt;set the root password;&lt;/li&gt;
+&lt;li&gt;install a boot loader (limited to systemd-boot for UEFI and GRUB for BIOS)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Leaving the root password blank disables the root account.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Introduction to git</title>
+      <link>//localhost:1313/docs/git/introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/git/introduction/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;git&#34;&gt;Git&lt;/h1&gt;
+&lt;h3 id=&#34;what-is-git&#34;&gt;What is Git?&lt;/h3&gt;
+&lt;p&gt;Git is a version management tool used to make collaborative efforts a lot easier.&lt;/p&gt;
+&lt;h3 id=&#34;creating-a-new-repository&#34;&gt;Creating a new repository:&lt;/h3&gt;
+&lt;p&gt;To create a new repository using git you should cd to the folder you want to be a repository and type into your terminal:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git init
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will create a .git directory known as the working tree.&lt;/p&gt;
+&lt;h3 id=&#34;checking-the-status-of-your-repository&#34;&gt;Checking the status of your repository&lt;/h3&gt;
+&lt;p&gt;Using the &amp;lsquo;git status&amp;rsquo; command will show you what branch you are using, changed files not staged for commit and files that are not currently tracked by git.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;adding-files-to-your-repository-to-be-tracked&#34;&gt;Adding files to your repository to be tracked&lt;/h3&gt;
+&lt;p&gt;To add files to be tracked you will need to use &amp;lsquo;git add&amp;rsquo; an example of this would be:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Using the command above will add all files inside the folder to be tracked.&lt;/p&gt;
+&lt;h3 id=&#34;commiting-changes-to-the-repository&#34;&gt;Commiting changes to the repository&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This command will commit the changes that have been added to the repository, it will bring up your default text editor and ask for a commit message, this is what will be seen when you look at repository history.&lt;/p&gt;
+&lt;p&gt;I prefer to use the &amp;lsquo;-m&amp;rsquo; switch on my commit and then type the message inside the command meaning it skips the extra step of using a text editor.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit -m &amp;#34;MESSAGE GOES HERE&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;showing-the-history-of-the-repository&#34;&gt;Showing the history of the repository&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git log
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This command will show you the commits to the project you are looking at, each commit has a unique name called the git hash these are not randomly generated they are generated using SHA-1. The output also shows you the author, commit message and date and time of the commit.&lt;/p&gt;
+&lt;p&gt;It is useful to see what the project looked like at each stage of the commits so if needed you can restore to a previous state.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Join AD Domain</title>
+      <link>//localhost:1313/docs/microsoft/join-active-directory-domain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/join-active-directory-domain/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;verify-you-can-resolve-the-active-directory-domain-controller-fqdn---optional&#34;&gt;Verify you can resolve the Active Directory Domain Controller FQDN - (Optional)&lt;/h3&gt;
+&lt;p&gt;Open a command prompt and ping your ADDC FQDN, replace DC.network.com in the command below.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ping DC.network.com
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If the ping is successful you can begin the joining process.&lt;/p&gt;
+&lt;h3 id=&#34;joining-the-domain&#34;&gt;Joining the domain&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Open Server Manager and click Local Server on the left hand menu panel&lt;/li&gt;
+&lt;li&gt;Click the workgroup property in the properties panel, this will open a System Properties window.&lt;/li&gt;
+&lt;li&gt;Click on the Change button in the System Properties window&lt;/li&gt;
+&lt;li&gt;In the Member of section, select Domain and enter the domain name into the field.&lt;/li&gt;
+&lt;li&gt;A windows security box will pop up asking for account details, enter an Administrator account for your domain.&lt;/li&gt;
+&lt;li&gt;If the joining process was successful a small new window will open that welcomes you to the domain, click Ok.&lt;/li&gt;
+&lt;li&gt;A window will appear saying you need to restart your device, click Ok and then Close the System Properties window.&lt;/li&gt;
+&lt;li&gt;Now Restart your device when prompted.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once the device has restarted you will be able to login as a domain user.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Mounting a network share</title>
+      <link>//localhost:1313/docs/linux/mountnfs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/linux/mountnfs/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;how-to-mount-a-network-share&#34;&gt;How to mount a network share&lt;/h1&gt;
+&lt;h2 id=&#34;nfs&#34;&gt;NFS&lt;/h2&gt;
+&lt;p&gt;Mounting an NFS share requires nfs-common. To install:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install nfs-common
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To mount an NFS network share use the command below:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mount -t nfs -o 192.168.0.100:/backups
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Replace the IP Address and share location to your required config.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Powershell Cheatsheet</title>
+      <link>//localhost:1313/docs/cheatsheets/system-administration/powershell/powershell-cheatsheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/cheatsheets/system-administration/powershell/powershell-cheatsheet/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;powershell&#34;&gt;Powershell&lt;/h1&gt;
+&lt;p&gt;a lot of powershell commands have aliases that are similar to linux.&lt;/p&gt;
+&lt;p&gt;Basic&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ls              # Shows current directory
+cd &amp;lt;DIRECTORY&amp;gt;  # Change directory to specified directory
+mkdir &amp;lt;NEWDIRECTORYNAME&amp;gt; # Create a new folder
+copy &amp;lt;FILETOCOPY&amp;gt; &amp;lt;PATHTOCOPYTO&amp;gt;    # Copy a folder/file to a different place
+move &amp;lt;FILETOMOVE&amp;gt; &amp;lt;PATHTOCOPYTO&amp;gt;    # Move a folder/file to a different place
+rm &amp;lt;FILETOREMOVE&amp;gt;   # Remove a file 
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Reset a Domain Password in RDWeb</title>
+      <link>//localhost:1313/docs/microsoft/rds/resetpass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/rds/resetpass/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;resetting-a-domain-password-in-rdweb&#34;&gt;Resetting a domain password in RDWeb&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Open IIS on the Server with RDWeb service installed&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to [Server Name] –&amp;gt; Sites –&amp;gt; Default Web Site –&amp;gt; RDWeb –&amp;gt; Pages and open the section Application Settings.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;find &lt;em&gt;PasswordChangeEnabled&lt;/em&gt; and change the value to true&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Restart the IIS Service&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now you can navigate to the RDWeb page and change your password
+https://[SERVERNAME]/RDWeb/Pages/en-US/password.aspx&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Setup Headless Raspberry Pi</title>
+      <link>//localhost:1313/docs/linux/raspberrypi/preprpi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/linux/raspberrypi/preprpi/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;setup-a-headless-raspberry-pi&#34;&gt;Setup a headless Raspberry Pi&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Requirements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Raspberry Pi with power supply&lt;/li&gt;
+&lt;li&gt;SD Card&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;imaging-the-sd-card&#34;&gt;Imaging the SD Card:&lt;/h2&gt;
+&lt;p&gt;Download Raspbian lite (this has no DE, if you want a DE download the full iso image not lite)
+&lt;a href=&#34;http://www.raspberrypi.org/downloads&#34;&gt;Raspbian Downloads&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Use an application like &lt;a href=&#34;https://www.balena.io/etcher/&#34;&gt;EthcherBalena&lt;/a&gt; to write to the SD Card.&lt;/p&gt;
+&lt;h2 id=&#34;steps-to-take-once-the-image-is-written-to-the-sd-card&#34;&gt;Steps to take once the image is written to the SD Card:&lt;/h2&gt;
+&lt;p&gt;Once the image is written to the SD Card open a terminal and browse to the the SD Card (Usually /Volumes/boot/).&lt;/p&gt;
+&lt;p&gt;If you want to enable SSH then make a file called &amp;lsquo;ssh&amp;rsquo; make sure the file has no extensions if you are doing this on windows.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Enable SSH:&lt;/strong&gt;
+Linux or mac:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;touch ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Windows:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;New-Item ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now add create a file called wpa_supplicant.conf and add the config below changing the network information to your own.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;network={
+    ssid=&amp;#34;ssid_name&amp;#34;
+    psk=&amp;#34;password&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once these steps are completed, plug the SD Card in and boot the Raspberry Pi.&lt;/p&gt;
+&lt;p&gt;Now there are two options to accessing the device:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ssh pi@raspberry.local
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;or&lt;/p&gt;
+&lt;p&gt;Find the IP on your router or use nmap to find the IP then:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ssh pi@&amp;lt;IPADDRESS&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The default password is &lt;strong&gt;raspberry&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You should now have access to your device without having to plug in a monitor.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Troubleshooting vCenter</title>
+      <link>//localhost:1313/docs/vmware/vcenter/vcenter_troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/vmware/vcenter/vcenter_troubleshooting/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;vcenter-booting-to-a-login-prompt&#34;&gt;vCenter booting to a login prompt&lt;/h2&gt;
+&lt;p&gt;If vCenter is booting to a login prompt these are the steps you can take to troubleshoot and fix the issue:&lt;/p&gt;
+&lt;h3 id=&#34;first-method&#34;&gt;First method&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;try to navigate to &amp;lt;IP_ADDRESS&amp;gt;:5480 in your web browser, from this page you should be able to remediate any issues, check health and running services.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;second-method&#34;&gt;Second method&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Log into the vCenter using root and the password set when creating the appliance (Reset the root password using the GRUB reset method if required)&lt;/li&gt;
+&lt;li&gt;type:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;service-control --start --all
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Once the services have started you should be able to get to the web address, if this doesn&amp;rsquo;t work go to the next method.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;third-method&#34;&gt;Third Method&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;In the vCenter shell enter:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl --list-unit-files | grep masked
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;If services are showing as masked then run this command to unmask them:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;find /etc/systemd/system/ -lname &amp;#39;/dev/null&amp;#39; -exec rm {} \\;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Now check all the services are unmasked and run:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;service-control --start --all
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

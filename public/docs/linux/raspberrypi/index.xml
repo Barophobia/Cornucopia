@@ -1,0 +1,62 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – Raspberry Pi</title>
+    <link>//localhost:1313/docs/linux/raspberrypi/</link>
+    <description>Recent content in Raspberry Pi on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/linux/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Setup Headless Raspberry Pi</title>
+      <link>//localhost:1313/docs/linux/raspberrypi/preprpi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/linux/raspberrypi/preprpi/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;setup-a-headless-raspberry-pi&#34;&gt;Setup a headless Raspberry Pi&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Requirements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Raspberry Pi with power supply&lt;/li&gt;
+&lt;li&gt;SD Card&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;imaging-the-sd-card&#34;&gt;Imaging the SD Card:&lt;/h2&gt;
+&lt;p&gt;Download Raspbian lite (this has no DE, if you want a DE download the full iso image not lite)
+&lt;a href=&#34;http://www.raspberrypi.org/downloads&#34;&gt;Raspbian Downloads&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Use an application like &lt;a href=&#34;https://www.balena.io/etcher/&#34;&gt;EthcherBalena&lt;/a&gt; to write to the SD Card.&lt;/p&gt;
+&lt;h2 id=&#34;steps-to-take-once-the-image-is-written-to-the-sd-card&#34;&gt;Steps to take once the image is written to the SD Card:&lt;/h2&gt;
+&lt;p&gt;Once the image is written to the SD Card open a terminal and browse to the the SD Card (Usually /Volumes/boot/).&lt;/p&gt;
+&lt;p&gt;If you want to enable SSH then make a file called &amp;lsquo;ssh&amp;rsquo; make sure the file has no extensions if you are doing this on windows.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Enable SSH:&lt;/strong&gt;
+Linux or mac:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;touch ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Windows:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;New-Item ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now add create a file called wpa_supplicant.conf and add the config below changing the network information to your own.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;network={
+    ssid=&amp;#34;ssid_name&amp;#34;
+    psk=&amp;#34;password&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once these steps are completed, plug the SD Card in and boot the Raspberry Pi.&lt;/p&gt;
+&lt;p&gt;Now there are two options to accessing the device:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ssh pi@raspberry.local
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;or&lt;/p&gt;
+&lt;p&gt;Find the IP on your router or use nmap to find the IP then:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ssh pi@&amp;lt;IPADDRESS&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The default password is &lt;strong&gt;raspberry&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You should now have access to your device without having to plug in a monitor.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

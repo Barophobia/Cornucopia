@@ -1,0 +1,152 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – Microsoft</title>
+    <link>//localhost:1313/docs/microsoft/</link>
+    <description>Recent content in Microsoft on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 09 Dec 2021 16:51:31 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/docs/microsoft/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: KMS</title>
+      <link>//localhost:1313/docs/microsoft/kms/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/kms/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;kms&#34;&gt;KMS&lt;/h3&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Disabling Cipher Suites</title>
+      <link>//localhost:1313/docs/microsoft/disabling-cipher-suites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/disabling-cipher-suites/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;check-active-cipher-suites-using-powershell&#34;&gt;Check active cipher suites using powershell&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Get-TlsCipherSuite | format-table Name
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will give you a list of active cipher suites on the device.&lt;/p&gt;
+&lt;h2 id=&#34;disabling-a-cipher-suite&#34;&gt;Disabling a cipher suite&lt;/h2&gt;
+&lt;p&gt;For this example I will disable the &amp;lsquo;TLS_RSA_WITH_3DES_EDE_CBC_SHA&amp;rsquo; cipher suite as this is classed as vulnerable to a SWEET32 attack.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Disable-TlsCipherSuite -Name &amp;#34;TLS_RSA_WITH_3DES_EDE_CBC_SHA&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The command will not give any terminal output but you can use the Get-TlsCipherSuite command to make sure it is deactivated.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Enable Remote Desktop</title>
+      <link>//localhost:1313/docs/microsoft/enable-rdp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/enable-rdp/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;Open Server Manager and click Local Server on the left hand menu panel&lt;/li&gt;
+&lt;li&gt;Click the Remote Desktop property in the Properties panel (Usually Disabled by default), the will open a System Properties window.&lt;/li&gt;
+&lt;li&gt;In the System Properties window, select Allow remote connections to this computer. A window will open telling you that firewall rule exceptions will be enabled for Remote Desktop, click OK.&lt;/li&gt;
+&lt;li&gt;On the System Properties window click Apply and then OK.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now test you can RDP to the server using another device.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Force a remote group policy update</title>
+      <link>//localhost:1313/docs/microsoft/remotegpupdate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/remotegpupdate/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;steps-to-force-a-remote-group-policy-update&#34;&gt;Steps to force a remote group policy update&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Open GPMC&lt;/li&gt;
+&lt;li&gt;Right-Click the OU that you want to update&lt;/li&gt;
+&lt;li&gt;Click &amp;lsquo;Group Policy Update&amp;rsquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The remote Group Policy refresh updates all Group Policy settings, including security settings that are set on a group of remote computers, by using the functionality that is added to the context menu for an OU in the Group Policy Management Console (GPMC). When you select an OU to remotely refresh the Group Policy settings on all the computers in that OU, the following operations happen:&lt;/p&gt;
+&lt;p&gt;An Active Directory query returns a list of all computers that belong to that OU.&lt;/p&gt;
+&lt;p&gt;For each computer that belongs to the selected OU, a WMI call retrieves the list of signed in users.&lt;/p&gt;
+&lt;p&gt;A remote scheduled task is created to run GPUpdate.exe /force for each signed in user and once for the computer Group Policy refresh. The task is scheduled to run with a random delay of up to 10 minutes to decrease the load on the network traffic.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Join AD Domain</title>
+      <link>//localhost:1313/docs/microsoft/join-active-directory-domain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/join-active-directory-domain/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;verify-you-can-resolve-the-active-directory-domain-controller-fqdn---optional&#34;&gt;Verify you can resolve the Active Directory Domain Controller FQDN - (Optional)&lt;/h3&gt;
+&lt;p&gt;Open a command prompt and ping your ADDC FQDN, replace DC.network.com in the command below.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ping DC.network.com
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If the ping is successful you can begin the joining process.&lt;/p&gt;
+&lt;h3 id=&#34;joining-the-domain&#34;&gt;Joining the domain&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Open Server Manager and click Local Server on the left hand menu panel&lt;/li&gt;
+&lt;li&gt;Click the workgroup property in the properties panel, this will open a System Properties window.&lt;/li&gt;
+&lt;li&gt;Click on the Change button in the System Properties window&lt;/li&gt;
+&lt;li&gt;In the Member of section, select Domain and enter the domain name into the field.&lt;/li&gt;
+&lt;li&gt;A windows security box will pop up asking for account details, enter an Administrator account for your domain.&lt;/li&gt;
+&lt;li&gt;If the joining process was successful a small new window will open that welcomes you to the domain, click Ok.&lt;/li&gt;
+&lt;li&gt;A window will appear saying you need to restart your device, click Ok and then Close the System Properties window.&lt;/li&gt;
+&lt;li&gt;Now Restart your device when prompted.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once the device has restarted you will be able to login as a domain user.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: openSSH</title>
+      <link>//localhost:1313/docs/microsoft/openssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/openssh/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: RDS</title>
+      <link>//localhost:1313/docs/microsoft/rds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/rds/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;rds&#34;&gt;RDS&lt;/h3&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

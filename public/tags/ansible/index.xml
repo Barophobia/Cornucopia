@@ -1,0 +1,43 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – Ansible</title>
+    <link>//localhost:1313/tags/ansible/</link>
+    <description>Recent content in Ansible on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 05 Sep 2023 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Ansible Syntax</title>
+      <link>//localhost:1313/docs/cheatsheets/automation/ansible/syntax/</link>
+      <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/cheatsheets/automation/ansible/syntax/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;ansible&#34;&gt;Ansible&lt;/h1&gt;
+&lt;h3 id=&#34;playbooks&#34;&gt;Playbooks&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ansible-playbook &amp;lt;YAML&amp;gt; -i &amp;lt;HOSTSFILE&amp;gt;    # Run on all hosts from specified hosts file
+ansible-playbook &amp;lt;YAML&amp;gt; -C                # Test run
+ansible-playbook &amp;lt;YAML&amp;gt; -C -D             # Dry run
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;check-syntax&#34;&gt;Check Syntax&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ansible-playbook --syntax-check &amp;lt;YAML&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;execute-commands-on-hosts&#34;&gt;Execute commands on hosts&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ansible &amp;lt;HOSTGROUP&amp;gt; -a &amp;lt;COMMAND&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ansible all -a &amp;#34;neofetch&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

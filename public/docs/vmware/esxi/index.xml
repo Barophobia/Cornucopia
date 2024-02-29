@@ -1,0 +1,153 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – ESXi</title>
+    <link>//localhost:1313/docs/vmware/esxi/</link>
+    <description>Recent content in ESXi on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/vmware/esxi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Applying Certificates</title>
+      <link>//localhost:1313/docs/vmware/esxi/applying-certificates/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/vmware/esxi/applying-certificates/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;applying-certificates-to-esxi-hosts-through-the-web-ui&#34;&gt;Applying certificates to ESXi Hosts through the web UI&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Log in with root.&lt;/li&gt;
+&lt;li&gt;Go to Manage &amp;gt; Security &amp;amp; Users &amp;gt; Certificates.&lt;/li&gt;
+&lt;li&gt;Select Import new Certificate &amp;gt; Generate FQDN request.&lt;/li&gt;
+&lt;li&gt;Copy and paste FQDN request into a text file and rename it with the .csr extension.&lt;/li&gt;
+&lt;li&gt;Send file over to CA host so the CA can sign it.
+&lt;ul&gt;
+&lt;li&gt;Note: You can add the IP address of the ESXi host to the Subject Alternate Name to allow secure connections by specifying the FQDN (set to the CN) or the IP (set to the SAN).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Send back signed cert in .pem format (Base64 ASCII encoded).&lt;/li&gt;
+&lt;li&gt;Open the certificate file with a text editor.&lt;/li&gt;
+&lt;li&gt;Back in ESXi under root privilege, go to Manage &amp;gt; Security &amp;amp; Users &amp;gt; Certificates.&lt;/li&gt;
+&lt;li&gt;Select Import new Certificate.&lt;/li&gt;
+&lt;li&gt;Copy and paste the .pem content into an empty box and select Import.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;apply-certificates-to-esxi-hosts-through-the-cli&#34;&gt;Apply certificates to ESXi Hosts through the CLI&lt;/h3&gt;
+&lt;p&gt;This assumes you have already generated a CSR and signed it using a CA. If you haven&amp;rsquo;t use the guide here - &lt;a href=&#34;//localhost:1313/docs/vmware/esxi/gencsr/&#34;&gt;Generating a CSR for ESXi&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SSH to the host.&lt;/li&gt;
+&lt;li&gt;Change directory /etc/vmware/ssl
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd /etc/vmware/ssl
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;Open rui.key in vi and paste the key you used to create your CSR, then save and quit using :wq&lt;/li&gt;
+&lt;li&gt;Open rui.cer in vi and paste the signed certificate contents into the box. (Make sure the certificate is in Base64)&lt;/li&gt;
+&lt;li&gt;Once complete reboot the host and navigate to the webpage to see if the certificate was succesfully imported.&lt;/li&gt;
+&lt;li&gt;Delete the /csrstore, made if you used my guide to create the CSR.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Generating a CSR using CLI</title>
+      <link>//localhost:1313/docs/vmware/esxi/gencsr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/vmware/esxi/gencsr/</guid>
+      <description>
+        
+        
+        &lt;p&gt;In this guide I will be using the openssl pre-installed on the ESXi host to generate the CSR, if you have openSSL elsewhere you can use that, just make sure you take the rui.key file with the configuration.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SSH to the ESXi host&lt;/li&gt;
+&lt;li&gt;Create a directory called that will be used to temporarily house the config and key. (the /etc/vmware/ssl folder can reset itself back to default so it isn&amp;rsquo;t recommended to store anything there). This directory can be removed once the certificate is imported.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir /csrstore
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Change directory to the new folder&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd /csrstore
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;create an openssl.cnf file and use the example below to fill it out. The fields that should be changed are -&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;                - subjectAltName
+                - CountryName
+                - stateOrProvinceName
+                - LocalityName
+                - 0.organizationName
+                - organizationalUnitName
+                - commonName
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create the openssl.cnf file and open it in the vi text editor&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vi openssl.cnf
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;SAMPLE OPENSSL CONFIG&lt;/em&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[ req ]
+default_bits = 2048
+default_keyfile = rui.key
+distinguished_name = req_distinguished_name
+encrypt_key = no
+prompt = no
+string_mask = nombstr
+req_extensions = v3_req
+
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = digitalSignature, keyEncipherment, dataEncipherment
+extendedKeyUsage = serverAuth, clientAuth
+subjectAltName = DNS:esxihost, IP:10.0.1.10, DNS:esxihost.vmware.com
+
+[ req_distinguished_name ]
+CountryName = US
+stateOrProvinceName = StreetCorner
+LocalityName = Alleyway
+0.organizationName = CompanyX
+organizationalUnitName = ITGuys
+commonName = esxihost.vmware.com
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Generate a new rui.key to be used with your new certifate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;openssl genrsa -out rui.key 2048
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Now generate the CSR based on your config and rui.key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;openssl req -new -node -out rui.csr -key rui.key -config openssl.cnf
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Now take the CSR and sign it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you need to know how to import the signed certificate go here - &lt;a href=&#34;//localhost:1313/docs/vmware/esxi/applying-certificates/&#34;&gt;Applying certificates to ESXi Hosts&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Hardening ESXi 7</title>
+      <link>//localhost:1313/docs/vmware/esxi/hardening/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/vmware/esxi/hardening/</guid>
+      <description>
+        
+        
+        &lt;p&gt;A link to my ESXi script is included in the github link section, if thats all you are looking for go there.&lt;/p&gt;
+&lt;p&gt;The script requires powerCLI this can be obtained from VMWare free of charge.&lt;/p&gt;
+&lt;h1 id=&#34;github-link&#34;&gt;Github Link&lt;/h1&gt;
+&lt;p&gt;I recommend reading the page before running the script blindly but that&amp;rsquo;s up to you.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Barophobia/esxi_7_hardening&#34;&gt;Barophobia ESXi 7 Hardening Script&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

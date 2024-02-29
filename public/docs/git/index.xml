@@ -1,0 +1,90 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – Git</title>
+    <link>//localhost:1313/docs/git/</link>
+    <description>Recent content in Git on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Git Branches</title>
+      <link>//localhost:1313/docs/git/branches/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/git/branches/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;git-branches&#34;&gt;Git Branches&lt;/h1&gt;
+&lt;h3 id=&#34;creating-new-branches&#34;&gt;Creating new branches&lt;/h3&gt;
+&lt;p&gt;If you have multiple people who contribute to a project then it may be useful to create a new branch so that the master branch is always working and correct.&lt;/p&gt;
+&lt;p&gt;To create a new branch you can use this command.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch X
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;X = name of the new branch&lt;/p&gt;
+&lt;p&gt;now a new branch has been made but you are not on the branch yet, to switch to a new branch use:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git switch X
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;X = name of the branch to switch to&lt;/p&gt;
+&lt;p&gt;You are now on the new branch.&lt;/p&gt;
+&lt;p&gt;you could also use:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git switch -c X
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;X = new branch name&lt;/p&gt;
+&lt;p&gt;this will create and switch you to the new branch that you have created.&lt;/p&gt;
+&lt;h3 id=&#34;listing-branches&#34;&gt;Listing branches&lt;/h3&gt;
+&lt;p&gt;To see local branches, run this command:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To see remote branches, run this command:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch -r
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To see all local and remote branches, run this
+command:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch -a
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The current branch will be marked with an asterix.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Introduction to git</title>
+      <link>//localhost:1313/docs/git/introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/git/introduction/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;git&#34;&gt;Git&lt;/h1&gt;
+&lt;h3 id=&#34;what-is-git&#34;&gt;What is Git?&lt;/h3&gt;
+&lt;p&gt;Git is a version management tool used to make collaborative efforts a lot easier.&lt;/p&gt;
+&lt;h3 id=&#34;creating-a-new-repository&#34;&gt;Creating a new repository:&lt;/h3&gt;
+&lt;p&gt;To create a new repository using git you should cd to the folder you want to be a repository and type into your terminal:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git init
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will create a .git directory known as the working tree.&lt;/p&gt;
+&lt;h3 id=&#34;checking-the-status-of-your-repository&#34;&gt;Checking the status of your repository&lt;/h3&gt;
+&lt;p&gt;Using the &amp;lsquo;git status&amp;rsquo; command will show you what branch you are using, changed files not staged for commit and files that are not currently tracked by git.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;adding-files-to-your-repository-to-be-tracked&#34;&gt;Adding files to your repository to be tracked&lt;/h3&gt;
+&lt;p&gt;To add files to be tracked you will need to use &amp;lsquo;git add&amp;rsquo; an example of this would be:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Using the command above will add all files inside the folder to be tracked.&lt;/p&gt;
+&lt;h3 id=&#34;commiting-changes-to-the-repository&#34;&gt;Commiting changes to the repository&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This command will commit the changes that have been added to the repository, it will bring up your default text editor and ask for a commit message, this is what will be seen when you look at repository history.&lt;/p&gt;
+&lt;p&gt;I prefer to use the &amp;lsquo;-m&amp;rsquo; switch on my commit and then type the message inside the command meaning it skips the extra step of using a text editor.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit -m &amp;#34;MESSAGE GOES HERE&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;showing-the-history-of-the-repository&#34;&gt;Showing the history of the repository&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git log
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This command will show you the commits to the project you are looking at, each commit has a unique name called the git hash these are not randomly generated they are generated using SHA-1. The output also shows you the author, commit message and date and time of the commit.&lt;/p&gt;
+&lt;p&gt;It is useful to see what the project looked like at each stage of the commits so if needed you can restore to a previous state.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

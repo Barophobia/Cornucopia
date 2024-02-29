@@ -1,0 +1,114 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – Nginx</title>
+    <link>//localhost:1313/docs/webservers/nginx/</link>
+    <description>Recent content in Nginx on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/webservers/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Creating a reverse proxy</title>
+      <link>//localhost:1313/docs/webservers/nginx/reverseproxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/webservers/nginx/reverseproxy/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;reverse-proxy-with-nginx&#34;&gt;Reverse proxy with nginx&lt;/h1&gt;
+&lt;p&gt;In this example I will be making a reverse proxy for a calibre server so anywhere it references that service is a variable of whatever service you are setting up.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Create a new file inside /etc/nginx/sites-available/calibre&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now edit the file and add the following&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;server {
+    listen 80;
+    client_max_body_size 64M; # To upload large books (Change where required)
+    server_name calibre.example.com ;
+
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can now navigate to the server_name address you set and it will work as expected.&lt;/p&gt;
+&lt;p&gt;It is recommended to issue a cert and use HTTPS this can be done with certbot.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Important Directories and Files</title>
+      <link>//localhost:1313/docs/webservers/nginx/dirandfiles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/webservers/nginx/dirandfiles/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;important-nginx-directories-and-files&#34;&gt;Important nginx Directories and files&lt;/h2&gt;
+&lt;h3 id=&#34;content&#34;&gt;Content&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/var/www/html
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The actual web content, which by default only consists of the default Nginx page you saw earlier, is served out of the /var/www/html directory. This can be changed by altering Nginx configuration files.&lt;/p&gt;
+&lt;h3 id=&#34;server-configuration&#34;&gt;Server Configuration&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The Nginx configuration directory. All of the Nginx configuration files reside here.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx/nginx.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The main Nginx configuration file. This can be modified to make changes to the Nginx global configuration.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx/sites-available/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The directory where per-site server blocks can be stored. Nginx will not use the configuration files found in this directory unless they are linked to the sites-enabled directory. Typically, all server block configuration is done in this directory, and then enabled by linking to the other directory.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx/sites-enabled/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The directory where enabled per-site server blocks are stored. Typically, these are created by linking to configuration files found in the sites-available directory.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx/snippets
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This directory contains configuration fragments that can be included elsewhere in the Nginx configuration. Potentially repeatable configuration segments are good candidates for refactoring into snippets.&lt;/p&gt;
+&lt;h3 id=&#34;server-logs&#34;&gt;Server Logs&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/var/log/nginx/access.log
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Every request to your web server is recorded in this log file unless Nginx is configured to do otherwise.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/var/log/nginx/error.log
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Any Nginx errors will be recorded in this log.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Installing Nginx</title>
+      <link>//localhost:1313/docs/webservers/nginx/install-nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/webservers/nginx/install-nginx/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;installing-nginx&#34;&gt;Installing Nginx&lt;/h1&gt;
+&lt;h2 id=&#34;installing-nginx-on-linux&#34;&gt;Installing nginx on Linux&lt;/h2&gt;
+&lt;p&gt;Ubuntu:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You may need to adjust UFW rules to allow access to the webserver.&lt;/p&gt;
+&lt;h2 id=&#34;checking-if-your-webserver-is-running&#34;&gt;Checking if your webserver is running&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl status nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;managing-the-nginx-process&#34;&gt;Managing the nginx process&lt;/h2&gt;
+&lt;p&gt;To stop nginx:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl stop nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To start nginx:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl start nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To restart nginx:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl restart nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you only make configuration changes you can reload without dropping connections:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl reload nginx
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

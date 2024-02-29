@@ -1,0 +1,52 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – openSSH</title>
+    <link>//localhost:1313/docs/microsoft/openssh/</link>
+    <description>Recent content in openSSH on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/microsoft/openssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Installing and configuring OpenSSH</title>
+      <link>//localhost:1313/docs/microsoft/openssh/openssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/openssh/openssh/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;openssh-windows&#34;&gt;OpenSSH Windows&lt;/h1&gt;
+&lt;p&gt;With the addition of windows server 2019 you can now install the openssh component through the server manager features.&lt;/p&gt;
+&lt;p&gt;&amp;lsquo;Add Roles &amp;amp; Features&amp;rsquo; &amp;gt; &amp;lsquo;OpenSSH Server&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;This will install the OpenSSH Server component and will allow you to edit the config and listen on the relevant port&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Useful locations:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;sshd_config
+%programdata%\ssh&lt;/p&gt;
+&lt;p&gt;sshd executables
+C:\Windows\System32\OpenSSH&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Debugging sshd&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To start sshd in debug mode type &amp;lsquo;sshd -d&amp;rsquo; into powershell, this will give you mroe output in the console.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Turning on logs&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To turn on logs you will need to remove the # before the log config in the ssh_config file located inside %Programdata%\ssh the logs will then go into %programdata%\ssh\logs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No Service inside the services applet&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you cannot see the OpenSSH Server process inside the services applet you may need to create your own.&lt;/p&gt;
+&lt;p&gt;Using CMD:&lt;/p&gt;
+&lt;p&gt;sc.exe create &amp;ldquo;OpenSSH Server&amp;rdquo; C:\Windows\System32\OpenSSH\sshd.exe&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;sshd Service will not start&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If the sshd service won&amp;rsquo;t start it may be to do with the security permissions set on the %Programdata%/ssh folder.
+There should only be 2 users that have permissions to the SSH folder (SYSTEM &amp;amp; Administrators) outside of the listed 2 the service will not start so remove the permissions and try to start the service.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

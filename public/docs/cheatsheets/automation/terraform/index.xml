@@ -1,0 +1,49 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – Terraform</title>
+    <link>//localhost:1313/docs/cheatsheets/automation/terraform/</link>
+    <description>Recent content in Terraform on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 05 Sep 2023 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/docs/cheatsheets/automation/terraform/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Terraform Cheatsheet</title>
+      <link>//localhost:1313/docs/cheatsheets/automation/terraform/terra_syntax/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/cheatsheets/automation/terraform/terra_syntax/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;terraform&#34;&gt;Terraform&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;terraform plan          # dry run
+terraform apply         # apply configuration changes
+terraform refresh       # synchronise state with the resource
+terraform destroy       # destroy current configuration
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;state-management&#34;&gt;State management&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;terraform state list # this will show the resources in the state file
+terraform state rm &amp;lt;RESOURCE&amp;gt; # remove a resource from the state list
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;correcting-formatting&#34;&gt;Correcting formatting&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;terraform fmt #reformats .tf files for better readability
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;remote-exec&#34;&gt;Remote Exec&lt;/h3&gt;
+&lt;p&gt;This is used for remotely executing a command.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;provisioner &amp;#34;remote-exec&amp;#34; {
+    inline = [
+         &amp;#34;apt install neofetch&amp;#34;
+    ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

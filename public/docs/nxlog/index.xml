@@ -1,0 +1,93 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – NXLog</title>
+    <link>//localhost:1313/docs/nxlog/</link>
+    <description>Recent content in NXLog on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/nxlog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: How to configure NXLog</title>
+      <link>//localhost:1313/docs/nxlog/howtoconfigurenxlog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/nxlog/howtoconfigurenxlog/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;how-to-configure-nxlog&#34;&gt;How to configure NXLog&lt;/h1&gt;
+&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Edit the nxlog.conf file inside C:\Program Files (x86)\nxlog\conf&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At the bottom of the notepad will be some commented out lines that are similar to the lines below, remove the hashes so they arent commented out and make sure the output is correctly configured to the syslog server&amp;rsquo;s IP using the correct Module (TCP/UDP) and Port.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When you edit the nxlog.conf file make sure you restart the nxlog service.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Modules section
+&amp;lt;Input in&amp;gt;
+    Module  im_msvistalog
+&amp;lt;/Input&amp;gt;
+
+&amp;lt;Output out&amp;gt;
+    Module  om_udp
+    Host    IP_ADDRESS
+    Port    514
+    Exec    to_syslog_snare();
+&amp;lt;/Output&amp;gt;
+
+# Route section
+&amp;lt;Route 1&amp;gt;
+    Path    in =&amp;gt; out
+&amp;lt;/Route&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;sending-logs-as-json&#34;&gt;Sending Logs as JSON&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Edit nxlog.conf and change the Extension and Output to look like the lines below&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;Extension json&amp;gt;
+    Module    xm_json
+&amp;lt;/Extension&amp;gt;
+
+&amp;lt;Output out&amp;gt;
+    Module    om_tcp
+    Host      IP_ADDRESS
+    Port      514
+    Exec      to_json();
+&amp;lt;/Output&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: How to install NXLog</title>
+      <link>//localhost:1313/docs/nxlog/howtoinstallnxlog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/nxlog/howtoinstallnxlog/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;how-to-install-nxlog&#34;&gt;How to install NXLog&lt;/h1&gt;
+&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
+&lt;p&gt;Download NXLog from the website - &lt;a href=&#34;https://nxlog.co/products/nxlog-community-edition/download&#34;&gt;NXLog Downloads&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Install using the .exe you just downloaded, if you choose a custom install path make sure you remember where it is.&lt;/p&gt;
+&lt;p&gt;Once you have configured the nxlog.conf start the nxlog service in the services applet.&lt;/p&gt;
+&lt;p&gt;If you have any issues there is a log file in the INSTALL_PATH\data\nxlog.txt this should give some information on what the issue is.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

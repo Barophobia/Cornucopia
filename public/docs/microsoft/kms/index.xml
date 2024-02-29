@@ -1,0 +1,65 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – KMS</title>
+    <link>//localhost:1313/docs/microsoft/kms/</link>
+    <description>Recent content in KMS on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/docs/microsoft/kms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Install KMS</title>
+      <link>//localhost:1313/docs/microsoft/kms/install/</link>
+      <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/kms/install/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;installing-kms&#34;&gt;Installing KMS&lt;/h3&gt;
+&lt;p&gt;These steps remain the same whether you are installing on Windows Server 2008 R2, 2012, 2012 R2, 2016, 2019 or 2022.&lt;/p&gt;
+&lt;h4 id=&#34;pre-requisites&#34;&gt;Pre-requisites&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Decide which server will host the KMS. It is recommended to utilise the latest server version you have access to, with the highest patch level.&lt;/li&gt;
+&lt;li&gt;Administrator access to CMD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;installation-process&#34;&gt;Installation process&lt;/h4&gt;
+&lt;p&gt;Logon to the server and open an elevated command prompt (without the elevation you will not be able to complete the process)&lt;/p&gt;
+&lt;p&gt;change directory to the system32 folder:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd C:\windows\system32
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Install your product key:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cscript slmgr.vbs /ipk *PRODUCT_KEY*
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cscript slmgr.vbs /ato
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The KMS should now function as expected.&lt;/p&gt;
+&lt;p&gt;To validate that clients are being activated use:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cscript slmgr.vbs /dlv
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: General Syntax</title>
+      <link>//localhost:1313/docs/microsoft/kms/general/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/microsoft/kms/general/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Useful commands when using KMS&lt;/p&gt;
+&lt;h3 id=&#34;check-the-status-of-windows-activation&#34;&gt;Check the Status of Windows Activation&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;slmgr.vbs /dli
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

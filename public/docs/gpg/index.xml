@@ -1,0 +1,71 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cornucopia – GPG</title>
+    <link>//localhost:1313/docs/gpg/</link>
+    <description>Recent content in GPG on Cornucopia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/gpg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Encrypt/Decrypt Files</title>
+      <link>//localhost:1313/docs/gpg/encrypt_decrypt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/gpg/encrypt_decrypt/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;encrypt-a-file&#34;&gt;Encrypt a file:&lt;/h2&gt;
+&lt;p&gt;This will encrypt a file, the -r flag is the recipient of the file to use this locally you can provide your own username.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg -e -r &amp;#34;USER&amp;#34; example.txt 
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;decrypt-a-file&#34;&gt;Decrypt a file:&lt;/h2&gt;
+&lt;p&gt;This will decrypt the gpg file provided in the command once you have provided the passphrase.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg -d -o example.txt example.txt.gpg 
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Generate GPG Keys</title>
+      <link>//localhost:1313/docs/gpg/genkeys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/gpg/genkeys/</guid>
+      <description>
+        
+        
+        &lt;p&gt;To get start with GPG you will need to generate a secret and public key, this will require some security information.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --full-generate-key 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;OR&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --gen-key
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: List stored Keys</title>
+      <link>//localhost:1313/docs/gpg/viewkeys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/gpg/viewkeys/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This will list the current keys in your trust database depending on the key you would like to see:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --list-secret-keys 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;OR&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --list-keys
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>
