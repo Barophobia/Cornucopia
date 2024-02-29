@@ -1,16 +1,7 @@
 ---
 title: "Terraform Cheatsheet"
-date: 2023-09-06
-author: "Barophobia"
-tags: ["terraform", "introduction"]
-categories: ["language", "programming"]
 description: "Introduction to Terraform syntax and advantages."
-keywords: "terraform"
-draft: false
-include_toc: true
 ---
-
-# Terraform
 
 ```
 terraform plan          # dry run
