@@ -1,16 +1,9 @@
 ---
 title: "Ansible Syntax"
-date: 2023-09-05
-author: "Barophobia"
-tags: ["ansible", "syntax"]
-categories: ["language", "programming", "automation"]
 description: "Introduction to Ansible Syntax."
 keywords: ""
 draft: false
-include_toc: true
 ---
-
-# Ansible
 
 ### Playbooks
 
