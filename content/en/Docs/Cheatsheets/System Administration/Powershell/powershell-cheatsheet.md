@@ -2,8 +2,6 @@
 title = "Powershell Cheatsheet"
 +++
 
-# Powershell
-
 a lot of powershell commands have aliases that are similar to linux.
 
 Basic
