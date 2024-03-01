@@ -5,7 +5,7 @@
     <description>Recent content in Documentation on Cornucopia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Dec 2021 16:51:31 +0000</lastBuildDate>
     
 	  <atom:link href="//localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -34,18 +34,35 @@
 &lt;p&gt;Now edit the file and add the following&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;server {
-    listen 80;
-    client_max_body_size 64M; # To upload large books (Change where required)
-    server_name calibre.example.com ;
-
-    location / {
-        proxy_pass http://127.0.0.1:8080;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can now navigate to the server_name address you set and it will work as expected.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;server&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;listen&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;80&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;client_max_body_size&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;64&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# To upload large books (Change where required)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;server_name&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;calibre&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;example&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;com&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;location&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;proxy_pass&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;http&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;127.0&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0.1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;8080&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can now navigate to the server_name address you set and it will work as expected.&lt;/p&gt;
 &lt;p&gt;It is recommended to issue a cert and use HTTPS this can be done with certbot.&lt;/p&gt;
 
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: DNSMasq for DNS</title>
+      <link>//localhost:1313/docs/linux/dnsmasq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/linux/dnsmasq/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;install-dnsmasq&#34;&gt;Install DNSMasq&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Install DNSMasq&lt;/strong&gt;
+Debian:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt install dnsmasq
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -60,11 +77,11 @@
         
         &lt;h2 id=&#34;encrypt-a-file&#34;&gt;Encrypt a file:&lt;/h2&gt;
 &lt;p&gt;This will encrypt a file, the -r flag is the recipient of the file to use this locally you can provide your own username.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg -e -r &amp;#34;USER&amp;#34; example.txt 
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;decrypt-a-file&#34;&gt;Decrypt a file:&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gpg -e -r &amp;#34;USER&amp;#34; example.txt 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;decrypt-a-file&#34;&gt;Decrypt a file:&lt;/h2&gt;
 &lt;p&gt;This will decrypt the gpg file provided in the command once you have provided the passphrase.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg -d -o example.txt example.txt.gpg 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gpg -d -o example.txt example.txt.gpg 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -78,10 +95,10 @@
         
         
         &lt;p&gt;To get start with GPG you will need to generate a secret and public key, this will require some security information.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --full-generate-key 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;OR&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --gen-key
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gpg --full-generate-key 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;OR&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gpg --gen-key
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -107,37 +124,37 @@
 &lt;p&gt;When you edit the nxlog.conf file make sure you restart the nxlog service.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Modules section
-&amp;lt;Input in&amp;gt;
-    Module  im_msvistalog
-&amp;lt;/Input&amp;gt;
-
-&amp;lt;Output out&amp;gt;
-    Module  om_udp
-    Host    IP_ADDRESS
-    Port    514
-    Exec    to_syslog_snare();
-&amp;lt;/Output&amp;gt;
-
-# Route section
-&amp;lt;Route 1&amp;gt;
-    Path    in =&amp;gt; out
-&amp;lt;/Route&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;sending-logs-as-json&#34;&gt;Sending Logs as JSON&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# Modules section
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;Input in&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Module  im_msvistalog
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/Input&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;Output out&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Module  om_udp
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Host    IP_ADDRESS
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Port    514
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Exec    to_syslog_snare();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/Output&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# Route section
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;Route 1&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Path    in =&amp;gt; out
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/Route&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;sending-logs-as-json&#34;&gt;Sending Logs as JSON&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Edit nxlog.conf and change the Extension and Output to look like the lines below&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;Extension json&amp;gt;
-    Module    xm_json
-&amp;lt;/Extension&amp;gt;
-
-&amp;lt;Output out&amp;gt;
-    Module    om_tcp
-    Host      IP_ADDRESS
-    Port      514
-    Exec      to_json();
-&amp;lt;/Output&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;Extension json&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Module    xm_json
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/Extension&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;Output out&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Module    om_tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Host      IP_ADDRESS
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Port      514
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Exec      to_json();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/Output&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -171,24 +188,24 @@
         
         &lt;h2 id=&#34;important-nginx-directories-and-files&#34;&gt;Important nginx Directories and files&lt;/h2&gt;
 &lt;h3 id=&#34;content&#34;&gt;Content&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/var/www/html
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The actual web content, which by default only consists of the default Nginx page you saw earlier, is served out of the /var/www/html directory. This can be changed by altering Nginx configuration files.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;var&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;www&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;html&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The actual web content, which by default only consists of the default Nginx page you saw earlier, is served out of the /var/www/html directory. This can be changed by altering Nginx configuration files.&lt;/p&gt;
 &lt;h3 id=&#34;server-configuration&#34;&gt;Server Configuration&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The Nginx configuration directory. All of the Nginx configuration files reside here.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx/nginx.conf
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The main Nginx configuration file. This can be modified to make changes to the Nginx global configuration.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx/sites-available/
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The directory where per-site server blocks can be stored. Nginx will not use the configuration files found in this directory unless they are linked to the sites-enabled directory. Typically, all server block configuration is done in this directory, and then enabled by linking to the other directory.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx/sites-enabled/
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The directory where enabled per-site server blocks are stored. Typically, these are created by linking to configuration files found in the sites-available directory.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/nginx/snippets
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This directory contains configuration fragments that can be included elsewhere in the Nginx configuration. Potentially repeatable configuration segments are good candidates for refactoring into snippets.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/etc/nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The Nginx configuration directory. All of the Nginx configuration files reside here.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/etc/nginx/nginx.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The main Nginx configuration file. This can be modified to make changes to the Nginx global configuration.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/etc/nginx/sites-available/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The directory where per-site server blocks can be stored. Nginx will not use the configuration files found in this directory unless they are linked to the sites-enabled directory. Typically, all server block configuration is done in this directory, and then enabled by linking to the other directory.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/etc/nginx/sites-enabled/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The directory where enabled per-site server blocks are stored. Typically, these are created by linking to configuration files found in the sites-available directory.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/etc/nginx/snippets
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This directory contains configuration fragments that can be included elsewhere in the Nginx configuration. Potentially repeatable configuration segments are good candidates for refactoring into snippets.&lt;/p&gt;
 &lt;h3 id=&#34;server-logs&#34;&gt;Server Logs&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/var/log/nginx/access.log
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Every request to your web server is recorded in this log file unless Nginx is configured to do otherwise.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/var/log/nginx/error.log
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Any Nginx errors will be recorded in this log.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;var&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;log&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;nginx&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;access&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;log&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Every request to your web server is recorded in this log file unless Nginx is configured to do otherwise.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;var&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;log&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;nginx&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;log&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Any Nginx errors will be recorded in this log.&lt;/p&gt;
 
       </description>
     </item>
@@ -205,8 +222,8 @@
         &lt;h1 id=&#34;fusion&#34;&gt;Fusion&lt;/h1&gt;
 &lt;h3 id=&#34;install-using-brew&#34;&gt;Install using brew:&lt;/h3&gt;
 &lt;p&gt;If you have brew on mac then just run this command to install vmware-fusion.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install --cask vmware-fusion
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;install-using-dmg-provided-by-vmware&#34;&gt;Install using DMG provided by VMWare&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install --cask vmware-fusion
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;install-using-dmg-provided-by-vmware&#34;&gt;Install using DMG provided by VMWare&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Download the file from the link below:&lt;/li&gt;
 &lt;/ul&gt;
@@ -230,20 +247,20 @@
         &lt;h1 id=&#34;installing-nginx&#34;&gt;Installing Nginx&lt;/h1&gt;
 &lt;h2 id=&#34;installing-nginx-on-linux&#34;&gt;Installing nginx on Linux&lt;/h2&gt;
 &lt;p&gt;Ubuntu:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install nginx
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You may need to adjust UFW rules to allow access to the webserver.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt install nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You may need to adjust UFW rules to allow access to the webserver.&lt;/p&gt;
 &lt;h2 id=&#34;checking-if-your-webserver-is-running&#34;&gt;Checking if your webserver is running&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl status nginx
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;managing-the-nginx-process&#34;&gt;Managing the nginx process&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl status nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;managing-the-nginx-process&#34;&gt;Managing the nginx process&lt;/h2&gt;
 &lt;p&gt;To stop nginx:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl stop nginx
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To start nginx:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl start nginx
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To restart nginx:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl restart nginx
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you only make configuration changes you can reload without dropping connections:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl reload nginx
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl stop nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To start nginx:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl start nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To restart nginx:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl restart nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you only make configuration changes you can reload without dropping connections:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;systemctl&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;reload&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nginx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -257,10 +274,10 @@
         
         
         &lt;p&gt;This will list the current keys in your trust database depending on the key you would like to see:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --list-secret-keys 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;OR&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --list-keys
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gpg --list-secret-keys 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;OR&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gpg --list-keys
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -273,13 +290,12 @@
       <description>
         
         
-        &lt;h1 id=&#34;maintaining-a-linux-server&#34;&gt;Maintaining a Linux Server&lt;/h1&gt;
-&lt;h2 id=&#34;keep-packages-up-to-date&#34;&gt;Keep packages up to date&lt;/h2&gt;
+        &lt;h2 id=&#34;keep-packages-up-to-date&#34;&gt;Keep packages up to date&lt;/h2&gt;
 &lt;p&gt;All Linux distributions use package managers to easily be able to install and update packages without having to manually download them.&lt;/p&gt;
 &lt;p&gt;On debian the package manager is apt.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt update
-apt upgrade
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Keeping the server up to date should be minimum maintenance required for your server as not only do up to date packages often offer more features but they also fix security bugs and vulnerabilities.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Keeping the server up to date should be minimum maintenance required for your server as not only do up to date packages often offer more features but they also fix security bugs and vulnerabilities.&lt;/p&gt;
 
       </description>
     </item>
@@ -293,40 +309,37 @@ apt upgrade
       <description>
         
         
-        &lt;h1 id=&#34;ufw&#34;&gt;UFW&lt;/h1&gt;
-&lt;h2 id=&#34;installation&#34;&gt;Installation:&lt;/h2&gt;
+        &lt;h2 id=&#34;installation&#34;&gt;Installation:&lt;/h2&gt;
 &lt;p&gt;Debian:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install ufw
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;check-the-status-of-ufw&#34;&gt;Check the status of UFW:&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt install ufw
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;check-the-status-of-ufw&#34;&gt;Check the status of UFW:&lt;/h2&gt;
 &lt;p&gt;You can check the status of ufw by running:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw status
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Without any changes it will most likely report back &lt;strong&gt;&amp;lsquo;Status: Inactive&amp;rsquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Without any changes it will most likely report back &lt;strong&gt;&amp;lsquo;Status: Inactive&amp;rsquo;&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;set-up-ufw-to-allow-ssh-or-port-22&#34;&gt;Set up UFW to allow SSH or port 22:&lt;/h2&gt;
 &lt;p&gt;Here we will set up UFW to allow port 22 (SSH) connections so that once the UFW is enabled you are still able to SSH into the machine.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;First lets deny all incoming connections by default.&lt;/li&gt;
+&lt;li&gt;Lets allow ssh or port 22 - there are 2 ways of doing this.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw default deny incoming
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;Now lets allow ssh or port 22 - there are 2 ways of doing this.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw allow in ssh
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;or&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw allow in 22
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw allow in ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw allow in 22
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Once this is set we can enable the UFW.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw enable
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;view-all-your-rules&#34;&gt;View all your rules:&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw status verbose
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;delete-a-rule&#34;&gt;Delete a rule:&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw enable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;deny-all-incoming-traffic&#34;&gt;Deny all incoming traffic&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw default deny incoming
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;view-all-your-rules&#34;&gt;View all your rules:&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw status verbose
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;delete-a-rule&#34;&gt;Delete a rule:&lt;/h2&gt;
 &lt;p&gt;To delete a rule for example the SSH rule, run:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw delete allow in &amp;#39;SSH&amp;#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once the rule is deleted, reload UFW&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw reload
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;disable-ufw&#34;&gt;Disable UFW:&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ufw disable
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw delete allow in &amp;#39;SSH&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once the rule is deleted, reload UFW&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;ufw&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;reload&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;disable-ufw&#34;&gt;Disable UFW:&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw disable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -341,141 +354,70 @@ apt upgrade
         
         &lt;h1 id=&#34;updating-oracle-linux&#34;&gt;Updating Oracle Linux&lt;/h1&gt;
 &lt;h2 id=&#34;check-your-current-oracle-linux-version&#34;&gt;Check your current Oracle Linux Version:&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat /etc/oracle-release
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output of this command will be the version of your machine.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat /etc/oracle-release
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output of this command will be the version of your machine.&lt;/p&gt;
 &lt;h2 id=&#34;with-internet&#34;&gt;With internet:&lt;/h2&gt;
 &lt;p&gt;With internet updating and upgrading oracle linux is as simple as using the following command&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum update -y &amp;amp;&amp;amp; sudo yum upgrade -y
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will check you have the latest update information.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo yum update -y &amp;amp;&amp;amp; sudo yum upgrade -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will check you have the latest update information.
 The upgrade command will actually upgrade the software on your machine.&lt;/p&gt;
 &lt;h2 id=&#34;without-internet&#34;&gt;Without internet:&lt;/h2&gt;
 &lt;p&gt;To complete an offline upgrade of an oracle linux system there is a requirement that you have the oracle ISO file that is a higher version.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Mount the ISO to a mount point (I am using /mnt/iso)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir /mnt/iso
-mount -o ro ORACLE_ISO.iso /mnt/iso
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir /mnt/iso
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mount -o ro ORACLE_ISO.iso /mnt/iso
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Disable the Online repository&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo vi /etc/yum.repos.d/public.repo
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Inside this file there will be a list of repos, change the enable variable to 0 (enable=0)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo vi /etc/yum.repos.d/public.repo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Inside this file there will be a list of repos, change the enable variable to 0 (enable=0)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Create a local repo&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo vi local.repo
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Inside the new file write this:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[localRepo]
-name=localRepo
-baseurl=file:///mnt/iso/
-gpgcheck=0
-enabled=1
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now save and exit the file.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo vi local.repo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Inside the new file write this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[localRepo]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;name=localRepo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;baseurl=file:///mnt/iso/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gpgcheck=0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;enabled=1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now save and exit the file.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Clean the yum package manager cache&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum clean all
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo yum clean all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Check the local repo is enable and being used&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum repolist all
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In the output you should see the localRepo and it should be enabled.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo yum repolist all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the output you should see the localRepo and it should be enabled.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Now update the system&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum update -y --skip-broken
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo yum update -y --skip-broken
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Restart the system to ensure the updates are installed as expected.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo reboot
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;or&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl reboot
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;after-offline-update-clean-up&#34;&gt;After offline update clean up&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo reboot
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl reboot
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;after-offline-update-clean-up&#34;&gt;After offline update clean up&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;unmount the ISO&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;umount /mnt/iso
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;umount /mnt/iso
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;clean the yum cache&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;yum clean all
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yum clean all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Remove the ISO&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;rm ORACLE_ISO
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After completing these steps you could go further and remove the local repo but I wouldn&amp;rsquo;t recommend it as you can use the same repo in the future to make upgrades a bit smoother as long as you mount in the same directory.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rm ORACLE_ISO
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After completing these steps you could go further and remove the local repo but I wouldn&amp;rsquo;t recommend it as you can use the same repo in the future to make upgrades a bit smoother as long as you mount in the same directory.&lt;/p&gt;
 
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Using DNSMasq for DNS</title>
-      <link>//localhost:1313/docs/linux/dnsmasq/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/docs/linux/dnsmasq/</guid>
-      <description>
-        
-        
-        &lt;h1 id=&#34;install-dnsmasq&#34;&gt;Install DNSMasq&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Install DNSMasq&lt;/strong&gt;
-Debian:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install dnsmasq
-&lt;/code&gt;&lt;/pre&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Terraform Cheatsheet</title>
-      <link>//localhost:1313/docs/cheatsheets/automation/terraform/terra_syntax/</link>
-      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/docs/cheatsheets/automation/terraform/terra_syntax/</guid>
-      <description>
-        
-        
-        &lt;h1 id=&#34;terraform&#34;&gt;Terraform&lt;/h1&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;terraform plan          # dry run
-terraform apply         # apply configuration changes
-terraform refresh       # synchronise state with the resource
-terraform destroy       # destroy current configuration
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;state-management&#34;&gt;State management&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;terraform state list # this will show the resources in the state file
-terraform state rm &amp;lt;RESOURCE&amp;gt; # remove a resource from the state list
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;correcting-formatting&#34;&gt;Correcting formatting&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;terraform fmt #reformats .tf files for better readability
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;remote-exec&#34;&gt;Remote Exec&lt;/h3&gt;
-&lt;p&gt;This is used for remotely executing a command.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;provisioner &amp;#34;remote-exec&amp;#34; {
-    inline = [
-         &amp;#34;apt install neofetch&amp;#34;
-    ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Ansible Syntax</title>
-      <link>//localhost:1313/docs/cheatsheets/automation/ansible/syntax/</link>
-      <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/docs/cheatsheets/automation/ansible/syntax/</guid>
-      <description>
-        
-        
-        &lt;h1 id=&#34;ansible&#34;&gt;Ansible&lt;/h1&gt;
-&lt;h3 id=&#34;playbooks&#34;&gt;Playbooks&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ansible-playbook &amp;lt;YAML&amp;gt; -i &amp;lt;HOSTSFILE&amp;gt;    # Run on all hosts from specified hosts file
-ansible-playbook &amp;lt;YAML&amp;gt; -C                # Test run
-ansible-playbook &amp;lt;YAML&amp;gt; -C -D             # Dry run
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;check-syntax&#34;&gt;Check Syntax&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ansible-playbook --syntax-check &amp;lt;YAML&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;execute-commands-on-hosts&#34;&gt;Execute commands on hosts&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ansible &amp;lt;HOSTGROUP&amp;gt; -a &amp;lt;COMMAND&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ansible all -a &amp;#34;neofetch&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     
@@ -498,14 +440,14 @@ ansible-playbook &amp;lt;YAML&amp;gt; -C -D             # Dry run
 &lt;h4 id=&#34;installation-process&#34;&gt;Installation process&lt;/h4&gt;
 &lt;p&gt;Logon to the server and open an elevated command prompt (without the elevation you will not be able to complete the process)&lt;/p&gt;
 &lt;p&gt;change directory to the system32 folder:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd C:\windows\system32
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Install your product key:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cscript slmgr.vbs /ipk *PRODUCT_KEY*
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cscript slmgr.vbs /ato
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The KMS should now function as expected.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd C:\windows\system32
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install your product key:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cscript slmgr.vbs /ipk *PRODUCT_KEY*
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cscript slmgr.vbs /ato
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The KMS should now function as expected.&lt;/p&gt;
 &lt;p&gt;To validate that clients are being activated use:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cscript slmgr.vbs /dlv
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cscript slmgr.vbs /dlv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -520,8 +462,8 @@ ansible-playbook &amp;lt;YAML&amp;gt; -C -D             # Dry run
         
         &lt;p&gt;Useful commands when using KMS&lt;/p&gt;
 &lt;h3 id=&#34;check-the-status-of-windows-activation&#34;&gt;Check the Status of Windows Activation&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;slmgr.vbs /dli
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;slmgr.vbs /dli
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -534,9 +476,31 @@ ansible-playbook &amp;lt;YAML&amp;gt; -C -D             # Dry run
       <description>
         
         
-        &lt;h1 id=&#34;about-oracle-linux&#34;&gt;About Oracle Linux&lt;/h1&gt;
-&lt;p&gt;Oracle linux or Oracle Enterprise Linux (OEL) is a linux distribution freely distributed by Oracle. It is compiled from Red Hat (RHEL) source code.&lt;/p&gt;
+        &lt;p&gt;Oracle linux or Oracle Enterprise Linux (OEL) is a linux distribution freely distributed by Oracle. It is compiled from Red Hat (RHEL) source code.&lt;/p&gt;
 
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Ansible Syntax</title>
+      <link>//localhost:1313/docs/cheatsheets/automation/ansible/syntax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/cheatsheets/automation/ansible/syntax/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;playbooks&#34;&gt;Playbooks&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ansible-playbook &amp;lt;YAML&amp;gt; -i &amp;lt;HOSTSFILE&amp;gt;    # Run on all hosts from specified hosts file
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ansible-playbook &amp;lt;YAML&amp;gt; -C                # Test run
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ansible-playbook &amp;lt;YAML&amp;gt; -C -D             # Dry run
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;check-syntax&#34;&gt;Check Syntax&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ansible-playbook --syntax-check &amp;lt;YAML&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;execute-commands-on-hosts&#34;&gt;Execute commands on hosts&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ansible &amp;lt;HOSTGROUP&amp;gt; -a &amp;lt;COMMAND&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ansible all -a &amp;#34;neofetch&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -571,8 +535,8 @@ ansible-playbook &amp;lt;YAML&amp;gt; -C -D             # Dry run
 &lt;ul&gt;
 &lt;li&gt;SSH to the host.&lt;/li&gt;
 &lt;li&gt;Change directory /etc/vmware/ssl
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd /etc/vmware/ssl
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd /etc/vmware/ssl
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Open rui.key in vi and paste the key you used to create your CSR, then save and quit using :wq&lt;/li&gt;
 &lt;li&gt;Open rui.cer in vi and paste the signed certificate contents into the box. (Make sure the certificate is in Base64)&lt;/li&gt;
 &lt;li&gt;Once complete reboot the host and navigate to the webpage to see if the certificate was succesfully imported.&lt;/li&gt;
@@ -592,14 +556,14 @@ ansible-playbook &amp;lt;YAML&amp;gt; -C -D             # Dry run
         
         
         &lt;h3 id=&#34;check-the-current-time-zone&#34;&gt;Check the current time zone&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;date
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;configuring-the-time-zone-used&#34;&gt;Configuring the time zone used&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;date
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;configuring-the-time-zone-used&#34;&gt;Configuring the time zone used&lt;/h3&gt;
 &lt;p&gt;To configure the timezone in ubuntu, timedatectl is used.&lt;/p&gt;
 &lt;p&gt;Find the time zone from the list using the command below&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;timedatectl list-timezones
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once you have the time zone name for the time zone required use the command below to set it, change America/Goose_Bay to your desired timezone.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo timedatectl set-timezone America/Goose_Bay
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now use the command listed in the first section again to check your new setting.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;timedatectl list-timezones
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once you have the time zone name for the time zone required use the command below to set it, change America/Goose_Bay to your desired timezone.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo timedatectl set-timezone America/Goose_Bay
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now use the command listed in the first section again to check your new setting.&lt;/p&gt;
 
       </description>
     </item>
@@ -614,12 +578,12 @@ ansible-playbook &amp;lt;YAML&amp;gt; -C -D             # Dry run
         
         
         &lt;h2 id=&#34;check-active-cipher-suites-using-powershell&#34;&gt;Check active cipher suites using powershell&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Get-TlsCipherSuite | format-table Name
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will give you a list of active cipher suites on the device.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Get-TlsCipherSuite | format-table Name
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will give you a list of active cipher suites on the device.&lt;/p&gt;
 &lt;h2 id=&#34;disabling-a-cipher-suite&#34;&gt;Disabling a cipher suite&lt;/h2&gt;
 &lt;p&gt;For this example I will disable the &amp;lsquo;TLS_RSA_WITH_3DES_EDE_CBC_SHA&amp;rsquo; cipher suite as this is classed as vulnerable to a SWEET32 attack.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Disable-TlsCipherSuite -Name &amp;#34;TLS_RSA_WITH_3DES_EDE_CBC_SHA&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The command will not give any terminal output but you can use the Get-TlsCipherSuite command to make sure it is deactivated.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Disable-TlsCipherSuite -Name &amp;#34;TLS_RSA_WITH_3DES_EDE_CBC_SHA&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The command will not give any terminal output but you can use the Get-TlsCipherSuite command to make sure it is deactivated.&lt;/p&gt;
 
       </description>
     </item>
@@ -635,26 +599,26 @@ ansible-playbook &amp;lt;YAML&amp;gt; -C -D             # Dry run
         
         &lt;h1 id=&#34;docker&#34;&gt;Docker&lt;/h1&gt;
 &lt;h3 id=&#34;docker-basics&#34;&gt;Docker basics&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker start &amp;lt;CONTAINER&amp;gt; #start container
-docker restart &amp;lt;CONTAINER&amp;gt; #restart container
-docker stop &amp;lt;CONTAINER&amp;gt; #stop container
-docker rm &amp;lt;CONTAINER&amp;gt; #remove a container
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;listing-containers&#34;&gt;Listing containers&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker ps       #list running containers
-docker ps -a    #list all containers
-docker ps -s    #list running containers with system specs
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;image-management&#34;&gt;Image management&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker images       #list local stored images
-docker rmi &amp;lt;IMAGE&amp;gt;  #remove a local image
-docker save -o &amp;lt;TARBALL&amp;gt; &amp;lt;IMAGE&amp;gt; #Save a local image as a tarball so you can archive or inspect the image.
-docker history &amp;lt;IMAGE&amp;gt; #Shows image creation history
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;building-images&#34;&gt;Building Images&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker build .
-docker build --build-arg ARG=VALUE . # pass variables with build arg
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;networks&#34;&gt;Networks&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker network ls      # shows docker network info
-docker network rm &amp;lt;NETWORKID&amp;gt; #Remove a network using the ID
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker start &amp;lt;CONTAINER&amp;gt; #start container
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker restart &amp;lt;CONTAINER&amp;gt; #restart container
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker stop &amp;lt;CONTAINER&amp;gt; #stop container
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker rm &amp;lt;CONTAINER&amp;gt; #remove a container
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;listing-containers&#34;&gt;Listing containers&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker ps       #list running containers
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker ps -a    #list all containers
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker ps -s    #list running containers with system specs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;image-management&#34;&gt;Image management&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker images       #list local stored images
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker rmi &amp;lt;IMAGE&amp;gt;  #remove a local image
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker save -o &amp;lt;TARBALL&amp;gt; &amp;lt;IMAGE&amp;gt; #Save a local image as a tarball so you can archive or inspect the image.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker history &amp;lt;IMAGE&amp;gt; #Shows image creation history
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;building-images&#34;&gt;Building Images&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;docker&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;build&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;docker&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;build&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;build&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;arg&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ARG&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;VALUE&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# pass variables with build arg&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;networks&#34;&gt;Networks&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker network ls      # shows docker network info
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker network rm &amp;lt;NETWORKID&amp;gt; #Remove a network using the ID
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -719,8 +683,8 @@ docker network rm &amp;lt;NETWORKID&amp;gt; #Remove a network using the ID
 &lt;li&gt;Click Edit Settings.&lt;/li&gt;
 &lt;li&gt;click the Filter icon in the name column and in the field enter:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vpxd.certmgmt
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vpxd.certmgmt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Change the value of vpxd.certmgmt.mode to custom.&lt;/li&gt;
 &lt;li&gt;Restart the vCenter Server Service.&lt;/li&gt;
 &lt;/ul&gt;
@@ -759,12 +723,12 @@ docker network rm &amp;lt;NETWORKID&amp;gt; #Remove a network using the ID
 &lt;li&gt;SSH to the ESXi host&lt;/li&gt;
 &lt;li&gt;Create a directory called that will be used to temporarily house the config and key. (the /etc/vmware/ssl folder can reset itself back to default so it isn&amp;rsquo;t recommended to store anything there). This directory can be removed once the certificate is imported.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir /csrstore
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir /csrstore
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Change directory to the new folder&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd /csrstore
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd /csrstore
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;create an openssl.cnf file and use the example below to fill it out. The fields that should be changed are -&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;                - subjectAltName
@@ -780,39 +744,39 @@ docker network rm &amp;lt;NETWORKID&amp;gt; #Remove a network using the ID
 &lt;p&gt;Create the openssl.cnf file and open it in the vi text editor&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vi openssl.cnf
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;SAMPLE OPENSSL CONFIG&lt;/em&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[ req ]
-default_bits = 2048
-default_keyfile = rui.key
-distinguished_name = req_distinguished_name
-encrypt_key = no
-prompt = no
-string_mask = nombstr
-req_extensions = v3_req
-
-[ v3_req ]
-basicConstraints = CA:FALSE
-keyUsage = digitalSignature, keyEncipherment, dataEncipherment
-extendedKeyUsage = serverAuth, clientAuth
-subjectAltName = DNS:esxihost, IP:10.0.1.10, DNS:esxihost.vmware.com
-
-[ req_distinguished_name ]
-CountryName = US
-stateOrProvinceName = StreetCorner
-LocalityName = Alleyway
-0.organizationName = CompanyX
-organizationalUnitName = ITGuys
-commonName = esxihost.vmware.com
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vi openssl.cnf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;SAMPLE OPENSSL CONFIG&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[ req ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;default_bits = 2048
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;default_keyfile = rui.key
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;distinguished_name = req_distinguished_name
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;encrypt_key = no
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;prompt = no
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;string_mask = nombstr
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;req_extensions = v3_req
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[ v3_req ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;basicConstraints = CA:FALSE
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;keyUsage = digitalSignature, keyEncipherment, dataEncipherment
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;extendedKeyUsage = serverAuth, clientAuth
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;subjectAltName = DNS:esxihost, IP:10.0.1.10, DNS:esxihost.vmware.com
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[ req_distinguished_name ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CountryName = US
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;stateOrProvinceName = StreetCorner
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;LocalityName = Alleyway
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.organizationName = CompanyX
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;organizationalUnitName = ITGuys
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;commonName = esxihost.vmware.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Generate a new rui.key to be used with your new certifate&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;openssl genrsa -out rui.key 2048
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;openssl genrsa -out rui.key 2048
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Now generate the CSR based on your config and rui.key&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;openssl req -new -node -out rui.csr -key rui.key -config openssl.cnf
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;openssl req -new -node -out rui.csr -key rui.key -config openssl.cnf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Now take the CSR and sign it.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;If you need to know how to import the signed certificate go here - &lt;a href=&#34;//localhost:1313/docs/vmware/esxi/applying-certificates/&#34;&gt;Applying certificates to ESXi Hosts&lt;/a&gt;&lt;/p&gt;
@@ -833,25 +797,25 @@ commonName = esxihost.vmware.com
 &lt;h3 id=&#34;creating-new-branches&#34;&gt;Creating new branches&lt;/h3&gt;
 &lt;p&gt;If you have multiple people who contribute to a project then it may be useful to create a new branch so that the master branch is always working and correct.&lt;/p&gt;
 &lt;p&gt;To create a new branch you can use this command.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch X
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;X = name of the new branch&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch X
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;X = name of the new branch&lt;/p&gt;
 &lt;p&gt;now a new branch has been made but you are not on the branch yet, to switch to a new branch use:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git switch X
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;X = name of the branch to switch to&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git switch X
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;X = name of the branch to switch to&lt;/p&gt;
 &lt;p&gt;You are now on the new branch.&lt;/p&gt;
 &lt;p&gt;you could also use:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git switch -c X
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;X = new branch name&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git switch -c X
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;X = new branch name&lt;/p&gt;
 &lt;p&gt;this will create and switch you to the new branch that you have created.&lt;/p&gt;
 &lt;h3 id=&#34;listing-branches&#34;&gt;Listing branches&lt;/h3&gt;
 &lt;p&gt;To see local branches, run this command:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To see remote branches, run this command:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch -r
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To see all local and remote branches, run this
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To see remote branches, run this command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch -r
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To see all local and remote branches, run this
 command:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch -a
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The current branch will be marked with an asterix.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch -a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The current branch will be marked with an asterix.&lt;/p&gt;
 
       </description>
     </item>
@@ -917,16 +881,15 @@ There should only be 2 users that have permissions to the SSH folder (SYSTEM &am
       <description>
         
         
-        &lt;h1 id=&#34;how-to-install-arch-linux&#34;&gt;How to install Arch Linux&lt;/h1&gt;
-&lt;p&gt;Arch linux is a sort of &amp;lsquo;build it yourself&amp;rsquo; OS allowing you to create the environment you desire, I use this to have a low resource requirement extending the life of &amp;lsquo;old&amp;rsquo; hardware but it can be used for more than that.&lt;/p&gt;
+        &lt;p&gt;Arch linux is a sort of &amp;lsquo;build it yourself&amp;rsquo; OS allowing you to create the environment you desire, I use this to have a low resource requirement extending the life of &amp;lsquo;old&amp;rsquo; hardware but it can be used for more than that.&lt;/p&gt;
 &lt;h3 id=&#34;how-to-use-the-arch-automated-installer&#34;&gt;How to use the Arch automated installer&lt;/h3&gt;
 &lt;p&gt;Download the Arch Linux ISO from the website.
 &lt;a href=&#34;https://www.archlinux.org&#34;&gt;https://www.archlinux.org&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Boot to the ISO file&lt;/p&gt;
 &lt;p&gt;Once you have booted to the ISO you should be presented with the command line&lt;/p&gt;
 &lt;p&gt;To use the Arch automated installer type:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;archinstall
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The guided installer will perform the following steps:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;archinstall
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The guided installer will perform the following steps:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;configure the locale;&lt;/li&gt;
 &lt;li&gt;select the mirrors;&lt;/li&gt;
@@ -956,23 +919,23 @@ There should only be 2 users that have permissions to the SSH folder (SYSTEM &am
 &lt;p&gt;Git is a version management tool used to make collaborative efforts a lot easier.&lt;/p&gt;
 &lt;h3 id=&#34;creating-a-new-repository&#34;&gt;Creating a new repository:&lt;/h3&gt;
 &lt;p&gt;To create a new repository using git you should cd to the folder you want to be a repository and type into your terminal:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git init
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will create a .git directory known as the working tree.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will create a .git directory known as the working tree.&lt;/p&gt;
 &lt;h3 id=&#34;checking-the-status-of-your-repository&#34;&gt;Checking the status of your repository&lt;/h3&gt;
 &lt;p&gt;Using the &amp;lsquo;git status&amp;rsquo; command will show you what branch you are using, changed files not staged for commit and files that are not currently tracked by git.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git status
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;adding-files-to-your-repository-to-be-tracked&#34;&gt;Adding files to your repository to be tracked&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;adding-files-to-your-repository-to-be-tracked&#34;&gt;Adding files to your repository to be tracked&lt;/h3&gt;
 &lt;p&gt;To add files to be tracked you will need to use &amp;lsquo;git add&amp;rsquo; an example of this would be:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Using the command above will add all files inside the folder to be tracked.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Using the command above will add all files inside the folder to be tracked.&lt;/p&gt;
 &lt;h3 id=&#34;commiting-changes-to-the-repository&#34;&gt;Commiting changes to the repository&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This command will commit the changes that have been added to the repository, it will bring up your default text editor and ask for a commit message, this is what will be seen when you look at repository history.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This command will commit the changes that have been added to the repository, it will bring up your default text editor and ask for a commit message, this is what will be seen when you look at repository history.&lt;/p&gt;
 &lt;p&gt;I prefer to use the &amp;lsquo;-m&amp;rsquo; switch on my commit and then type the message inside the command meaning it skips the extra step of using a text editor.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit -m &amp;#34;MESSAGE GOES HERE&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;showing-the-history-of-the-repository&#34;&gt;Showing the history of the repository&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git log
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This command will show you the commits to the project you are looking at, each commit has a unique name called the git hash these are not randomly generated they are generated using SHA-1. The output also shows you the author, commit message and date and time of the commit.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &amp;#34;MESSAGE GOES HERE&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;showing-the-history-of-the-repository&#34;&gt;Showing the history of the repository&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This command will show you the commits to the project you are looking at, each commit has a unique name called the git hash these are not randomly generated they are generated using SHA-1. The output also shows you the author, commit message and date and time of the commit.&lt;/p&gt;
 &lt;p&gt;It is useful to see what the project looked like at each stage of the commits so if needed you can restore to a previous state.&lt;/p&gt;
 
       </description>
@@ -989,8 +952,8 @@ There should only be 2 users that have permissions to the SSH folder (SYSTEM &am
         
         &lt;h3 id=&#34;verify-you-can-resolve-the-active-directory-domain-controller-fqdn---optional&#34;&gt;Verify you can resolve the Active Directory Domain Controller FQDN - (Optional)&lt;/h3&gt;
 &lt;p&gt;Open a command prompt and ping your ADDC FQDN, replace DC.network.com in the command below.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ping DC.network.com
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If the ping is successful you can begin the joining process.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ping DC.network.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If the ping is successful you can begin the joining process.&lt;/p&gt;
 &lt;h3 id=&#34;joining-the-domain&#34;&gt;Joining the domain&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Open Server Manager and click Local Server on the left hand menu panel&lt;/li&gt;
@@ -1016,13 +979,12 @@ There should only be 2 users that have permissions to the SSH folder (SYSTEM &am
       <description>
         
         
-        &lt;h1 id=&#34;how-to-mount-a-network-share&#34;&gt;How to mount a network share&lt;/h1&gt;
-&lt;h2 id=&#34;nfs&#34;&gt;NFS&lt;/h2&gt;
+        &lt;h2 id=&#34;nfs&#34;&gt;NFS&lt;/h2&gt;
 &lt;p&gt;Mounting an NFS share requires nfs-common. To install:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install nfs-common
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To mount an NFS network share use the command below:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mount -t nfs -o 192.168.0.100:/backups
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Replace the IP Address and share location to your required config.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt install nfs-common
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To mount an NFS network share use the command below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mount -t nfs -o 192.168.0.100:/backups
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Replace the IP Address and share location to your required config.&lt;/p&gt;
 
       </description>
     </item>
@@ -1036,16 +998,15 @@ There should only be 2 users that have permissions to the SSH folder (SYSTEM &am
       <description>
         
         
-        &lt;h1 id=&#34;powershell&#34;&gt;Powershell&lt;/h1&gt;
-&lt;p&gt;a lot of powershell commands have aliases that are similar to linux.&lt;/p&gt;
+        &lt;p&gt;a lot of powershell commands have aliases that are similar to linux.&lt;/p&gt;
 &lt;p&gt;Basic&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ls              # Shows current directory
-cd &amp;lt;DIRECTORY&amp;gt;  # Change directory to specified directory
-mkdir &amp;lt;NEWDIRECTORYNAME&amp;gt; # Create a new folder
-copy &amp;lt;FILETOCOPY&amp;gt; &amp;lt;PATHTOCOPYTO&amp;gt;    # Copy a folder/file to a different place
-move &amp;lt;FILETOMOVE&amp;gt; &amp;lt;PATHTOCOPYTO&amp;gt;    # Move a folder/file to a different place
-rm &amp;lt;FILETOREMOVE&amp;gt;   # Remove a file 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls              # Shows current directory
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd &amp;lt;DIRECTORY&amp;gt;  # Change directory to specified directory
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir &amp;lt;NEWDIRECTORYNAME&amp;gt; # Create a new folder
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;copy &amp;lt;FILETOCOPY&amp;gt; &amp;lt;PATHTOCOPYTO&amp;gt;    # Copy a folder/file to a different place
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;move &amp;lt;FILETOMOVE&amp;gt; &amp;lt;PATHTOCOPYTO&amp;gt;    # Move a folder/file to a different place
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rm &amp;lt;FILETOREMOVE&amp;gt;   # Remove a file 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -1103,23 +1064,52 @@ https://[SERVERNAME]/RDWeb/Pages/en-US/password.aspx&lt;/p&gt;
 &lt;p&gt;If you want to enable SSH then make a file called &amp;lsquo;ssh&amp;rsquo; make sure the file has no extensions if you are doing this on windows.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Enable SSH:&lt;/strong&gt;
 Linux or mac:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;touch ssh
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Windows:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;New-Item ssh
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now add create a file called wpa_supplicant.conf and add the config below changing the network information to your own.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;network={
-    ssid=&amp;#34;ssid_name&amp;#34;
-    psk=&amp;#34;password&amp;#34;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once these steps are completed, plug the SD Card in and boot the Raspberry Pi.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Windows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;New-Item ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now add create a file called wpa_supplicant.conf and add the config below changing the network information to your own.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;network={
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ssid=&amp;#34;ssid_name&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    psk=&amp;#34;password&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once these steps are completed, plug the SD Card in and boot the Raspberry Pi.&lt;/p&gt;
 &lt;p&gt;Now there are two options to accessing the device:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ssh pi@raspberry.local
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;or&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh pi@raspberry.local
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or&lt;/p&gt;
 &lt;p&gt;Find the IP on your router or use nmap to find the IP then:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ssh pi@&amp;lt;IPADDRESS&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The default password is &lt;strong&gt;raspberry&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh pi@&amp;lt;IPADDRESS&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The default password is &lt;strong&gt;raspberry&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;You should now have access to your device without having to plug in a monitor.&lt;/p&gt;
 
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Terraform Cheatsheet</title>
+      <link>//localhost:1313/docs/cheatsheets/automation/terraform/terra_syntax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/cheatsheets/automation/terraform/terra_syntax/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;terraform plan          # dry run
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;terraform apply         # apply configuration changes
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;terraform refresh       # synchronise state with the resource
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;terraform destroy       # destroy current configuration
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;state-management&#34;&gt;State management&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;terraform state list # this will show the resources in the state file
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;terraform state rm &amp;lt;RESOURCE&amp;gt; # remove a resource from the state list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;correcting-formatting&#34;&gt;Correcting formatting&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;terraform fmt #reformats .tf files for better readability
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;remote-exec&#34;&gt;Remote Exec&lt;/h3&gt;
+&lt;p&gt;This is used for remotely executing a command.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;provisioner &amp;#34;remote-exec&amp;#34; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    inline = [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &amp;#34;apt install neofetch&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -1143,24 +1133,24 @@ Linux or mac:&lt;/p&gt;
 &lt;li&gt;Log into the vCenter using root and the password set when creating the appliance (Reset the root password using the GRUB reset method if required)&lt;/li&gt;
 &lt;li&gt;type:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;service-control --start --all
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;service-control --start --all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Once the services have started you should be able to get to the web address, if this doesn&amp;rsquo;t work go to the next method.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;third-method&#34;&gt;Third Method&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;In the vCenter shell enter:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl --list-unit-files | grep masked
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl --list-unit-files | grep masked
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;If services are showing as masked then run this command to unmask them:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;find /etc/systemd/system/ -lname &amp;#39;/dev/null&amp;#39; -exec rm {} \\;
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;find /etc/systemd/system/ -lname &amp;#39;/dev/null&amp;#39; -exec rm {} \\;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Now check all the services are unmasked and run:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;service-control --start --all
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;service-control --start --all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     

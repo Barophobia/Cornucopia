@@ -5,8 +5,6 @@ chapter = true
 pre = "<b> - </b>"
 +++
 
-# Updating Oracle Linux
-
 ## Check your current Oracle Linux Version:
 
 ```

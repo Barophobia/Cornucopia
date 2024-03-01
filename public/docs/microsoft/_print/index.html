@@ -40,6 +40,7 @@
   src="https://code.jquery.com/jquery-3.6.3.min.js"
   integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
   crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
 
   </head>
   <body class="td-section">
@@ -50,7 +51,7 @@
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/privacy/"><span>Privacy</span></a>
@@ -284,14 +285,14 @@ This is the multi-page printable view of this section.
 <h4 id="installation-process">Installation process</h4>
 <p>Logon to the server and open an elevated command prompt (without the elevation you will not be able to complete the process)</p>
 <p>change directory to the system32 folder:</p>
-<pre tabindex="0"><code>cd C:\windows\system32
-</code></pre><p>Install your product key:</p>
-<pre tabindex="0"><code>cscript slmgr.vbs /ipk *PRODUCT_KEY*
-</code></pre><pre tabindex="0"><code>cscript slmgr.vbs /ato
-</code></pre><p>The KMS should now function as expected.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd C:\windows\system32
+</span></span></code></pre></div><p>Install your product key:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cscript slmgr.vbs /ipk *PRODUCT_KEY*
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cscript slmgr.vbs /ato
+</span></span></code></pre></div><p>The KMS should now function as expected.</p>
 <p>To validate that clients are being activated use:</p>
-<pre tabindex="0"><code>cscript slmgr.vbs /dlv
-</code></pre>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cscript slmgr.vbs /dlv
+</span></span></code></pre></div>
 </div>
 
 
@@ -310,8 +311,8 @@ This is the multi-page printable view of this section.
     
 	<p>Useful commands when using KMS</p>
 <h3 id="check-the-status-of-windows-activation">Check the Status of Windows Activation</h3>
-<pre tabindex="0"><code>slmgr.vbs /dli
-</code></pre>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>slmgr.vbs /dli
+</span></span></code></pre></div>
 </div>
 
 
@@ -333,12 +334,12 @@ This is the multi-page printable view of this section.
 	<h1 id="pg-846dde03355647c6690d2fd3a31bdae7">2 - Disabling Cipher Suites</h1>
     
 	<h2 id="check-active-cipher-suites-using-powershell">Check active cipher suites using powershell</h2>
-<pre tabindex="0"><code>Get-TlsCipherSuite | format-table Name
-</code></pre><p>This will give you a list of active cipher suites on the device.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Get-TlsCipherSuite | format-table Name
+</span></span></code></pre></div><p>This will give you a list of active cipher suites on the device.</p>
 <h2 id="disabling-a-cipher-suite">Disabling a cipher suite</h2>
 <p>For this example I will disable the &lsquo;TLS_RSA_WITH_3DES_EDE_CBC_SHA&rsquo; cipher suite as this is classed as vulnerable to a SWEET32 attack.</p>
-<pre tabindex="0"><code>Disable-TlsCipherSuite -Name &#34;TLS_RSA_WITH_3DES_EDE_CBC_SHA&#34;
-</code></pre><p>The command will not give any terminal output but you can use the Get-TlsCipherSuite command to make sure it is deactivated.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Disable-TlsCipherSuite -Name &#34;TLS_RSA_WITH_3DES_EDE_CBC_SHA&#34;
+</span></span></code></pre></div><p>The command will not give any terminal output but you can use the Get-TlsCipherSuite command to make sure it is deactivated.</p>
 
 </div>
 
@@ -409,8 +410,8 @@ This is the multi-page printable view of this section.
     
 	<h3 id="verify-you-can-resolve-the-active-directory-domain-controller-fqdn---optional">Verify you can resolve the Active Directory Domain Controller FQDN - (Optional)</h3>
 <p>Open a command prompt and ping your ADDC FQDN, replace DC.network.com in the command below.</p>
-<pre tabindex="0"><code>ping DC.network.com
-</code></pre><p>If the ping is successful you can begin the joining process.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ping DC.network.com
+</span></span></code></pre></div><p>If the ping is successful you can begin the joining process.</p>
 <h3 id="joining-the-domain">Joining the domain</h3>
 <ul>
 <li>Open Server Manager and click Local Server on the left hand menu panel</li>
@@ -604,7 +605,7 @@ https://[SERVERNAME]/RDWeb/Pages/en-US/password.aspx</p>
     </div>
     
   <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/prism.js'></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

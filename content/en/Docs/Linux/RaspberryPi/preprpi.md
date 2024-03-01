@@ -2,8 +2,6 @@
 title = "Setup Headless Raspberry Pi"
 +++
 
-# Setup a headless Raspberry Pi
-
 **Requirements**
 - Raspberry Pi with power supply 
 - SD Card

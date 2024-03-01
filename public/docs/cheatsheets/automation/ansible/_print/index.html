@@ -40,6 +40,7 @@
   src="https://code.jquery.com/jquery-3.6.3.min.js"
   integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
   crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
 
   </head>
   <body class="td-section">
@@ -50,7 +51,7 @@
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/privacy/"><span>Privacy</span></a>
@@ -134,18 +135,17 @@ This is the multi-page printable view of this section.
     
 	<h1 id="pg-909af68028e4b92ec99a24f307013283">1 - Ansible Syntax</h1>
     <div class="lead">Introduction to Ansible Syntax.</div>
-	<h1 id="ansible">Ansible</h1>
-<h3 id="playbooks">Playbooks</h3>
-<pre tabindex="0"><code>ansible-playbook &lt;YAML&gt; -i &lt;HOSTSFILE&gt;    # Run on all hosts from specified hosts file
-ansible-playbook &lt;YAML&gt; -C                # Test run
-ansible-playbook &lt;YAML&gt; -C -D             # Dry run
-</code></pre><h3 id="check-syntax">Check Syntax</h3>
-<pre tabindex="0"><code>ansible-playbook --syntax-check &lt;YAML&gt;
-</code></pre><h3 id="execute-commands-on-hosts">Execute commands on hosts</h3>
-<pre tabindex="0"><code>ansible &lt;HOSTGROUP&gt; -a &lt;COMMAND&gt;
-</code></pre><p>Example:</p>
-<pre tabindex="0"><code>ansible all -a &#34;neofetch&#34;
-</code></pre>
+	<h3 id="playbooks">Playbooks</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ansible-playbook &lt;YAML&gt; -i &lt;HOSTSFILE&gt;    # Run on all hosts from specified hosts file
+</span></span><span style="display:flex;"><span>ansible-playbook &lt;YAML&gt; -C                # Test run
+</span></span><span style="display:flex;"><span>ansible-playbook &lt;YAML&gt; -C -D             # Dry run
+</span></span></code></pre></div><h3 id="check-syntax">Check Syntax</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ansible-playbook --syntax-check &lt;YAML&gt;
+</span></span></code></pre></div><h3 id="execute-commands-on-hosts">Execute commands on hosts</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ansible &lt;HOSTGROUP&gt; -a &lt;COMMAND&gt;
+</span></span></code></pre></div><p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ansible all -a &#34;neofetch&#34;
+</span></span></code></pre></div>
 </div>
 
 
@@ -195,7 +195,7 @@ ansible-playbook &lt;YAML&gt; -C -D             # Dry run
     </div>
     
   <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/prism.js'></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

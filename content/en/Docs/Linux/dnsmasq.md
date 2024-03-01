@@ -1,5 +1,5 @@
 +++
-title = "Using DNSMasq for DNS"
+title = "DNSMasq for DNS"
 weight = 5
 chapter = true
 pre = "<b> - </b>"

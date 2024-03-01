@@ -40,6 +40,7 @@
   src="https://code.jquery.com/jquery-3.6.3.min.js"
   integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
   crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
 
   </head>
   <body class="td-section">
@@ -50,7 +51,7 @@
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/privacy/"><span>Privacy</span></a>
@@ -101,7 +102,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-726d03a9979fc6109d0af2ddcc5220bf">Maintaining a Linux Server</a></li>
+<li>1: <a href="#pg-967f17c9d6dbb24b353b383346ea5ba1">DNSMasq for DNS</a></li>
 
 
     
@@ -109,7 +110,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-d5778c7176fe78ed282ff13d395a065a">Uncomplicated Firewall (UFW)</a></li>
+<li>2: <a href="#pg-726d03a9979fc6109d0af2ddcc5220bf">Maintaining a Linux Server</a></li>
 
 
     
@@ -117,7 +118,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3: <a href="#pg-967f17c9d6dbb24b353b383346ea5ba1">Using DNSMasq for DNS</a></li>
+<li>3: <a href="#pg-d5778c7176fe78ed282ff13d395a065a">Uncomplicated Firewall (UFW)</a></li>
 
 
     
@@ -213,8 +214,7 @@ This is the multi-page printable view of this section.
 
 
 <div class="content">
-      <h1 id="linux">Linux</h1>
-
+      
 </div>
 </div>
 
@@ -235,87 +235,83 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-726d03a9979fc6109d0af2ddcc5220bf">1 - Maintaining a Linux Server</h1>
-    
-	<h1 id="maintaining-a-linux-server">Maintaining a Linux Server</h1>
-<h2 id="keep-packages-up-to-date">Keep packages up to date</h2>
-<p>All Linux distributions use package managers to easily be able to install and update packages without having to manually download them.</p>
-<p>On debian the package manager is apt.</p>
-<pre tabindex="0"><code>apt update
-apt upgrade
-</code></pre><p>Keeping the server up to date should be minimum maintenance required for your server as not only do up to date packages often offer more features but they also fix security bugs and vulnerabilities.</p>
-
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-d5778c7176fe78ed282ff13d395a065a">2 - Uncomplicated Firewall (UFW)</h1>
-    
-	<h1 id="ufw">UFW</h1>
-<h2 id="installation">Installation:</h2>
-<p>Debian:</p>
-<pre tabindex="0"><code>apt install ufw
-</code></pre><h2 id="check-the-status-of-ufw">Check the status of UFW:</h2>
-<p>You can check the status of ufw by running:</p>
-<pre tabindex="0"><code>ufw status
-</code></pre><p>Without any changes it will most likely report back <strong>&lsquo;Status: Inactive&rsquo;</strong></p>
-<h2 id="set-up-ufw-to-allow-ssh-or-port-22">Set up UFW to allow SSH or port 22:</h2>
-<p>Here we will set up UFW to allow port 22 (SSH) connections so that once the UFW is enabled you are still able to SSH into the machine.</p>
-<ul>
-<li>First lets deny all incoming connections by default.</li>
-</ul>
-<pre tabindex="0"><code>ufw default deny incoming
-</code></pre><ul>
-<li>Now lets allow ssh or port 22 - there are 2 ways of doing this.</li>
-</ul>
-<pre tabindex="0"><code>ufw allow in ssh
-</code></pre><p>or</p>
-<pre tabindex="0"><code>ufw allow in 22
-</code></pre><ul>
-<li>Once this is set we can enable the UFW.</li>
-</ul>
-<pre tabindex="0"><code>ufw enable
-</code></pre><h2 id="view-all-your-rules">View all your rules:</h2>
-<pre tabindex="0"><code>ufw status verbose
-</code></pre><h2 id="delete-a-rule">Delete a rule:</h2>
-<p>To delete a rule for example the SSH rule, run:</p>
-<pre tabindex="0"><code>ufw delete allow in &#39;SSH&#39;
-</code></pre><p>Once the rule is deleted, reload UFW</p>
-<pre tabindex="0"><code>ufw reload
-</code></pre><h2 id="disable-ufw">Disable UFW:</h2>
-<pre tabindex="0"><code>ufw disable
-</code></pre>
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-967f17c9d6dbb24b353b383346ea5ba1">3 - Using DNSMasq for DNS</h1>
+	<h1 id="pg-967f17c9d6dbb24b353b383346ea5ba1">1 - DNSMasq for DNS</h1>
     
 	<h1 id="install-dnsmasq">Install DNSMasq</h1>
 <p><strong>Install DNSMasq</strong>
 Debian:</p>
-<pre tabindex="0"><code>apt install dnsmasq
-</code></pre>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apt install dnsmasq
+</span></span></code></pre></div>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-726d03a9979fc6109d0af2ddcc5220bf">2 - Maintaining a Linux Server</h1>
+    
+	<h2 id="keep-packages-up-to-date">Keep packages up to date</h2>
+<p>All Linux distributions use package managers to easily be able to install and update packages without having to manually download them.</p>
+<p>On debian the package manager is apt.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apt update
+</span></span><span style="display:flex;"><span>apt upgrade
+</span></span></code></pre></div><p>Keeping the server up to date should be minimum maintenance required for your server as not only do up to date packages often offer more features but they also fix security bugs and vulnerabilities.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d5778c7176fe78ed282ff13d395a065a">3 - Uncomplicated Firewall (UFW)</h1>
+    
+	<h2 id="installation">Installation:</h2>
+<p>Debian:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apt install ufw
+</span></span></code></pre></div><h2 id="check-the-status-of-ufw">Check the status of UFW:</h2>
+<p>You can check the status of ufw by running:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ufw status
+</span></span></code></pre></div><p>Without any changes it will most likely report back <strong>&lsquo;Status: Inactive&rsquo;</strong></p>
+<h2 id="set-up-ufw-to-allow-ssh-or-port-22">Set up UFW to allow SSH or port 22:</h2>
+<p>Here we will set up UFW to allow port 22 (SSH) connections so that once the UFW is enabled you are still able to SSH into the machine.</p>
+<ul>
+<li>Lets allow ssh or port 22 - there are 2 ways of doing this.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ufw allow in ssh
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ufw allow in 22
+</span></span></code></pre></div><ul>
+<li>Once this is set we can enable the UFW.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ufw enable
+</span></span></code></pre></div><h2 id="deny-all-incoming-traffic">Deny all incoming traffic</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ufw default deny incoming
+</span></span></code></pre></div><h2 id="view-all-your-rules">View all your rules:</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ufw status verbose
+</span></span></code></pre></div><h2 id="delete-a-rule">Delete a rule:</h2>
+<p>To delete a rule for example the SSH rule, run:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ufw delete allow in &#39;SSH&#39;
+</span></span></code></pre></div><p>Once the rule is deleted, reload UFW</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#000">ufw</span> <span style="color:#000">reload</span>
+</span></span></code></pre></div><h2 id="disable-ufw">Disable UFW:</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ufw disable
+</span></span></code></pre></div>
 </div>
 
 
@@ -333,14 +329,14 @@ Debian:</p>
 	<h1 id="pg-9790ade7e4787a73f84175b4eaf519e2">4 - Configure time zone</h1>
     
 	<h3 id="check-the-current-time-zone">Check the current time zone</h3>
-<pre tabindex="0"><code>date
-</code></pre><h3 id="configuring-the-time-zone-used">Configuring the time zone used</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>date
+</span></span></code></pre></div><h3 id="configuring-the-time-zone-used">Configuring the time zone used</h3>
 <p>To configure the timezone in ubuntu, timedatectl is used.</p>
 <p>Find the time zone from the list using the command below</p>
-<pre tabindex="0"><code>timedatectl list-timezones
-</code></pre><p>Once you have the time zone name for the time zone required use the command below to set it, change America/Goose_Bay to your desired timezone.</p>
-<pre tabindex="0"><code>sudo timedatectl set-timezone America/Goose_Bay
-</code></pre><p>Now use the command listed in the first section again to check your new setting.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>timedatectl list-timezones
+</span></span></code></pre></div><p>Once you have the time zone name for the time zone required use the command below to set it, change America/Goose_Bay to your desired timezone.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo timedatectl set-timezone America/Goose_Bay
+</span></span></code></pre></div><p>Now use the command listed in the first section again to check your new setting.</p>
 
 </div>
 
@@ -358,16 +354,15 @@ Debian:</p>
     
 	<h1 id="pg-775cded8010d40cd6e397e8dadc27578">5 - Installing Arch Linux</h1>
     
-	<h1 id="how-to-install-arch-linux">How to install Arch Linux</h1>
-<p>Arch linux is a sort of &lsquo;build it yourself&rsquo; OS allowing you to create the environment you desire, I use this to have a low resource requirement extending the life of &lsquo;old&rsquo; hardware but it can be used for more than that.</p>
+	<p>Arch linux is a sort of &lsquo;build it yourself&rsquo; OS allowing you to create the environment you desire, I use this to have a low resource requirement extending the life of &lsquo;old&rsquo; hardware but it can be used for more than that.</p>
 <h3 id="how-to-use-the-arch-automated-installer">How to use the Arch automated installer</h3>
 <p>Download the Arch Linux ISO from the website.
 <a href="https://www.archlinux.org">https://www.archlinux.org</a></p>
 <p>Boot to the ISO file</p>
 <p>Once you have booted to the ISO you should be presented with the command line</p>
 <p>To use the Arch automated installer type:</p>
-<pre tabindex="0"><code>archinstall
-</code></pre><p>The guided installer will perform the following steps:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>archinstall
+</span></span></code></pre></div><p>The guided installer will perform the following steps:</p>
 <ul>
 <li>configure the locale;</li>
 <li>select the mirrors;</li>
@@ -396,13 +391,12 @@ Debian:</p>
     
 	<h1 id="pg-857ae677b93322583df3cb9fbe8db571">6 - Mounting a network share</h1>
     
-	<h1 id="how-to-mount-a-network-share">How to mount a network share</h1>
-<h2 id="nfs">NFS</h2>
+	<h2 id="nfs">NFS</h2>
 <p>Mounting an NFS share requires nfs-common. To install:</p>
-<pre tabindex="0"><code>apt install nfs-common
-</code></pre><p>To mount an NFS network share use the command below:</p>
-<pre tabindex="0"><code>mount -t nfs -o 192.168.0.100:/backups
-</code></pre><p>Replace the IP Address and share location to your required config.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apt install nfs-common
+</span></span></code></pre></div><p>To mount an NFS network share use the command below:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mount -t nfs -o 192.168.0.100:/backups
+</span></span></code></pre></div><p>Replace the IP Address and share location to your required config.</p>
 
 </div>
 
@@ -420,8 +414,7 @@ Debian:</p>
     
 	<h1 id="pg-0a0e8e03f6e1567ad67f9dccc9a684e5">7 - Oracle Linux</h1>
     
-	<h1 id="oracle-linux">Oracle Linux</h1>
-<p>Oracle linux or Oracle Enterprise Linux (OEL) is a linux distribution freely distributed by Oracle. It is compiled from Red Hat (RHEL) source code.</p>
+	<p>Oracle linux or Oracle Enterprise Linux (OEL) is a linux distribution freely distributed by Oracle. It is compiled from Red Hat (RHEL) source code.</p>
 
 </div>
 
@@ -449,69 +442,69 @@ Debian:</p>
     
 	<h1 id="updating-oracle-linux">Updating Oracle Linux</h1>
 <h2 id="check-your-current-oracle-linux-version">Check your current Oracle Linux Version:</h2>
-<pre tabindex="0"><code>cat /etc/oracle-release
-</code></pre><p>The output of this command will be the version of your machine.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cat /etc/oracle-release
+</span></span></code></pre></div><p>The output of this command will be the version of your machine.</p>
 <h2 id="with-internet">With internet:</h2>
 <p>With internet updating and upgrading oracle linux is as simple as using the following command</p>
-<pre tabindex="0"><code>sudo yum update -y &amp;&amp; sudo yum upgrade -y
-</code></pre><p>This will check you have the latest update information.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo yum update -y &amp;&amp; sudo yum upgrade -y
+</span></span></code></pre></div><p>This will check you have the latest update information.
 The upgrade command will actually upgrade the software on your machine.</p>
 <h2 id="without-internet">Without internet:</h2>
 <p>To complete an offline upgrade of an oracle linux system there is a requirement that you have the oracle ISO file that is a higher version.</p>
 <ul>
 <li>Mount the ISO to a mount point (I am using /mnt/iso)</li>
 </ul>
-<pre tabindex="0"><code>mkdir /mnt/iso
-mount -o ro ORACLE_ISO.iso /mnt/iso
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mkdir /mnt/iso
+</span></span><span style="display:flex;"><span>mount -o ro ORACLE_ISO.iso /mnt/iso
+</span></span></code></pre></div><ul>
 <li>Disable the Online repository</li>
 </ul>
-<pre tabindex="0"><code>sudo vi /etc/yum.repos.d/public.repo
-</code></pre><p>Inside this file there will be a list of repos, change the enable variable to 0 (enable=0)</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo vi /etc/yum.repos.d/public.repo
+</span></span></code></pre></div><p>Inside this file there will be a list of repos, change the enable variable to 0 (enable=0)</p>
 <ul>
 <li>Create a local repo</li>
 </ul>
-<pre tabindex="0"><code>sudo vi local.repo
-</code></pre><p>Inside the new file write this:</p>
-<pre tabindex="0"><code>[localRepo]
-name=localRepo
-baseurl=file:///mnt/iso/
-gpgcheck=0
-enabled=1
-</code></pre><p>Now save and exit the file.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo vi local.repo
+</span></span></code></pre></div><p>Inside the new file write this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>[localRepo]
+</span></span><span style="display:flex;"><span>name=localRepo
+</span></span><span style="display:flex;"><span>baseurl=file:///mnt/iso/
+</span></span><span style="display:flex;"><span>gpgcheck=0
+</span></span><span style="display:flex;"><span>enabled=1
+</span></span></code></pre></div><p>Now save and exit the file.</p>
 <ul>
 <li>Clean the yum package manager cache</li>
 </ul>
-<pre tabindex="0"><code>sudo yum clean all
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo yum clean all
+</span></span></code></pre></div><ul>
 <li>Check the local repo is enable and being used</li>
 </ul>
-<pre tabindex="0"><code>sudo yum repolist all
-</code></pre><p>In the output you should see the localRepo and it should be enabled.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo yum repolist all
+</span></span></code></pre></div><p>In the output you should see the localRepo and it should be enabled.</p>
 <ul>
 <li>Now update the system</li>
 </ul>
-<pre tabindex="0"><code>sudo yum update -y --skip-broken
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo yum update -y --skip-broken
+</span></span></code></pre></div><ul>
 <li>Restart the system to ensure the updates are installed as expected.</li>
 </ul>
-<pre tabindex="0"><code>sudo reboot
-</code></pre><p>or</p>
-<pre tabindex="0"><code>systemctl reboot
-</code></pre><h3 id="after-offline-update-clean-up">After offline update clean up</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo reboot
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>systemctl reboot
+</span></span></code></pre></div><h3 id="after-offline-update-clean-up">After offline update clean up</h3>
 <ul>
 <li>unmount the ISO</li>
 </ul>
-<pre tabindex="0"><code>umount /mnt/iso
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>umount /mnt/iso
+</span></span></code></pre></div><ul>
 <li>clean the yum cache</li>
 </ul>
-<pre tabindex="0"><code>yum clean all
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>yum clean all
+</span></span></code></pre></div><ul>
 <li>Remove the ISO</li>
 </ul>
-<pre tabindex="0"><code>rm ORACLE_ISO
-</code></pre><p>After completing these steps you could go further and remove the local repo but I wouldn&rsquo;t recommend it as you can use the same repo in the future to make upgrades a bit smoother as long as you mount in the same directory.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rm ORACLE_ISO
+</span></span></code></pre></div><p>After completing these steps you could go further and remove the local repo but I wouldn&rsquo;t recommend it as you can use the same repo in the future to make upgrades a bit smoother as long as you mount in the same directory.</p>
 
 </div>
 
@@ -529,8 +522,7 @@ enabled=1
     
 	<h1 id="pg-2b9546606f181f60ded6001af254c348">7.2 - About Oracle Linux</h1>
     
-	<h1 id="about-oracle-linux">About Oracle Linux</h1>
-<p>Oracle linux or Oracle Enterprise Linux (OEL) is a linux distribution freely distributed by Oracle. It is compiled from Red Hat (RHEL) source code.</p>
+	<p>Oracle linux or Oracle Enterprise Linux (OEL) is a linux distribution freely distributed by Oracle. It is compiled from Red Hat (RHEL) source code.</p>
 
 </div>
 
@@ -552,8 +544,7 @@ enabled=1
     
 	<h1 id="pg-e70f4f2b41105fc25dccdcd31cbe3d9d">8 - Raspberry Pi</h1>
     
-	<h1 id="raspberry-pi">Raspberry Pi</h1>
-
+	
 </div>
 
 
@@ -593,21 +584,21 @@ enabled=1
 <p>If you want to enable SSH then make a file called &lsquo;ssh&rsquo; make sure the file has no extensions if you are doing this on windows.</p>
 <p><strong>Enable SSH:</strong>
 Linux or mac:</p>
-<pre tabindex="0"><code>touch ssh
-</code></pre><p>Windows:</p>
-<pre tabindex="0"><code>New-Item ssh
-</code></pre><p>Now add create a file called wpa_supplicant.conf and add the config below changing the network information to your own.</p>
-<pre tabindex="0"><code>network={
-    ssid=&#34;ssid_name&#34;
-    psk=&#34;password&#34;
-}
-</code></pre><p>Once these steps are completed, plug the SD Card in and boot the Raspberry Pi.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>touch ssh
+</span></span></code></pre></div><p>Windows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>New-Item ssh
+</span></span></code></pre></div><p>Now add create a file called wpa_supplicant.conf and add the config below changing the network information to your own.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>network={
+</span></span><span style="display:flex;"><span>    ssid=&#34;ssid_name&#34;
+</span></span><span style="display:flex;"><span>    psk=&#34;password&#34;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Once these steps are completed, plug the SD Card in and boot the Raspberry Pi.</p>
 <p>Now there are two options to accessing the device:</p>
-<pre tabindex="0"><code>ssh pi@raspberry.local
-</code></pre><p>or</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ssh pi@raspberry.local
+</span></span></code></pre></div><p>or</p>
 <p>Find the IP on your router or use nmap to find the IP then:</p>
-<pre tabindex="0"><code>ssh pi@&lt;IPADDRESS&gt;
-</code></pre><p>The default password is <strong>raspberry</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ssh pi@&lt;IPADDRESS&gt;
+</span></span></code></pre></div><p>The default password is <strong>raspberry</strong>.</p>
 <p>You should now have access to your device without having to plug in a monitor.</p>
 
 </div>
@@ -663,7 +654,7 @@ Linux or mac:</p>
     </div>
     
   <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/prism.js'></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

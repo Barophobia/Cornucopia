@@ -40,6 +40,7 @@
   src="https://code.jquery.com/jquery-3.6.3.min.js"
   integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
   crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
 
   </head>
   <body class="td-section">
@@ -50,7 +51,7 @@
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/privacy/"><span>Privacy</span></a>
@@ -152,8 +153,8 @@ This is the multi-page printable view of this section.
 <li>Click Edit Settings.</li>
 <li>click the Filter icon in the name column and in the field enter:</li>
 </ul>
-<pre tabindex="0"><code>vpxd.certmgmt
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>vpxd.certmgmt
+</span></span></code></pre></div><ul>
 <li>Change the value of vpxd.certmgmt.mode to custom.</li>
 <li>Restart the vCenter Server Service.</li>
 </ul>
@@ -202,24 +203,24 @@ This is the multi-page printable view of this section.
 <li>Log into the vCenter using root and the password set when creating the appliance (Reset the root password using the GRUB reset method if required)</li>
 <li>type:</li>
 </ul>
-<pre tabindex="0"><code>service-control --start --all
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>service-control --start --all
+</span></span></code></pre></div><ul>
 <li>Once the services have started you should be able to get to the web address, if this doesn&rsquo;t work go to the next method.</li>
 </ul>
 <h3 id="third-method">Third Method</h3>
 <ul>
 <li>In the vCenter shell enter:</li>
 </ul>
-<pre tabindex="0"><code>systemctl --list-unit-files | grep masked
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>systemctl --list-unit-files | grep masked
+</span></span></code></pre></div><ul>
 <li>If services are showing as masked then run this command to unmask them:</li>
 </ul>
-<pre tabindex="0"><code>find /etc/systemd/system/ -lname &#39;/dev/null&#39; -exec rm {} \\;
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>find /etc/systemd/system/ -lname &#39;/dev/null&#39; -exec rm {} \\;
+</span></span></code></pre></div><ul>
 <li>Now check all the services are unmasked and run:</li>
 </ul>
-<pre tabindex="0"><code>service-control --start --all
-</code></pre>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>service-control --start --all
+</span></span></code></pre></div>
 </div>
 
 
@@ -269,7 +270,7 @@ This is the multi-page printable view of this section.
     </div>
     
   <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/prism.js'></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

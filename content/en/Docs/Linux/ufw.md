@@ -5,8 +5,6 @@ chapter = true
 pre = "<b> - </b>"
 +++
 
-# UFW
-
 ## Installation:
 
 Debian:
@@ -29,13 +27,7 @@ Without any changes it will most likely report back **'Status: Inactive'**
 
 Here we will set up UFW to allow port 22 (SSH) connections so that once the UFW is enabled you are still able to SSH into the machine.
 
-- First lets deny all incoming connections by default.
-
-```
-ufw default deny incoming
-```
-
-- Now lets allow ssh or port 22 - there are 2 ways of doing this.
+- Lets allow ssh or port 22 - there are 2 ways of doing this.
 
 ```
 ufw allow in ssh
@@ -51,6 +43,12 @@ ufw allow in 22
 
 ```
 ufw enable
+```
+
+## Deny all incoming traffic
+
+```
+ufw default deny incoming
 ```
 
 ## View all your rules:

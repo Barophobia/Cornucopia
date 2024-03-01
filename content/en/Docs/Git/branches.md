@@ -3,8 +3,6 @@ title = "Git Branches"
 chapter = true
 +++
 
-# Git Branches
-
 ### Creating new branches
 
 If you have multiple people who contribute to a project then it may be useful to create a new branch so that the master branch is always working and correct.

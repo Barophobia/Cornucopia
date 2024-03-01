@@ -40,6 +40,7 @@
   src="https://code.jquery.com/jquery-3.6.3.min.js"
   integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
   crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
 
   </head>
   <body class="td-section">
@@ -50,7 +51,7 @@
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/privacy/"><span>Privacy</span></a>
@@ -137,26 +138,26 @@ This is the multi-page printable view of this section.
     
 	<h1 id="docker">Docker</h1>
 <h3 id="docker-basics">Docker basics</h3>
-<pre tabindex="0"><code>docker start &lt;CONTAINER&gt; #start container
-docker restart &lt;CONTAINER&gt; #restart container
-docker stop &lt;CONTAINER&gt; #stop container
-docker rm &lt;CONTAINER&gt; #remove a container
-</code></pre><h3 id="listing-containers">Listing containers</h3>
-<pre tabindex="0"><code>docker ps       #list running containers
-docker ps -a    #list all containers
-docker ps -s    #list running containers with system specs
-</code></pre><h3 id="image-management">Image management</h3>
-<pre tabindex="0"><code>docker images       #list local stored images
-docker rmi &lt;IMAGE&gt;  #remove a local image
-docker save -o &lt;TARBALL&gt; &lt;IMAGE&gt; #Save a local image as a tarball so you can archive or inspect the image.
-docker history &lt;IMAGE&gt; #Shows image creation history
-</code></pre><h3 id="building-images">Building Images</h3>
-<pre tabindex="0"><code>docker build .
-docker build --build-arg ARG=VALUE . # pass variables with build arg
-</code></pre><h3 id="networks">Networks</h3>
-<pre tabindex="0"><code>docker network ls      # shows docker network info
-docker network rm &lt;NETWORKID&gt; #Remove a network using the ID
-</code></pre>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>docker start &lt;CONTAINER&gt; #start container
+</span></span><span style="display:flex;"><span>docker restart &lt;CONTAINER&gt; #restart container
+</span></span><span style="display:flex;"><span>docker stop &lt;CONTAINER&gt; #stop container
+</span></span><span style="display:flex;"><span>docker rm &lt;CONTAINER&gt; #remove a container
+</span></span></code></pre></div><h3 id="listing-containers">Listing containers</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>docker ps       #list running containers
+</span></span><span style="display:flex;"><span>docker ps -a    #list all containers
+</span></span><span style="display:flex;"><span>docker ps -s    #list running containers with system specs
+</span></span></code></pre></div><h3 id="image-management">Image management</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>docker images       #list local stored images
+</span></span><span style="display:flex;"><span>docker rmi &lt;IMAGE&gt;  #remove a local image
+</span></span><span style="display:flex;"><span>docker save -o &lt;TARBALL&gt; &lt;IMAGE&gt; #Save a local image as a tarball so you can archive or inspect the image.
+</span></span><span style="display:flex;"><span>docker history &lt;IMAGE&gt; #Shows image creation history
+</span></span></code></pre></div><h3 id="building-images">Building Images</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#000">docker</span> <span style="color:#000">build</span> <span style="color:#ce5c00;font-weight:bold">.</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">docker</span> <span style="color:#000">build</span> <span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">build</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">arg</span> <span style="color:#000">ARG</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">VALUE</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#8f5902;font-style:italic"># pass variables with build arg</span>
+</span></span></code></pre></div><h3 id="networks">Networks</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>docker network ls      # shows docker network info
+</span></span><span style="display:flex;"><span>docker network rm &lt;NETWORKID&gt; #Remove a network using the ID
+</span></span></code></pre></div>
 </div>
 
 
@@ -206,7 +207,7 @@ docker network rm &lt;NETWORKID&gt; #Remove a network using the ID
     </div>
     
   <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/prism.js'></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

@@ -3,8 +3,6 @@ title = "Introduction to git"
 chapter = true
 +++
 
-# Git 
-
 ### What is Git?
 
 Git is a version management tool used to make collaborative efforts a lot easier.

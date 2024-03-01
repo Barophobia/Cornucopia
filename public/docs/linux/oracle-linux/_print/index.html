@@ -40,6 +40,7 @@
   src="https://code.jquery.com/jquery-3.6.3.min.js"
   integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
   crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
 
   </head>
   <body class="td-section">
@@ -50,7 +51,7 @@
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/privacy/"><span>Privacy</span></a>
@@ -119,8 +120,7 @@ This is the multi-page printable view of this section.
 
 
 <div class="content">
-      <h1 id="oracle-linux">Oracle Linux</h1>
-<p>Oracle linux or Oracle Enterprise Linux (OEL) is a linux distribution freely distributed by Oracle. It is compiled from Red Hat (RHEL) source code.</p>
+      <p>Oracle linux or Oracle Enterprise Linux (OEL) is a linux distribution freely distributed by Oracle. It is compiled from Red Hat (RHEL) source code.</p>
 
 </div>
 </div>
@@ -146,69 +146,69 @@ This is the multi-page printable view of this section.
     
 	<h1 id="updating-oracle-linux">Updating Oracle Linux</h1>
 <h2 id="check-your-current-oracle-linux-version">Check your current Oracle Linux Version:</h2>
-<pre tabindex="0"><code>cat /etc/oracle-release
-</code></pre><p>The output of this command will be the version of your machine.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cat /etc/oracle-release
+</span></span></code></pre></div><p>The output of this command will be the version of your machine.</p>
 <h2 id="with-internet">With internet:</h2>
 <p>With internet updating and upgrading oracle linux is as simple as using the following command</p>
-<pre tabindex="0"><code>sudo yum update -y &amp;&amp; sudo yum upgrade -y
-</code></pre><p>This will check you have the latest update information.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo yum update -y &amp;&amp; sudo yum upgrade -y
+</span></span></code></pre></div><p>This will check you have the latest update information.
 The upgrade command will actually upgrade the software on your machine.</p>
 <h2 id="without-internet">Without internet:</h2>
 <p>To complete an offline upgrade of an oracle linux system there is a requirement that you have the oracle ISO file that is a higher version.</p>
 <ul>
 <li>Mount the ISO to a mount point (I am using /mnt/iso)</li>
 </ul>
-<pre tabindex="0"><code>mkdir /mnt/iso
-mount -o ro ORACLE_ISO.iso /mnt/iso
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mkdir /mnt/iso
+</span></span><span style="display:flex;"><span>mount -o ro ORACLE_ISO.iso /mnt/iso
+</span></span></code></pre></div><ul>
 <li>Disable the Online repository</li>
 </ul>
-<pre tabindex="0"><code>sudo vi /etc/yum.repos.d/public.repo
-</code></pre><p>Inside this file there will be a list of repos, change the enable variable to 0 (enable=0)</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo vi /etc/yum.repos.d/public.repo
+</span></span></code></pre></div><p>Inside this file there will be a list of repos, change the enable variable to 0 (enable=0)</p>
 <ul>
 <li>Create a local repo</li>
 </ul>
-<pre tabindex="0"><code>sudo vi local.repo
-</code></pre><p>Inside the new file write this:</p>
-<pre tabindex="0"><code>[localRepo]
-name=localRepo
-baseurl=file:///mnt/iso/
-gpgcheck=0
-enabled=1
-</code></pre><p>Now save and exit the file.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo vi local.repo
+</span></span></code></pre></div><p>Inside the new file write this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>[localRepo]
+</span></span><span style="display:flex;"><span>name=localRepo
+</span></span><span style="display:flex;"><span>baseurl=file:///mnt/iso/
+</span></span><span style="display:flex;"><span>gpgcheck=0
+</span></span><span style="display:flex;"><span>enabled=1
+</span></span></code></pre></div><p>Now save and exit the file.</p>
 <ul>
 <li>Clean the yum package manager cache</li>
 </ul>
-<pre tabindex="0"><code>sudo yum clean all
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo yum clean all
+</span></span></code></pre></div><ul>
 <li>Check the local repo is enable and being used</li>
 </ul>
-<pre tabindex="0"><code>sudo yum repolist all
-</code></pre><p>In the output you should see the localRepo and it should be enabled.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo yum repolist all
+</span></span></code></pre></div><p>In the output you should see the localRepo and it should be enabled.</p>
 <ul>
 <li>Now update the system</li>
 </ul>
-<pre tabindex="0"><code>sudo yum update -y --skip-broken
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo yum update -y --skip-broken
+</span></span></code></pre></div><ul>
 <li>Restart the system to ensure the updates are installed as expected.</li>
 </ul>
-<pre tabindex="0"><code>sudo reboot
-</code></pre><p>or</p>
-<pre tabindex="0"><code>systemctl reboot
-</code></pre><h3 id="after-offline-update-clean-up">After offline update clean up</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo reboot
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>systemctl reboot
+</span></span></code></pre></div><h3 id="after-offline-update-clean-up">After offline update clean up</h3>
 <ul>
 <li>unmount the ISO</li>
 </ul>
-<pre tabindex="0"><code>umount /mnt/iso
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>umount /mnt/iso
+</span></span></code></pre></div><ul>
 <li>clean the yum cache</li>
 </ul>
-<pre tabindex="0"><code>yum clean all
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>yum clean all
+</span></span></code></pre></div><ul>
 <li>Remove the ISO</li>
 </ul>
-<pre tabindex="0"><code>rm ORACLE_ISO
-</code></pre><p>After completing these steps you could go further and remove the local repo but I wouldn&rsquo;t recommend it as you can use the same repo in the future to make upgrades a bit smoother as long as you mount in the same directory.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rm ORACLE_ISO
+</span></span></code></pre></div><p>After completing these steps you could go further and remove the local repo but I wouldn&rsquo;t recommend it as you can use the same repo in the future to make upgrades a bit smoother as long as you mount in the same directory.</p>
 
 </div>
 
@@ -226,8 +226,7 @@ enabled=1
     
 	<h1 id="pg-2b9546606f181f60ded6001af254c348">2 - About Oracle Linux</h1>
     
-	<h1 id="about-oracle-linux">About Oracle Linux</h1>
-<p>Oracle linux or Oracle Enterprise Linux (OEL) is a linux distribution freely distributed by Oracle. It is compiled from Red Hat (RHEL) source code.</p>
+	<p>Oracle linux or Oracle Enterprise Linux (OEL) is a linux distribution freely distributed by Oracle. It is compiled from Red Hat (RHEL) source code.</p>
 
 </div>
 
@@ -278,7 +277,7 @@ enabled=1
     </div>
     
   <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/prism.js'></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

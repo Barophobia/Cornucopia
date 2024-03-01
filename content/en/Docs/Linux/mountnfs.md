@@ -2,8 +2,6 @@
 title = "Mounting a network share"
 +++
 
-# How to mount a network share
-
 ## NFS 
 Mounting an NFS share requires nfs-common. To install:
 

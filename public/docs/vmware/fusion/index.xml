@@ -26,8 +26,8 @@
         &lt;h1 id=&#34;fusion&#34;&gt;Fusion&lt;/h1&gt;
 &lt;h3 id=&#34;install-using-brew&#34;&gt;Install using brew:&lt;/h3&gt;
 &lt;p&gt;If you have brew on mac then just run this command to install vmware-fusion.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install --cask vmware-fusion
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;install-using-dmg-provided-by-vmware&#34;&gt;Install using DMG provided by VMWare&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install --cask vmware-fusion
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;install-using-dmg-provided-by-vmware&#34;&gt;Install using DMG provided by VMWare&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Download the file from the link below:&lt;/li&gt;
 &lt;/ul&gt;

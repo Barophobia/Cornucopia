@@ -40,6 +40,7 @@
   src="https://code.jquery.com/jquery-3.6.3.min.js"
   integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
   crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
 
   </head>
   <body class="td-section">
@@ -50,7 +51,7 @@
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/privacy/"><span>Privacy</span></a>
@@ -153,14 +154,14 @@ This is the multi-page printable view of this section.
 <h4 id="installation-process">Installation process</h4>
 <p>Logon to the server and open an elevated command prompt (without the elevation you will not be able to complete the process)</p>
 <p>change directory to the system32 folder:</p>
-<pre tabindex="0"><code>cd C:\windows\system32
-</code></pre><p>Install your product key:</p>
-<pre tabindex="0"><code>cscript slmgr.vbs /ipk *PRODUCT_KEY*
-</code></pre><pre tabindex="0"><code>cscript slmgr.vbs /ato
-</code></pre><p>The KMS should now function as expected.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd C:\windows\system32
+</span></span></code></pre></div><p>Install your product key:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cscript slmgr.vbs /ipk *PRODUCT_KEY*
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cscript slmgr.vbs /ato
+</span></span></code></pre></div><p>The KMS should now function as expected.</p>
 <p>To validate that clients are being activated use:</p>
-<pre tabindex="0"><code>cscript slmgr.vbs /dlv
-</code></pre>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cscript slmgr.vbs /dlv
+</span></span></code></pre></div>
 </div>
 
 
@@ -179,8 +180,8 @@ This is the multi-page printable view of this section.
     
 	<p>Useful commands when using KMS</p>
 <h3 id="check-the-status-of-windows-activation">Check the Status of Windows Activation</h3>
-<pre tabindex="0"><code>slmgr.vbs /dli
-</code></pre>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>slmgr.vbs /dli
+</span></span></code></pre></div>
 </div>
 
 
@@ -230,7 +231,7 @@ This is the multi-page printable view of this section.
     </div>
     
   <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/prism.js'></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

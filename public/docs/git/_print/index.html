@@ -40,6 +40,7 @@
   src="https://code.jquery.com/jquery-3.6.3.min.js"
   integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
   crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/prism.css"/>
 
   </head>
   <body class="td-section">
@@ -50,7 +51,7 @@
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/privacy/"><span>Privacy</span></a>
@@ -119,8 +120,7 @@ This is the multi-page printable view of this section.
 
 
 <div class="content">
-      <h1 id="git">Git</h1>
-
+      
 </div>
 </div>
 
@@ -147,25 +147,25 @@ This is the multi-page printable view of this section.
 <h3 id="creating-new-branches">Creating new branches</h3>
 <p>If you have multiple people who contribute to a project then it may be useful to create a new branch so that the master branch is always working and correct.</p>
 <p>To create a new branch you can use this command.</p>
-<pre tabindex="0"><code>git branch X
-</code></pre><p>X = name of the new branch</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git branch X
+</span></span></code></pre></div><p>X = name of the new branch</p>
 <p>now a new branch has been made but you are not on the branch yet, to switch to a new branch use:</p>
-<pre tabindex="0"><code>git switch X
-</code></pre><p>X = name of the branch to switch to</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git switch X
+</span></span></code></pre></div><p>X = name of the branch to switch to</p>
 <p>You are now on the new branch.</p>
 <p>you could also use:</p>
-<pre tabindex="0"><code>git switch -c X
-</code></pre><p>X = new branch name</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git switch -c X
+</span></span></code></pre></div><p>X = new branch name</p>
 <p>this will create and switch you to the new branch that you have created.</p>
 <h3 id="listing-branches">Listing branches</h3>
 <p>To see local branches, run this command:</p>
-<pre tabindex="0"><code>git branch
-</code></pre><p>To see remote branches, run this command:</p>
-<pre tabindex="0"><code>git branch -r
-</code></pre><p>To see all local and remote branches, run this
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git branch
+</span></span></code></pre></div><p>To see remote branches, run this command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git branch -r
+</span></span></code></pre></div><p>To see all local and remote branches, run this
 command:</p>
-<pre tabindex="0"><code>git branch -a
-</code></pre><p>The current branch will be marked with an asterix.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git branch -a
+</span></span></code></pre></div><p>The current branch will be marked with an asterix.</p>
 
 </div>
 
@@ -188,23 +188,23 @@ command:</p>
 <p>Git is a version management tool used to make collaborative efforts a lot easier.</p>
 <h3 id="creating-a-new-repository">Creating a new repository:</h3>
 <p>To create a new repository using git you should cd to the folder you want to be a repository and type into your terminal:</p>
-<pre tabindex="0"><code>git init
-</code></pre><p>This will create a .git directory known as the working tree.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git init
+</span></span></code></pre></div><p>This will create a .git directory known as the working tree.</p>
 <h3 id="checking-the-status-of-your-repository">Checking the status of your repository</h3>
 <p>Using the &lsquo;git status&rsquo; command will show you what branch you are using, changed files not staged for commit and files that are not currently tracked by git.</p>
-<pre tabindex="0"><code>git status
-</code></pre><h3 id="adding-files-to-your-repository-to-be-tracked">Adding files to your repository to be tracked</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git status
+</span></span></code></pre></div><h3 id="adding-files-to-your-repository-to-be-tracked">Adding files to your repository to be tracked</h3>
 <p>To add files to be tracked you will need to use &lsquo;git add&rsquo; an example of this would be:</p>
-<pre tabindex="0"><code>git add .
-</code></pre><p>Using the command above will add all files inside the folder to be tracked.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git add .
+</span></span></code></pre></div><p>Using the command above will add all files inside the folder to be tracked.</p>
 <h3 id="commiting-changes-to-the-repository">Commiting changes to the repository</h3>
-<pre tabindex="0"><code>git commit
-</code></pre><p>This command will commit the changes that have been added to the repository, it will bring up your default text editor and ask for a commit message, this is what will be seen when you look at repository history.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git commit
+</span></span></code></pre></div><p>This command will commit the changes that have been added to the repository, it will bring up your default text editor and ask for a commit message, this is what will be seen when you look at repository history.</p>
 <p>I prefer to use the &lsquo;-m&rsquo; switch on my commit and then type the message inside the command meaning it skips the extra step of using a text editor.</p>
-<pre tabindex="0"><code>git commit -m &#34;MESSAGE GOES HERE&#34;
-</code></pre><h3 id="showing-the-history-of-the-repository">Showing the history of the repository</h3>
-<pre tabindex="0"><code>git log
-</code></pre><p>This command will show you the commits to the project you are looking at, each commit has a unique name called the git hash these are not randomly generated they are generated using SHA-1. The output also shows you the author, commit message and date and time of the commit.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git commit -m &#34;MESSAGE GOES HERE&#34;
+</span></span></code></pre></div><h3 id="showing-the-history-of-the-repository">Showing the history of the repository</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git log
+</span></span></code></pre></div><p>This command will show you the commits to the project you are looking at, each commit has a unique name called the git hash these are not randomly generated they are generated using SHA-1. The output also shows you the author, commit message and date and time of the commit.</p>
 <p>It is useful to see what the project looked like at each stage of the commits so if needed you can restore to a previous state.</p>
 
 </div>
@@ -256,7 +256,7 @@ command:</p>
     </div>
     
   <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/prism.js'></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

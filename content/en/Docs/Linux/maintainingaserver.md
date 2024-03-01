@@ -5,8 +5,6 @@ chapter = true
 pre = "<b> - </b>"
 +++
 
-# Maintaining a Linux Server
-
 ## Keep packages up to date
 
 All Linux distributions use package managers to easily be able to install and update packages without having to manually download them. 

@@ -23,16 +23,15 @@
       <description>
         
         
-        &lt;h1 id=&#34;powershell&#34;&gt;Powershell&lt;/h1&gt;
-&lt;p&gt;a lot of powershell commands have aliases that are similar to linux.&lt;/p&gt;
+        &lt;p&gt;a lot of powershell commands have aliases that are similar to linux.&lt;/p&gt;
 &lt;p&gt;Basic&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ls              # Shows current directory
-cd &amp;lt;DIRECTORY&amp;gt;  # Change directory to specified directory
-mkdir &amp;lt;NEWDIRECTORYNAME&amp;gt; # Create a new folder
-copy &amp;lt;FILETOCOPY&amp;gt; &amp;lt;PATHTOCOPYTO&amp;gt;    # Copy a folder/file to a different place
-move &amp;lt;FILETOMOVE&amp;gt; &amp;lt;PATHTOCOPYTO&amp;gt;    # Move a folder/file to a different place
-rm &amp;lt;FILETOREMOVE&amp;gt;   # Remove a file 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls              # Shows current directory
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd &amp;lt;DIRECTORY&amp;gt;  # Change directory to specified directory
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir &amp;lt;NEWDIRECTORYNAME&amp;gt; # Create a new folder
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;copy &amp;lt;FILETOCOPY&amp;gt; &amp;lt;PATHTOCOPYTO&amp;gt;    # Copy a folder/file to a different place
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;move &amp;lt;FILETOMOVE&amp;gt; &amp;lt;PATHTOCOPYTO&amp;gt;    # Move a folder/file to a different place
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rm &amp;lt;FILETOREMOVE&amp;gt;   # Remove a file 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     

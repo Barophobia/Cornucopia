@@ -25,26 +25,26 @@
         
         &lt;h1 id=&#34;docker&#34;&gt;Docker&lt;/h1&gt;
 &lt;h3 id=&#34;docker-basics&#34;&gt;Docker basics&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker start &amp;lt;CONTAINER&amp;gt; #start container
-docker restart &amp;lt;CONTAINER&amp;gt; #restart container
-docker stop &amp;lt;CONTAINER&amp;gt; #stop container
-docker rm &amp;lt;CONTAINER&amp;gt; #remove a container
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;listing-containers&#34;&gt;Listing containers&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker ps       #list running containers
-docker ps -a    #list all containers
-docker ps -s    #list running containers with system specs
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;image-management&#34;&gt;Image management&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker images       #list local stored images
-docker rmi &amp;lt;IMAGE&amp;gt;  #remove a local image
-docker save -o &amp;lt;TARBALL&amp;gt; &amp;lt;IMAGE&amp;gt; #Save a local image as a tarball so you can archive or inspect the image.
-docker history &amp;lt;IMAGE&amp;gt; #Shows image creation history
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;building-images&#34;&gt;Building Images&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker build .
-docker build --build-arg ARG=VALUE . # pass variables with build arg
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;networks&#34;&gt;Networks&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker network ls      # shows docker network info
-docker network rm &amp;lt;NETWORKID&amp;gt; #Remove a network using the ID
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker start &amp;lt;CONTAINER&amp;gt; #start container
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker restart &amp;lt;CONTAINER&amp;gt; #restart container
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker stop &amp;lt;CONTAINER&amp;gt; #stop container
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker rm &amp;lt;CONTAINER&amp;gt; #remove a container
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;listing-containers&#34;&gt;Listing containers&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker ps       #list running containers
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker ps -a    #list all containers
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker ps -s    #list running containers with system specs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;image-management&#34;&gt;Image management&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker images       #list local stored images
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker rmi &amp;lt;IMAGE&amp;gt;  #remove a local image
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker save -o &amp;lt;TARBALL&amp;gt; &amp;lt;IMAGE&amp;gt; #Save a local image as a tarball so you can archive or inspect the image.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker history &amp;lt;IMAGE&amp;gt; #Shows image creation history
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;building-images&#34;&gt;Building Images&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;docker&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;build&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;docker&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;build&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;build&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;arg&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ARG&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;VALUE&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# pass variables with build arg&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;networks&#34;&gt;Networks&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker network ls      # shows docker network info
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker network rm &amp;lt;NETWORKID&amp;gt; #Remove a network using the ID
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     

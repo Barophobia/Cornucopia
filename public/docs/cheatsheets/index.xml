@@ -5,7 +5,6 @@
     <description>Recent content in Cheatsheets on Cornucopia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="//localhost:1313/docs/cheatsheets/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,7 +17,7 @@
     <item>
       <title>Docs: Automation</title>
       <link>//localhost:1313/docs/cheatsheets/automation/</link>
-      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//localhost:1313/docs/cheatsheets/automation/</guid>
       <description>
