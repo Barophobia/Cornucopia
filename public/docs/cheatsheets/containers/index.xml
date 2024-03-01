@@ -23,8 +23,7 @@
       <description>
         
         
-        &lt;h1 id=&#34;docker&#34;&gt;Docker&lt;/h1&gt;
-&lt;h3 id=&#34;docker-basics&#34;&gt;Docker basics&lt;/h3&gt;
+        &lt;h3 id=&#34;docker-basics&#34;&gt;Docker basics&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker start &amp;lt;CONTAINER&amp;gt; #start container
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker restart &amp;lt;CONTAINER&amp;gt; #restart container
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker stop &amp;lt;CONTAINER&amp;gt; #stop container

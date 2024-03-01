@@ -24,8 +24,7 @@
       <description>
         
         
-        &lt;h1 id=&#34;reverse-proxy-with-nginx&#34;&gt;Reverse proxy with nginx&lt;/h1&gt;
-&lt;p&gt;In this example I will be making a reverse proxy for a calibre server so anywhere it references that service is a variable of whatever service you are setting up.&lt;/p&gt;
+        &lt;p&gt;In this example I will be making a reverse proxy for a calibre server so anywhere it references that service is a variable of whatever service you are setting up.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Create a new file inside /etc/nginx/sites-available/calibre&lt;/p&gt;
@@ -244,8 +243,7 @@ Debian:&lt;/p&gt;
       <description>
         
         
-        &lt;h1 id=&#34;installing-nginx&#34;&gt;Installing Nginx&lt;/h1&gt;
-&lt;h2 id=&#34;installing-nginx-on-linux&#34;&gt;Installing nginx on Linux&lt;/h2&gt;
+        &lt;h2 id=&#34;installing-nginx-on-linux&#34;&gt;Installing nginx on Linux&lt;/h2&gt;
 &lt;p&gt;Ubuntu:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt install nginx
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You may need to adjust UFW rules to allow access to the webserver.&lt;/p&gt;
@@ -352,8 +350,7 @@ Debian:&lt;/p&gt;
       <description>
         
         
-        &lt;h1 id=&#34;updating-oracle-linux&#34;&gt;Updating Oracle Linux&lt;/h1&gt;
-&lt;h2 id=&#34;check-your-current-oracle-linux-version&#34;&gt;Check your current Oracle Linux Version:&lt;/h2&gt;
+        &lt;h2 id=&#34;check-your-current-oracle-linux-version&#34;&gt;Check your current Oracle Linux Version:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat /etc/oracle-release
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output of this command will be the version of your machine.&lt;/p&gt;
 &lt;h2 id=&#34;with-internet&#34;&gt;With internet:&lt;/h2&gt;
@@ -597,8 +594,7 @@ The upgrade command will actually upgrade the software on your machine.&lt;/p&gt
       <description>
         
         
-        &lt;h1 id=&#34;docker&#34;&gt;Docker&lt;/h1&gt;
-&lt;h3 id=&#34;docker-basics&#34;&gt;Docker basics&lt;/h3&gt;
+        &lt;h3 id=&#34;docker-basics&#34;&gt;Docker basics&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker start &amp;lt;CONTAINER&amp;gt; #start container
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker restart &amp;lt;CONTAINER&amp;gt; #restart container
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker stop &amp;lt;CONTAINER&amp;gt; #stop container
@@ -793,8 +789,7 @@ The upgrade command will actually upgrade the software on your machine.&lt;/p&gt
       <description>
         
         
-        &lt;h1 id=&#34;git-branches&#34;&gt;Git Branches&lt;/h1&gt;
-&lt;h3 id=&#34;creating-new-branches&#34;&gt;Creating new branches&lt;/h3&gt;
+        &lt;h3 id=&#34;creating-new-branches&#34;&gt;Creating new branches&lt;/h3&gt;
 &lt;p&gt;If you have multiple people who contribute to a project then it may be useful to create a new branch so that the master branch is always working and correct.&lt;/p&gt;
 &lt;p&gt;To create a new branch you can use this command.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch X
@@ -914,8 +909,7 @@ There should only be 2 users that have permissions to the SSH folder (SYSTEM &am
       <description>
         
         
-        &lt;h1 id=&#34;git&#34;&gt;Git&lt;/h1&gt;
-&lt;h3 id=&#34;what-is-git&#34;&gt;What is Git?&lt;/h3&gt;
+        &lt;h3 id=&#34;what-is-git&#34;&gt;What is Git?&lt;/h3&gt;
 &lt;p&gt;Git is a version management tool used to make collaborative efforts a lot easier.&lt;/p&gt;
 &lt;h3 id=&#34;creating-a-new-repository&#34;&gt;Creating a new repository:&lt;/h3&gt;
 &lt;p&gt;To create a new repository using git you should cd to the folder you want to be a repository and type into your terminal:&lt;/p&gt;
@@ -1049,8 +1043,7 @@ https://[SERVERNAME]/RDWeb/Pages/en-US/password.aspx&lt;/p&gt;
       <description>
         
         
-        &lt;h1 id=&#34;setup-a-headless-raspberry-pi&#34;&gt;Setup a headless Raspberry Pi&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Requirements&lt;/strong&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Requirements&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Raspberry Pi with power supply&lt;/li&gt;
 &lt;li&gt;SD Card&lt;/li&gt;

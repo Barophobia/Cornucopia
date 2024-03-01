@@ -23,8 +23,7 @@
       <description>
         
         
-        &lt;h1 id=&#34;updating-oracle-linux&#34;&gt;Updating Oracle Linux&lt;/h1&gt;
-&lt;h2 id=&#34;check-your-current-oracle-linux-version&#34;&gt;Check your current Oracle Linux Version:&lt;/h2&gt;
+        &lt;h2 id=&#34;check-your-current-oracle-linux-version&#34;&gt;Check your current Oracle Linux Version:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat /etc/oracle-release
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output of this command will be the version of your machine.&lt;/p&gt;
 &lt;h2 id=&#34;with-internet&#34;&gt;With internet:&lt;/h2&gt;

@@ -23,8 +23,7 @@
       <description>
         
         
-        &lt;h1 id=&#34;reverse-proxy-with-nginx&#34;&gt;Reverse proxy with nginx&lt;/h1&gt;
-&lt;p&gt;In this example I will be making a reverse proxy for a calibre server so anywhere it references that service is a variable of whatever service you are setting up.&lt;/p&gt;
+        &lt;p&gt;In this example I will be making a reverse proxy for a calibre server so anywhere it references that service is a variable of whatever service you are setting up.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Create a new file inside /etc/nginx/sites-available/calibre&lt;/p&gt;
@@ -90,8 +89,7 @@
       <description>
         
         
-        &lt;h1 id=&#34;installing-nginx&#34;&gt;Installing Nginx&lt;/h1&gt;
-&lt;h2 id=&#34;installing-nginx-on-linux&#34;&gt;Installing nginx on Linux&lt;/h2&gt;
+        &lt;h2 id=&#34;installing-nginx-on-linux&#34;&gt;Installing nginx on Linux&lt;/h2&gt;
 &lt;p&gt;Ubuntu:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt install nginx
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You may need to adjust UFW rules to allow access to the webserver.&lt;/p&gt;

@@ -23,8 +23,7 @@
       <description>
         
         
-        &lt;h1 id=&#34;git-branches&#34;&gt;Git Branches&lt;/h1&gt;
-&lt;h3 id=&#34;creating-new-branches&#34;&gt;Creating new branches&lt;/h3&gt;
+        &lt;h3 id=&#34;creating-new-branches&#34;&gt;Creating new branches&lt;/h3&gt;
 &lt;p&gt;If you have multiple people who contribute to a project then it may be useful to create a new branch so that the master branch is always working and correct.&lt;/p&gt;
 &lt;p&gt;To create a new branch you can use this command.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch X
@@ -59,8 +58,7 @@ command:&lt;/p&gt;
       <description>
         
         
-        &lt;h1 id=&#34;git&#34;&gt;Git&lt;/h1&gt;
-&lt;h3 id=&#34;what-is-git&#34;&gt;What is Git?&lt;/h3&gt;
+        &lt;h3 id=&#34;what-is-git&#34;&gt;What is Git?&lt;/h3&gt;
 &lt;p&gt;Git is a version management tool used to make collaborative efforts a lot easier.&lt;/p&gt;
 &lt;h3 id=&#34;creating-a-new-repository&#34;&gt;Creating a new repository:&lt;/h3&gt;
 &lt;p&gt;To create a new repository using git you should cd to the folder you want to be a repository and type into your terminal:&lt;/p&gt;
