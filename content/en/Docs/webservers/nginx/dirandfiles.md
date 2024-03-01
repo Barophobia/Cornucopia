@@ -5,7 +5,6 @@ chapter = true
 pre = "<b> - </b>"
 +++
 
-
 ## Important nginx Directories and files
 ### Content
 ```

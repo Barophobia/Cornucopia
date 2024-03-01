@@ -5,8 +5,6 @@ chapter = true
 pre = "<b> - </b>"
 +++
 
-# Installing Nginx
-
 ## Installing nginx on Linux
 
 Ubuntu:

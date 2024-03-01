@@ -5,8 +5,6 @@ chapter = true
 pre = "<b> - </b>"
 +++
 
-# Reverse proxy with nginx
-
 In this example I will be making a reverse proxy for a calibre server so anywhere it references that service is a variable of whatever service you are setting up.
 
 - Create a new file inside /etc/nginx/sites-available/calibre

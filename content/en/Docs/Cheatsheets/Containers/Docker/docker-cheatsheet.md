@@ -1,9 +1,6 @@
 +++
 title = "Docker Cheatsheet"
 +++
-
-# Docker
-
 ### Docker basics
 
 ```
