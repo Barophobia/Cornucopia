@@ -44,6 +44,12 @@ sudo systemctl status prometheus
 
 The status should show the active state
 
+If you want prometheus to start automatically use this command:
+
+```
+sudo systemctl enable prometheus
+```
+
 ### Issues that could happen
 
 When creating the service file ensure to use absolute paths otherwise the service will not function correctly.
