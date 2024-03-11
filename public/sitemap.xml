@@ -40,6 +40,10 @@
   </url><url>
     <loc>//localhost:1313/docs/nxlog/</loc>
   </url><url>
+    <loc>//localhost:1313/docs/prometheus/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/prometheus/prometheusservice/</loc>
+  </url><url>
     <loc>//localhost:1313/docs/cheatsheets/system-administration/</loc>
   </url><url>
     <loc>//localhost:1313/docs/linux/ufw/</loc>
