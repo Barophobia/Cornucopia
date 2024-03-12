@@ -6,6 +6,7 @@ pre = "<b> - </b>"
 +++
 
 #### sshd_config file example
+
 ```
 
 ############
@@ -92,7 +93,7 @@ X11Forwarding no
 # Hash the known_hosts file to minimise usable information given to an attacker
 HashKnownHosts Yes
 
-# LogLevel VERBOSE logs user's key fingerprint on login. Needed to have a clear audit track of which key was using to log in.
+# LogLevel VERBOSE logs user's key fingerprint on login. Needed to have a clear audit track of which key was used to log in.
 # By default logs are retained until they consume up to 10% of the available disk space
 LogLevel VERBOSE
 
