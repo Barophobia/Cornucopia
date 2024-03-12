@@ -3,8 +3,6 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="text/html" href="//localhost:1313/docs/webservers/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/webservers/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -19,16 +17,21 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Webservers | Cornucopia</title>
-<meta name="description" content="Cornucopia">
-<meta property="og:title" content="Webservers" />
-<meta property="og:description" content="Cornucopia" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="//localhost:1313/docs/webservers/" /><meta property="og:site_name" content="Cornucopia" />
+<title>sshd_config | Cornucopia</title>
+<meta name="description" content="############ # BINDINGS # ############ # CHANGE THE PORT NUMBER # This port should be changed as it is an easy target for script kiddies and brute forcing. Port 22 # Server Listen Address # This should be the server&amp;#39;s IP Address not 0.0.0.0 to minimise random incoming connections ListenAddress 0.0.0.0 # Address Family # IPv4 only, this can be changed to &amp;#39;any&amp;#39; to allow IPv6 or IPv4 AddressFamily inet ################### # BANNER SETTINGS # ################### # Warning Banner # If the server is internet facing ensure you ommit any identifying information in the banner Banner /etc/issue.">
+<meta property="og:title" content="sshd_config" />
+<meta property="og:description" content="############ # BINDINGS # ############ # CHANGE THE PORT NUMBER # This port should be changed as it is an easy target for script kiddies and brute forcing. Port 22 # Server Listen Address # This should be the server&#39;s IP Address not 0.0.0.0 to minimise random incoming connections ListenAddress 0.0.0.0 # Address Family # IPv4 only, this can be changed to &#39;any&#39; to allow IPv6 or IPv4 AddressFamily inet ################### # BANNER SETTINGS # ################### # Warning Banner # If the server is internet facing ensure you ommit any identifying information in the banner Banner /etc/issue." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/docs/ssh-hardening/sshd_config/" /><meta property="article:section" content="docs" />
 
-<meta itemprop="name" content="Webservers">
-<meta itemprop="description" content="Cornucopia"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Webservers"/>
-<meta name="twitter:description" content="Cornucopia"/>
+<meta property="og:site_name" content="Cornucopia" />
+
+<meta itemprop="name" content="sshd_config">
+<meta itemprop="description" content="############ # BINDINGS # ############ # CHANGE THE PORT NUMBER # This port should be changed as it is an easy target for script kiddies and brute forcing. Port 22 # Server Listen Address # This should be the server&#39;s IP Address not 0.0.0.0 to minimise random incoming connections ListenAddress 0.0.0.0 # Address Family # IPv4 only, this can be changed to &#39;any&#39; to allow IPv6 or IPv4 AddressFamily inet ################### # BANNER SETTINGS # ################### # Warning Banner # If the server is internet facing ensure you ommit any identifying information in the banner Banner /etc/issue.">
+
+<meta itemprop="wordCount" content="652">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="sshd_config"/>
+<meta name="twitter:description" content="############ # BINDINGS # ############ # CHANGE THE PORT NUMBER # This port should be changed as it is an easy target for script kiddies and brute forcing. Port 22 # Server Listen Address # This should be the server&#39;s IP Address not 0.0.0.0 to minimise random incoming connections ListenAddress 0.0.0.0 # Address Family # IPv4 only, this can be changed to &#39;any&#39; to allow IPv6 or IPv4 AddressFamily inet ################### # BANNER SETTINGS # ################### # Warning Banner # If the server is internet facing ensure you ommit any identifying information in the banner Banner /etc/issue."/>
 
 
 
@@ -43,7 +46,7 @@
 <link rel="stylesheet" href="/css/prism.css"/>
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       <nav class="td-navbar navbar-dark js-navbar-scroll">
 <div class="container-fluid flex-column flex-md-row">
@@ -216,13 +219,13 @@
   <a href="/docs/prometheus/prometheusservice/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsprometheusprometheusservice"><span class="">Prometheus as a service (systemd)</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsssh-hardening-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsssh-hardening-li">
   <a href="/docs/ssh-hardening/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsssh-hardening"><span class="">SSH Hardening</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsssh-hardeningssh_keys-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsssh-hardeningssh_keys-li">
   <a href="/docs/ssh-hardening/ssh_keys/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsssh-hardeningssh_keys"><span class="">SSH Keys</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsssh-hardeningsshd_config-li">
-  <a href="/docs/ssh-hardening/sshd_config/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsssh-hardeningsshd_config"><span class="">sshd_config</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsssh-hardeningsshd_config-li">
+  <a href="/docs/ssh-hardening/sshd_config/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-docsssh-hardeningsshd_config"><span class="td-sidebar-nav-active-item">sshd_config</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsvmware-li">
@@ -257,10 +260,10 @@
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docswebservers-li">
-  <a href="/docs/webservers/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-docswebservers"><span class="td-sidebar-nav-active-item">Webservers</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docswebservers-li">
+  <a href="/docs/webservers/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docswebservers"><span class="">Webservers</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docswebserversnginx-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docswebserversnginx-li">
   <a href="/docs/webservers/nginx/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docswebserversnginx"><span class="">Nginx</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docswebserversnginxreverseproxy-li">
@@ -293,15 +296,27 @@
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             
 <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
-<a href="https://github.com/barophobia/cornucopia/tree/main/content/en/Docs/webservers/_index.md" class="td-page-meta--view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
-  <a href="https://github.com/barophobia/cornucopia/edit/main/content/en/Docs/webservers/_index.md" class="td-page-meta--edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
-  <a href="https://github.com/barophobia/cornucopia/new/main/content/en/Docs/webservers?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
-  <a href="https://github.com/barophobia/cornucopia/issues/new?title=Webservers" class="td-page-meta--issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
-  <a id="print" href="/docs/webservers/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+<a href="https://github.com/barophobia/cornucopia/tree/main/content/en/Docs/SSH%20Hardening/sshd_config.md" class="td-page-meta--view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
+  <a href="https://github.com/barophobia/cornucopia/edit/main/content/en/Docs/SSH%20Hardening/sshd_config.md" class="td-page-meta--edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/barophobia/cornucopia/new/main/content/en/Docs/SSH%20Hardening?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
+  <a href="https://github.com/barophobia/cornucopia/issues/new?title=sshd_config" class="td-page-meta--issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+  <a id="print" href="/docs/ssh-hardening/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#optionalrecommended-extras">Optional/Recommended Extra&rsquo;s</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#banner-example">Banner Example</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 	
           </aside>
@@ -313,40 +328,158 @@
   <ol class="breadcrumb">
   <li class="breadcrumb-item">
     <a href="/docs/">Documentation</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/ssh-hardening/">SSH Hardening</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Webservers</li>
+    sshd_config</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Webservers</h1>
-  
+	<h1>sshd_config</h1>
+	
 	<header class="article-meta">
 		
   </header>
+	<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>############
+</span></span><span style="display:flex;"><span># BINDINGS #
+</span></span><span style="display:flex;"><span>############
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># CHANGE THE PORT NUMBER
+</span></span><span style="display:flex;"><span># This port should be changed as it is an easy target for script kiddies and brute forcing.
+</span></span><span style="display:flex;"><span>Port 22
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Server Listen Address
+</span></span><span style="display:flex;"><span># This should be the server&#39;s IP Address not 0.0.0.0 to minimise random incoming connections
+</span></span><span style="display:flex;"><span>ListenAddress 0.0.0.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Address Family
+</span></span><span style="display:flex;"><span># IPv4 only, this can be changed to &#39;any&#39; to allow IPv6 or IPv4
+</span></span><span style="display:flex;"><span>AddressFamily inet
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>###################
+</span></span><span style="display:flex;"><span># BANNER SETTINGS #
+</span></span><span style="display:flex;"><span>###################
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Warning Banner
+</span></span><span style="display:flex;"><span># If the server is internet facing ensure you ommit any identifying information in the banner
+</span></span><span style="display:flex;"><span>Banner /etc/issue.net
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>################
+</span></span><span style="display:flex;"><span># CRYPTOGRAPHY #
+</span></span><span style="display:flex;"><span>################
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Define cryptography algorithms to avoid the use of weak algorithms
+</span></span><span style="display:flex;"><span># AES-CTR and Chacha20-Poly1305 modes have been removed to mitigate the Terrapin attack
+</span></span><span style="display:flex;"><span>#   https://terrapin-attack.com/
+</span></span><span style="display:flex;"><span># ecdh-sha2-nistp* algorithms have been removed due to concerns around NIST P-curves design, they can be readded if you trust the NSA to design your algorithms
+</span></span><span style="display:flex;"><span>#   https://github.com/jtesta/ssh-audit/issues/213#issuecomment-1774204745
+</span></span><span style="display:flex;"><span># Remember to Disable small Diffie-Hellman Key Sizes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>HostKeyAlgorithms ssh-ed25519
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#########
+</span></span><span style="display:flex;"><span># OTHER #
+</span></span><span style="display:flex;"><span>#########
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Disable Protocol 1
+</span></span><span style="display:flex;"><span># Legacy SSH protocol 1 is NOT secure
+</span></span><span style="display:flex;"><span>Protocol 2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Compression
+</span></span><span style="display:flex;"><span># Delayed option enables compression after authentication
+</span></span><span style="display:flex;"><span>Compression delayed
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Idle Log out time
+</span></span><span style="display:flex;"><span># This will avoid unattended SSH Sessions
+</span></span><span style="display:flex;"><span>ClientAliveInterval 300
+</span></span><span style="display:flex;"><span>ClientAliveCountMax 0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Strict Mode
+</span></span><span style="display:flex;"><span># Using StrictModes enforces check on files in the home directory to ensure proper privileges and ownership is present
+</span></span><span style="display:flex;"><span>StrictModes yes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Historically unsafe
+</span></span><span style="display:flex;"><span>IgnoreRhosts yes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ChallengeResponseAuthentication no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PermitEmptyPasswords no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Disable root ssh login access
+</span></span><span style="display:flex;"><span># This option still allows the use of su and sudo once in the terminal. It is recommended to use a normal user and then escalate privileges when required
+</span></span><span style="display:flex;"><span>PermitRootLogin no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Fixes CVE-0216-0777
+</span></span><span style="display:flex;"><span>Host *
+</span></span><span style="display:flex;"><span>    UseRoaming no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>X11Forwarding no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Hash the known_hosts file to minimise usable information given to an attacker
+</span></span><span style="display:flex;"><span>HashKnownHosts Yes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># LogLevel VERBOSE logs user&#39;s key fingerprint on login. Needed to have a clear audit track of which key was using to log in.
+</span></span><span style="display:flex;"><span># By default logs are retained until they consume up to 10% of the available disk space
+</span></span><span style="display:flex;"><span>LogLevel VERBOSE
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Disable ssh-agent forwarding to stop lateral movement
+</span></span><span style="display:flex;"><span>AllowAgentForwarding no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># disable reverse DNS lookups
+</span></span><span style="display:flex;"><span>UseDNS no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># allow a maximum of two sessions over a single TCP connection
+</span></span><span style="display:flex;"><span>MaxSessions 2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># set maximum authentication retries to prevent brute force attacks
+</span></span><span style="display:flex;"><span>MaxAuthTries 3
+</span></span></code></pre></div><h2 id="optionalrecommended-extras">Optional/Recommended Extra&rsquo;s</h2>
+<h4 id="disable-password-authentication">Disable Password Authentication</h4>
+<p>This option will disable password based logins meaning you will only be able to use SSH keys, this is the recommended setup, to learn more about setting up SSH Keys click here - <a href="/docs/ssh-hardening/ssh_keys/">SSH Keys</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>PasswordAuthentication no
+</span></span></code></pre></div><h4 id="disable-small-diffie-hellman-key-sizes">Disable Small Diffie-Hellman Key Sizes</h4>
+<p>The small Diffie-Hellman keysizes should be disabled in the moduli file before enabling diffie-hellman KexAlgorithms</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>awk &#39;$5 &gt;= 3071&#39; /etc/ssh/moduli &gt; /etc/ssh/moduli.safe
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mv /etc/ssh/moduli.safe /etc/ssh/moduli
+</span></span></code></pre></div><h2 id="banner-example">Banner Example</h2>
+<p>The banner should be entered into the /etc/issue.net file</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>#################################################################
+</span></span><span style="display:flex;"><span>#                   _    _           _   _                      #
+</span></span><span style="display:flex;"><span>#                  / \  | | ___ _ __| |_| |                     #
+</span></span><span style="display:flex;"><span>#                 / _ \ | |/ _ \ &#39;__| __| |                     #
+</span></span><span style="display:flex;"><span>#                / ___ \| |  __/ |  | |_|_|                     #
+</span></span><span style="display:flex;"><span>#               /_/   \_\_|\___|_|   \__(_)                     #
+</span></span><span style="display:flex;"><span>#                                                               #
+</span></span><span style="display:flex;"><span>#  You are entering into a secured area! Your IP, Login Time,   #
+</span></span><span style="display:flex;"><span>#   Username has been noted and has been sent to the network     #
+</span></span><span style="display:flex;"><span>#                       administrator!                          #
+</span></span><span style="display:flex;"><span>#   This service is restricted to authorized users only. All    #
+</span></span><span style="display:flex;"><span>#            activities on this system are logged.              #
+</span></span><span style="display:flex;"><span>#  Unauthorised access will be fully investigated and reported  #
+</span></span><span style="display:flex;"><span>#        to the appropriate law enforcement agencies.           #
+</span></span><span style="display:flex;"><span>#################################################################
+</span></span></code></pre></div><p>This banner should be entered in the /etc/motd and will be shown after login</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>###############################################################
+</span></span><span style="display:flex;"><span>#                     SUPER SECURE SERVER                     #
+</span></span><span style="display:flex;"><span>###############################################################
+</span></span><span style="display:flex;"><span>#                   Welcome to Secureland                     #
+</span></span><span style="display:flex;"><span>#       All connections are monitored and recorded.           #
+</span></span><span style="display:flex;"><span>#  Disconnect IMMEDIATELY if you are not an authorised user!  #
+</span></span><span style="display:flex;"><span>###############################################################
+</span></span></code></pre></div><p>After making changes restart the SSH daemon</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo systemctl restart sshd
+</span></span></code></pre></div>
 	
-  <div class="section-index">
-    
-    
-    
-    
-    
-    
-    
-    
-    <hr class="panel-line">
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/docs/webservers/nginx/">Nginx</a>
-                </h5>
-                <p></p>
-            </div>
-        
-    
 </div>
-</div>
+
 
           </main>
         </div>

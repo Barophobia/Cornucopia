@@ -3,8 +3,8 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="//localhost:1313/docs/prometheus/">
-<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/prometheus/index.xml">
+<link rel="canonical" type="text/html" href="//localhost:1313/docs/ssh-hardening/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/ssh-hardening/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -19,15 +19,15 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Prometheus | Cornucopia</title>
+<title>SSH Hardening | Cornucopia</title>
 <meta name="description" content="Cornucopia">
-<meta property="og:title" content="Prometheus" />
+<meta property="og:title" content="SSH Hardening" />
 <meta property="og:description" content="Cornucopia" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="//localhost:1313/docs/prometheus/" /><meta property="og:site_name" content="Cornucopia" />
+<meta property="og:url" content="//localhost:1313/docs/ssh-hardening/" /><meta property="og:site_name" content="Cornucopia" />
 
-<meta itemprop="name" content="Prometheus">
-<meta itemprop="description" content="Cornucopia"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Prometheus"/>
+<meta itemprop="name" content="SSH Hardening">
+<meta itemprop="description" content="Cornucopia"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="SSH Hardening"/>
 <meta name="twitter:description" content="Cornucopia"/>
 
 
@@ -79,13 +79,13 @@
 This is the multi-page printable view of this section.
 <a href="#" onclick="print();return false;">Click here to print</a>.
 </p><p>
-<a href="/docs/prometheus/">Return to the regular view of this page</a>.
+<a href="/docs/ssh-hardening/">Return to the regular view of this page</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">Prometheus</h1>
+<h1 class="title">SSH Hardening</h1>
 
 
 
@@ -102,7 +102,15 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-581fe58acdf89f8ee618fa6f3f94a5c1">Prometheus as a service (systemd)</a></li>
+<li>1: <a href="#pg-715663e11b4aab7c9eaf6d3be4fb6455">SSH Keys</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-297d8a79c2d4fe008207be088cff1244">sshd_config</a></li>
 
 
     
@@ -133,35 +141,166 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-581fe58acdf89f8ee618fa6f3f94a5c1">1 - Prometheus as a service (systemd)</h1>
+	<h1 id="pg-715663e11b4aab7c9eaf6d3be4fb6455">1 - SSH Keys</h1>
     
-	<p>Create a prometheus service file.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo vi /etc/systemd/system/prometheus.service
-</span></span></code></pre></div><p>Copy the following content to the file. Change the ExecStart location if you want to start the application from elsewhere.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>[Unit]
-</span></span><span style="display:flex;"><span>Description=Prometheus Server
-</span></span><span style="display:flex;"><span>Documentation=https://prometheus.io/docs/introduction/overview/
-</span></span><span style="display:flex;"><span>After=network-online.target
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[Service]
-</span></span><span style="display:flex;"><span>User=root
-</span></span><span style="display:flex;"><span>Restart=on-failure
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>ExecStart=/home/root/prometheus/prometheus --config.file /home/root/prometheus/prometheus.yml
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[Install]
-</span></span><span style="display:flex;"><span>WantedBy=multi-user.target
-</span></span></code></pre></div><p>Step 3: Reload the systemd service to register the prometheus service and start the prometheus service.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#000">sudo</span> <span style="color:#000">systemctl</span> <span style="color:#000">daemon</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">reload</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">sudo</span> <span style="color:#000">systemctl</span> <span style="color:#000">start</span> <span style="color:#000">prometheus</span>
-</span></span></code></pre></div><p>Check the prometheus service status using this command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo systemctl status prometheus
-</span></span></code></pre></div><p>The status should show the active state</p>
-<p>If you want prometheus to start automatically use this command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo systemctl enable prometheus
-</span></span></code></pre></div><h3 id="issues-that-could-happen">Issues that could happen</h3>
-<p>When creating the service file ensure to use absolute paths otherwise the service will not function correctly.</p>
+	<h2 id="generate-ed25519-ssh-key">Generate ed25519 SSH Key</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ssh-keygen -t ed25519 
+</span></span></code></pre></div><h2 id="copy-public-key-to-servers">Copy Public key to servers</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ssh-copy-id USER@IPADDRESS
+</span></span></code></pre></div><p>On connection the server will request the password to the user and then you will be able to SSH without the use of the password.</p>
 
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-297d8a79c2d4fe008207be088cff1244">2 - sshd_config</h1>
+    
+	<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>############
+</span></span><span style="display:flex;"><span># BINDINGS #
+</span></span><span style="display:flex;"><span>############
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># CHANGE THE PORT NUMBER
+</span></span><span style="display:flex;"><span># This port should be changed as it is an easy target for script kiddies and brute forcing.
+</span></span><span style="display:flex;"><span>Port 22
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Server Listen Address
+</span></span><span style="display:flex;"><span># This should be the server&#39;s IP Address not 0.0.0.0 to minimise random incoming connections
+</span></span><span style="display:flex;"><span>ListenAddress 0.0.0.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Address Family
+</span></span><span style="display:flex;"><span># IPv4 only, this can be changed to &#39;any&#39; to allow IPv6 or IPv4
+</span></span><span style="display:flex;"><span>AddressFamily inet
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>###################
+</span></span><span style="display:flex;"><span># BANNER SETTINGS #
+</span></span><span style="display:flex;"><span>###################
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Warning Banner
+</span></span><span style="display:flex;"><span># If the server is internet facing ensure you ommit any identifying information in the banner
+</span></span><span style="display:flex;"><span>Banner /etc/issue.net
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>################
+</span></span><span style="display:flex;"><span># CRYPTOGRAPHY #
+</span></span><span style="display:flex;"><span>################
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Define cryptography algorithms to avoid the use of weak algorithms
+</span></span><span style="display:flex;"><span># AES-CTR and Chacha20-Poly1305 modes have been removed to mitigate the Terrapin attack
+</span></span><span style="display:flex;"><span>#   https://terrapin-attack.com/
+</span></span><span style="display:flex;"><span># ecdh-sha2-nistp* algorithms have been removed due to concerns around NIST P-curves design, they can be readded if you trust the NSA to design your algorithms
+</span></span><span style="display:flex;"><span>#   https://github.com/jtesta/ssh-audit/issues/213#issuecomment-1774204745
+</span></span><span style="display:flex;"><span># Remember to Disable small Diffie-Hellman Key Sizes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>HostKeyAlgorithms ssh-ed25519
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#########
+</span></span><span style="display:flex;"><span># OTHER #
+</span></span><span style="display:flex;"><span>#########
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Disable Protocol 1
+</span></span><span style="display:flex;"><span># Legacy SSH protocol 1 is NOT secure
+</span></span><span style="display:flex;"><span>Protocol 2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Compression
+</span></span><span style="display:flex;"><span># Delayed option enables compression after authentication
+</span></span><span style="display:flex;"><span>Compression delayed
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Idle Log out time
+</span></span><span style="display:flex;"><span># This will avoid unattended SSH Sessions
+</span></span><span style="display:flex;"><span>ClientAliveInterval 300
+</span></span><span style="display:flex;"><span>ClientAliveCountMax 0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Strict Mode
+</span></span><span style="display:flex;"><span># Using StrictModes enforces check on files in the home directory to ensure proper privileges and ownership is present
+</span></span><span style="display:flex;"><span>StrictModes yes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Historically unsafe
+</span></span><span style="display:flex;"><span>IgnoreRhosts yes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ChallengeResponseAuthentication no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PermitEmptyPasswords no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Disable root ssh login access
+</span></span><span style="display:flex;"><span># This option still allows the use of su and sudo once in the terminal. It is recommended to use a normal user and then escalate privileges when required
+</span></span><span style="display:flex;"><span>PermitRootLogin no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Fixes CVE-0216-0777
+</span></span><span style="display:flex;"><span>Host *
+</span></span><span style="display:flex;"><span>    UseRoaming no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>X11Forwarding no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Hash the known_hosts file to minimise usable information given to an attacker
+</span></span><span style="display:flex;"><span>HashKnownHosts Yes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># LogLevel VERBOSE logs user&#39;s key fingerprint on login. Needed to have a clear audit track of which key was using to log in.
+</span></span><span style="display:flex;"><span># By default logs are retained until they consume up to 10% of the available disk space
+</span></span><span style="display:flex;"><span>LogLevel VERBOSE
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Disable ssh-agent forwarding to stop lateral movement
+</span></span><span style="display:flex;"><span>AllowAgentForwarding no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># disable reverse DNS lookups
+</span></span><span style="display:flex;"><span>UseDNS no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># allow a maximum of two sessions over a single TCP connection
+</span></span><span style="display:flex;"><span>MaxSessions 2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># set maximum authentication retries to prevent brute force attacks
+</span></span><span style="display:flex;"><span>MaxAuthTries 3
+</span></span></code></pre></div><h2 id="optionalrecommended-extras">Optional/Recommended Extra&rsquo;s</h2>
+<h4 id="disable-password-authentication">Disable Password Authentication</h4>
+<p>This option will disable password based logins meaning you will only be able to use SSH keys, this is the recommended setup, to learn more about setting up SSH Keys click here - <a href="/docs/ssh-hardening/ssh_keys/">SSH Keys</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>PasswordAuthentication no
+</span></span></code></pre></div><h4 id="disable-small-diffie-hellman-key-sizes">Disable Small Diffie-Hellman Key Sizes</h4>
+<p>The small Diffie-Hellman keysizes should be disabled in the moduli file before enabling diffie-hellman KexAlgorithms</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>awk &#39;$5 &gt;= 3071&#39; /etc/ssh/moduli &gt; /etc/ssh/moduli.safe
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mv /etc/ssh/moduli.safe /etc/ssh/moduli
+</span></span></code></pre></div><h2 id="banner-example">Banner Example</h2>
+<p>The banner should be entered into the /etc/issue.net file</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>#################################################################
+</span></span><span style="display:flex;"><span>#                   _    _           _   _                      #
+</span></span><span style="display:flex;"><span>#                  / \  | | ___ _ __| |_| |                     #
+</span></span><span style="display:flex;"><span>#                 / _ \ | |/ _ \ &#39;__| __| |                     #
+</span></span><span style="display:flex;"><span>#                / ___ \| |  __/ |  | |_|_|                     #
+</span></span><span style="display:flex;"><span>#               /_/   \_\_|\___|_|   \__(_)                     #
+</span></span><span style="display:flex;"><span>#                                                               #
+</span></span><span style="display:flex;"><span>#  You are entering into a secured area! Your IP, Login Time,   #
+</span></span><span style="display:flex;"><span>#   Username has been noted and has been sent to the network     #
+</span></span><span style="display:flex;"><span>#                       administrator!                          #
+</span></span><span style="display:flex;"><span>#   This service is restricted to authorized users only. All    #
+</span></span><span style="display:flex;"><span>#            activities on this system are logged.              #
+</span></span><span style="display:flex;"><span>#  Unauthorised access will be fully investigated and reported  #
+</span></span><span style="display:flex;"><span>#        to the appropriate law enforcement agencies.           #
+</span></span><span style="display:flex;"><span>#################################################################
+</span></span></code></pre></div><p>This banner should be entered in the /etc/motd and will be shown after login</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>###############################################################
+</span></span><span style="display:flex;"><span>#                     SUPER SECURE SERVER                     #
+</span></span><span style="display:flex;"><span>###############################################################
+</span></span><span style="display:flex;"><span>#                   Welcome to Secureland                     #
+</span></span><span style="display:flex;"><span>#       All connections are monitored and recorded.           #
+</span></span><span style="display:flex;"><span>#  Disconnect IMMEDIATELY if you are not an authorised user!  #
+</span></span><span style="display:flex;"><span>###############################################################
+</span></span></code></pre></div><p>After making changes restart the SSH daemon</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo systemctl restart sshd
+</span></span></code></pre></div>
 </div>
 
 

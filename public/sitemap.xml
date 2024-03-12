@@ -44,6 +44,12 @@
   </url><url>
     <loc>//localhost:1313/docs/prometheus/prometheusservice/</loc>
   </url><url>
+    <loc>//localhost:1313/docs/ssh-hardening/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/ssh-hardening/ssh_keys/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/ssh-hardening/sshd_config/</loc>
+  </url><url>
     <loc>//localhost:1313/docs/cheatsheets/system-administration/</loc>
   </url><url>
     <loc>//localhost:1313/docs/linux/ufw/</loc>

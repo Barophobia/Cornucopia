@@ -38,7 +38,7 @@ sudo vi /etc/systemd/system/prometheus.service Copy the following content to the
 [Unit] Description=Prometheus Server Documentation=https://prometheus.io/docs/introduction/overview/ After=network-online.target [Service] User=root Restart=on-failure ExecStart=/home/root/prometheus/prometheus --config.file /home/root/prometheus/prometheus.yml [Install] WantedBy=multi-user.target Step 3: Reload the systemd service to register the prometheus service and start the prometheus service.
 sudo systemctl daemon-reload sudo systemctl start prometheus Check the prometheus service status using this command:">
 
-<meta itemprop="wordCount" content="104">
+<meta itemprop="wordCount" content="118">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Prometheus as a service (systemd)"/>
 <meta name="twitter:description" content="Create a prometheus service file.
 sudo vi /etc/systemd/system/prometheus.service Copy the following content to the file. Change the ExecStart location if you want to start the application from elsewhere.
@@ -231,6 +231,15 @@ sudo systemctl daemon-reload sudo systemctl start prometheus Check the prometheu
   <a href="/docs/prometheus/prometheusservice/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-docsprometheusprometheusservice"><span class="td-sidebar-nav-active-item">Prometheus as a service (systemd)</span></a>
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsssh-hardening-li">
+  <a href="/docs/ssh-hardening/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsssh-hardening"><span class="">SSH Hardening</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsssh-hardeningssh_keys-li">
+  <a href="/docs/ssh-hardening/ssh_keys/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsssh-hardeningssh_keys"><span class="">SSH Keys</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsssh-hardeningsshd_config-li">
+  <a href="/docs/ssh-hardening/sshd_config/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsssh-hardeningsshd_config"><span class="">sshd_config</span></a>
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsvmware-li">
   <a href="/docs/vmware/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsvmware"><span class="">VMWare</span></a>
   <ul class="ul-2 foldable">
@@ -365,7 +374,9 @@ sudo systemctl daemon-reload sudo systemctl start prometheus Check the prometheu
 </span></span></code></pre></div><p>Check the prometheus service status using this command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo systemctl status prometheus
 </span></span></code></pre></div><p>The status should show the active state</p>
-<h3 id="issues-that-could-happen">Issues that could happen</h3>
+<p>If you want prometheus to start automatically use this command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo systemctl enable prometheus
+</span></span></code></pre></div><h3 id="issues-that-could-happen">Issues that could happen</h3>
 <p>When creating the service file ensure to use absolute paths otherwise the service will not function correctly.</p>
 
 	
