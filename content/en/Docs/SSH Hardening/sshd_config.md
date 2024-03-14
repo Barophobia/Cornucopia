@@ -57,7 +57,7 @@ KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-grou
 #########
 
 # Disable Protocol 1
-# Legacy SSH protocol 1 is NOT secure
+# Legacy SSH protocol 1 is NOT secure and disabled by default after OpenSSH version 7
 Protocol 2
 
 # Compression

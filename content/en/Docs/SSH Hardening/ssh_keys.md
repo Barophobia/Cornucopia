@@ -1,5 +1,5 @@
 +++
-title = "SSH Keys"
+title = "SSH Keys (Passwordless Authentication)"
 weight = 5
 chapter = true
 pre = "<b> - </b>"
