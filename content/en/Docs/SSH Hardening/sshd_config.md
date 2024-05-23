@@ -84,10 +84,6 @@ PermitEmptyPasswords no
 # This option still allows the use of su and sudo once in the terminal. It is recommended to use a normal user and then escalate privileges when required
 PermitRootLogin no
 
-# Fixes CVE-0216-0777
-Host *
-    UseRoaming no
-
 X11Forwarding no
 
 # Hash the known_hosts file to minimise usable information given to an attacker
